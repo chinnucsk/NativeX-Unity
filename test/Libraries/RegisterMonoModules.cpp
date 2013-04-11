@@ -23,6 +23,13 @@ extern "C"
 	void	uStartWithNameAndApplicationId();
 	void	uShowOfferWall();
 	void	uShowIncentOfferWall();
+	void	uShowNonIncentOfferWall();
+	void	uGetAndCacheFeaturedOffer();
+	void	uShowCachedFeaturedOffer();
+	void	uShowFeaturedOffer();
+	void	uGetAndCacheInterstitial();
+	void	uShowCachedInterstitial();
+	void	uShowInterstitial();
 }
 void RegisterMonoModules()
 {
@@ -41,6 +48,13 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("uStartWithNameAndApplicationId", (void*)&uStartWithNameAndApplicationId);
 	mono_dl_register_symbol("uShowOfferWall", (void*)&uShowOfferWall);
 	mono_dl_register_symbol("uShowIncentOfferWall", (void*)&uShowIncentOfferWall);
+	mono_dl_register_symbol("uShowNonIncentOfferWall", (void*)&uShowNonIncentOfferWall);
+	mono_dl_register_symbol("uGetAndCacheFeaturedOffer", (void*)&uGetAndCacheFeaturedOffer);
+	mono_dl_register_symbol("uShowCachedFeaturedOffer", (void*)&uShowCachedFeaturedOffer);
+	mono_dl_register_symbol("uShowFeaturedOffer", (void*)&uShowFeaturedOffer);
+	mono_dl_register_symbol("uGetAndCacheInterstitial", (void*)&uGetAndCacheInterstitial);
+	mono_dl_register_symbol("uShowCachedInterstitial", (void*)&uShowCachedInterstitial);
+	mono_dl_register_symbol("uShowInterstitial", (void*)&uShowInterstitial);
 #endif // !(TARGET_IPHONE_SIMULATOR)
 }
 

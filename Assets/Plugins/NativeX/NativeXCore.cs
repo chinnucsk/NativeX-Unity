@@ -55,7 +55,7 @@ public class NativeXCore : MonoBehaviour {
 	[DllImport ("__Internal")]
 	public static extern void uShowOfferWall();
 #endif
-	public static void showOfferWall()
+	public static void showRewardOfferWall()
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
@@ -97,5 +97,153 @@ public class NativeXCore : MonoBehaviour {
 #endif
 		return;
 	}
-		
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uShowNonIncentOfferWall();
+#endif
+
+	public static void showNonRewardWebOfferwall()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("showNonRewardWebOfferWall", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uShowNonIncentOfferWall();	
+			if(isDebugLogEnabled){
+				Debug.Log("showNonIncentWebOfferWall has been hit");
+			}
+		}
+#endif
+	}
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uGetAndCacheFeaturedOffer();
+#endif
+
+	public static void getAndCacheFeaturedOffer()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("getFeaturedOffer", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uGetAndCacheFeaturedOffer();
+			if(isDebugLogEnabled){
+				Debug.Log("getAndCacheFeaturedOffer has been hit");
+			}
+		}
+#endif
+	}
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uShowCachedFeaturedOffer();
+#endif
+
+	public static void showCachedFeaturedOffer()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("showCachedFeaturedOffer", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uShowCachedFeaturedOffer();	
+			if(isDebugLogEnabled){
+				Debug.Log("iOS - showCachedFeaturedOffer has been hit");
+			}
+		}
+#endif
+	}
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uShowFeaturedOffer();
+#endif
+
+	public static void showFeaturedOffer()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("showFeaturedOffer", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uShowFeaturedOffer();
+			if(isDebugLogEnabled){
+				Debug.Log("showFeaturedOffer has been hit");
+			}
+		}
+#endif
+	}
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uGetAndCacheInterstitial();
+#endif
+
+	public static void getAndCacheInterstitial()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("getAndCacheInterstitial", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uGetAndCacheInterstitial();
+			if(isDebugLogEnabled){
+				Debug.Log("showInterstitial has been hit");
+			}
+		}
+#endif
+	}
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uShowCachedInterstitial();
+#endif
+
+	public static void showCachedInterstitial()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("showCachedInterstitial", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uShowCachedInterstitial();
+			if(isDebugLogEnabled){
+				Debug.Log("showInterstitial has been hit");
+			}
+		}
+#endif
+	}
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uShowInterstitial();
+#endif
+
+	public static void showInterstitial()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("showNonRewardInterstitial", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uShowInterstitial();
+			if(isDebugLogEnabled){
+				Debug.Log("showInterstitial has been hit");
+			}
+		}
+#endif
+	}
+
+
 }
