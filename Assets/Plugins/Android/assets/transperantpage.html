@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" manifest="cache.manifest">
+	<head>
+		<meta charset="utf-8"  >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body{
+				background:none;
+				padding:0;
+				margin:0;
+				overflow:none;
+			}
+			
+			#main{
+				background:none;
+				width:768px;
+				height:1024px;
+				display: -webkit-box;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+			}
+			
+			#popup{
+				display:block;
+				/*-webkit-border-image: url(border_image_1.png) 20% stretch stretch;
+				border-width:10px;*/
+				border:10px solid #000000;
+				position:relative;
+				width:600px;
+				height:300px;
+				background:#cccccc;
+				-webkit-box-sizing: border-box;
+			}
+			
+			#popup-close{
+				position:absolute;
+				top:-25px;
+				right:-25px;
+				width:50px;
+				height:50px;
+				background:red;
+				-webkit-border-radius:3px;
+			}
+			
+			@media only screen 
+			and (min-device-width : 768px) 
+			and (max-device-width : 1024px){
+				#main{
+					width:1024px;
+					height:768px;
+				}
+				
+				#popup{
+					width:800px;
+					height:600px;
+				}
+			}
+			
+			@media only screen 
+			and (min-device-width : 600px) 
+			and (max-device-width : 1024px){
+				#main{
+					width:1024px;
+					height:600px;
+				}
+				
+				#popup{
+					width:800px;
+					height:500px;
+				}
+			}
+			
+			@media only screen 
+			and (min-device-width : 480px) 
+			and (max-device-width : 800px)
+			and (-webkit-min-device-pixel-ratio: 1.5) {
+				#main{
+					width:533px;
+					height:320px;
+				}
+				
+				#popup{
+					width:400px;
+					height:250px;
+				}
+			}
+			
+
+			
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="popup">
+				<div id="popup-close"></div>
+			</div>
+		</div>
+	</body>
+</html>
