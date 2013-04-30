@@ -11,7 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @protocol NativeXBannerAdViewDelegate;
 @interface NativeXBannerAdView : UIView
 
@@ -32,7 +31,6 @@
 
 - (void)reloadAdContent;
 
-
 @end
 
 @protocol NativeXBannerAdViewDelegate <NSObject>
@@ -40,7 +38,8 @@
 @required
 - (void)didLoadContentForBannerAdView:(NativeXBannerAdView *)adView;
 - (void)noAdContentForBannerAdView:(NativeXBannerAdView *)adView;
-- (void)bannerAdView:(NativeXBannerAdView *)adView didFailWithError:(NSError *)error;
+- (void)bannerAdView:(NativeXBannerAdView *)adView
+    didFailWithError:(NSError *)error;
 
 @optional
 - (void)dismissActionForBannerAdView:(NativeXBannerAdView *)adView;

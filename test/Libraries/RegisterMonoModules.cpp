@@ -30,6 +30,12 @@ extern "C"
 	void	uGetAndCacheInterstitial();
 	void	uShowCachedInterstitial();
 	void	uShowInterstitial();
+	void	uShowBanner();
+	void	uRemoveBanner();
+	void	uRedeemCurrency();
+	void	uConnectWithAppId();
+	void	uActionTakenWithActionId();
+	void	uTrackInAppPurchase();
 }
 void RegisterMonoModules()
 {
@@ -55,6 +61,12 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("uGetAndCacheInterstitial", (void*)&uGetAndCacheInterstitial);
 	mono_dl_register_symbol("uShowCachedInterstitial", (void*)&uShowCachedInterstitial);
 	mono_dl_register_symbol("uShowInterstitial", (void*)&uShowInterstitial);
+	mono_dl_register_symbol("uShowBanner", (void*)&uShowBanner);
+	mono_dl_register_symbol("uRemoveBanner", (void*)&uRemoveBanner);
+	mono_dl_register_symbol("uRedeemCurrency", (void*)&uRedeemCurrency);
+	mono_dl_register_symbol("uConnectWithAppId", (void*)&uConnectWithAppId);
+	mono_dl_register_symbol("uActionTakenWithActionId", (void*)&uActionTakenWithActionId);
+	mono_dl_register_symbol("uTrackInAppPurchase", (void*)&uTrackInAppPurchase);
 #endif // !(TARGET_IPHONE_SIMULATOR)
 }
 

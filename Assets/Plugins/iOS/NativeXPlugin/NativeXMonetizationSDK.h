@@ -47,7 +47,8 @@
 // param: appID -- is the unique Identifier you receive from NativeX
 // param: publisherUserId -- Id used for publisher currency postback if used
 // call this in AppDidFinishLaunchingWithOptions
-- (void)initiateWithAppId:(NSString *)appId andPublisherUserId:(NSString *) publisherUserId;
+- (void)initiateWithAppId:(NSString *)appId
+       andPublisherUserId:(NSString *)publisherUserId;
 
 // iPhone offer wall presentation
 - (void)openOfferWallFromPresentingViewController:(UIViewController *)presentingViewController;
@@ -68,16 +69,16 @@
 - (void)redeemCurrency;
 
 // Banner Ad View
-- (NativeXBannerAdView *)bannerAdViewWithThemeID:(NSNumber *)themeID 
-                                     delegate:(id<NativeXBannerAdViewDelegate>)delegate 
-                                        frame:(CGRect)frame;
+- (NativeXBannerAdView *)bannerAdViewWithThemeID:(NSNumber *)themeID
+                                        delegate:(id<NativeXBannerAdViewDelegate>)delegate
+                                           frame:(CGRect)frame;
 
 // Interstitial Ad View
 - (NativeXInterstitialAdViewController *)interstitialAdViewControllerWithThemeID:(NSNumber *)themeID
-                                                                     delegate:(id<NativeXInterstitialAdViewControllerDelegate>)delegate;
+                                                                        delegate:(id<NativeXInterstitialAdViewControllerDelegate>)delegate;
 
-- (NativeXInAppPurchaseTrackRequest *)trackInAppPurchaseWithTrackRecord:(NativeXInAppPurchaseTrackRecord *)trackRecord 
-                                                        delegate:(id<NativeXInAppPurchaseTrackDelegate>)delegate; //if the delegate is about to be deallocated clear return value's delegate property
+- (NativeXInAppPurchaseTrackRequest *)trackInAppPurchaseWithTrackRecord:(NativeXInAppPurchaseTrackRecord *)trackRecord
+                                                               delegate:(id<NativeXInAppPurchaseTrackDelegate>)delegate; //if the delegate is about to be deallocated clear return value's delegate property
 
 // Non-reward web offer wall iPhone and iPad presentation
 - (void)openNonRewardWebOfferWallFromPresentingViewController:(UIViewController *)presentingViewController;
@@ -111,13 +112,14 @@
 @required
 
 // Called when the Offer Wall is successfully initialized.
-- (void)nativeXPublisherSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable;
+- (void)nativeXMonetizationSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable;
 
 // Called when there is an error trying to initialize the Offer Wall.
-- (void)nativeXPublisherSdkDidFailToInitiate: (NSError *) error;
+- (void)nativeXMonetizationSdkDidFailToInitiate: (NSError *) error;
 
 // Called when the currency redemption is successfull.
-- (void)didRedeemWithBalances:(NSArray *)balances andReceiptId:(NSString *)receiptId;
+- (void)didRedeemWithBalances:(NSArray *)balances
+                 andReceiptId:(NSString *)receiptId;
 
 // Called when the currency redemption is unsuccessfull.
 - (void)didRedeemWithError:(NSError *)error;

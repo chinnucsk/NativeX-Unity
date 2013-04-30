@@ -78,9 +78,63 @@ public class TestUI: MonoBehaviour
 			NativeXCore.showInterstitial();
 			Debug.Log("Show Interstitial has been clicked.");
 		}
+
+		//Moving buttons to the other side of the screen
+		xPos = Screen.width - width - 5.0f;
+		yPos = 5.0f;
+
+		if( GUI.Button( new Rect( xPos, yPos, width, height ), "Show Banner" ) )
+		{
+			NativeXCore.showBanner();
+			Debug.Log("Show Banner has been clicked");
+		}
+		
+		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Remove Banner" ) )
+		{
+			NativeXCore.removeBanner();
+			Debug.Log("Remove Banner has been clicked");
+		}
+		
+		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Redeem Currency" ) )
+		{
+			NativeXCore.redeemCurrency();
+			Debug.Log("Redeem Currency has been clicked");
+		}
+		
+		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "App Was Run" ) )
+		{
+			NativeXCore.appWasRun(5077, 12198);
+			Debug.Log("App Was Run has been clicked");
+		}
+		
+		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Action Taken" ) )
+		{
+			NativeXCore.actionTaken(16, 17);
+			Debug.Log("Action Taken has been clicked");
+		}
+		
+		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Upgrade App" ) )
+		{
+			NativeXCore.upgradeAndroidApp("PublisherTest",25);
+			Debug.Log("Upgrade App has been clicked");
+		}
+		
+		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Rate App" ) )
+		{
+			NativeXCore.rateAndroidApp("PublisherTest", 25);
+			Debug.Log("Rate App has been clicked");
+		}
+		
+		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Track In App Purchase" ) )
+		{
+			NativeXCore.trackInAppPurchase("prodId","storeId",2.0f,2,"prodTitle");
+			Debug.Log("Track In App Purchase has been clicked");
+		}
 		
 		GUI.Label(new Rect(xPos, yPos += heightPlus, width, height), resultText);
-		
+
+
+
 	}
 	
 }

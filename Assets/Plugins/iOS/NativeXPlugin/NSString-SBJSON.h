@@ -43,6 +43,6 @@ This is a category on NSString that adds methods for parsing the target string.
 
  Returns the NSDictionary or NSArray represented by the current string's JSON representation.
  */
-- (id)JSONValue;
+- (id)nativeXPublisherJSONValue;
 
 @end

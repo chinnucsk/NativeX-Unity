@@ -245,5 +245,181 @@ public class NativeXCore : MonoBehaviour {
 #endif
 	}
 
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uShowBanner(float x, float y, float width, float height);
+#endif
+	public static void showBanner()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("showNonRewardBanner", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uShowBanner(0,0,Screen.width,Screen.height/20);
+			if(isDebugLogEnabled){
+				Debug.Log("showBanner has been hit");
+			}
+		}
+#endif
+	}
 
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uRemoveBanner();
+#endif
+	public static void removeBanner()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("removeBanner", currentAct);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uRemoveBanner();
+			if(isDebugLogEnabled){
+				Debug.Log("removeBanner has been hit");
+			}
+		}
+#endif
+	}
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uRedeemCurrency();
+#endif
+	public static void redeemCurrency()
+	{
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("redeemCurrency", currentAct, true);
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uRedeemCurrency();	
+			if(isDebugLogEnabled){
+				Debug.Log("redeemCurrency has been hit");
+			}
+		}
+#endif
+	}
+
+//These methods were added as a request from a specific client and should not be used in typical integrations!
+//	public static void checkBalances(){
+//#if UNITY_ANDROID
+//		if(Application.platform == RuntimePlatform.Android){
+//			instance.Call("checkBalances", currentAct);
+//		}
+//#endif
+//		return;
+//	}
+//
+//	public static void transferBalances(bool show){
+//		#if UNITY_ANDROID
+//		if(Application.platform == RuntimePlatform.Android){
+//			if(balance != null){balance.Clear();}
+//			instance.Call("transferBalances", currentAct, show);
+//		}
+//#endif
+//		return;
+//	}
+
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]	
+	public static extern void uConnectWithAppId(string appId);
+#endif
+	public static void appWasRun(int androidAppId, int iOSAppId)
+	{
+#if UNITY_ANDROID
+		if(androidAppId!=null)
+		{
+			if(Application.platform == RuntimePlatform.Android){
+				instance.Call("appWasRun", androidAppId);
+			}
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			if(null!=iOSAppId)
+			{
+				uConnectWithAppId(iOSAppId.ToString());
+				if(isDebugLogEnabled){
+					Debug.Log("appWasRun has been hit");
+				}
+			}
+		}
+#endif
+	}
+
+	//This Call this to perform an Action Taken call.
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uActionTakenWithActionId(string actionId);
+#endif
+	public static void actionTaken(int androidActionId, int iOSActionId)
+	{
+#if UNITY_ANDROID
+		if(androidActionId!=null)
+		{
+			if(Application.platform == RuntimePlatform.Android){
+				instance.Call("actionTaken", androidActionId);
+			}
+		}
+#elif UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			if(iOSActionId!=null)
+			{
+				uActionTakenWithActionId(iOSActionId.ToString());
+				if(isDebugLogEnabled){
+					Debug.Log("actionTaken has been hit");
+				}
+			}
+		}
+#endif
+	}
+
+	//This is an Android only function used to aler the consumer to turn on Auto-matic updates
+	public static void upgradeAndroidApp(string currency, int amount){
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("upgradeApp", currentAct, currency, amount);
+		}
+#endif
+		return;
+	}
+
+	//This is an Android only function to alert the consumer to rate your app
+	public static void rateAndroidApp(string currency, int amount){
+#if UNITY_ANDROID
+		if(Application.platform == RuntimePlatform.Android){
+			instance.Call("rateApp", currentAct, currency, amount);
+		}
+#endif
+		return;
+	}
+
+
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uTrackInAppPurchase(string storeProductId, string storeTransactionId,
+	                                              float costPerItem, int quantity, string productTitle);
+#endif
+
+	//Called to track an In-App-Purchase
+	//Raises event Action<bool> W3iHandler.e_didTrackInAppPurchaseSucceed on completion
+	public static void trackInAppPurchase(string storeProductId, string storeTransactionId,
+	                                      float costPerItem, int quantity, string productTitle)
+	{
+#if UNITY_IPHONE
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			uTrackInAppPurchase(storeProductId, storeTransactionId, costPerItem,quantity,productTitle);	
+		}
+#endif
+		return;
+	}
+
+
+
+	
 }

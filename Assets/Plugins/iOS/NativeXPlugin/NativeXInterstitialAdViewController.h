@@ -24,6 +24,11 @@
 //(Modal view presents on and dismisses from this property if not nil)
 @property (nonatomic, unsafe_unretained) UIViewController *parentController;
 
+//Controls the presentation style of the view controller
+// Set to YES if you want modal presentation and NO if you use transparency 
+
+@property (nonatomic, assign) BOOL shouldPresentModally;
+
 //the modal view can be set to auto dismiss after a set amount of time
 @property (nonatomic, assign) NSTimeInterval autoDismissTime;
 
@@ -46,13 +51,15 @@
 
 - (void)reloadAdContent;
 
+- (void)presentFromViewController:(UIViewController *) presentingViewController;
+
 //popover style for ipad
 - (void)presentPopoverFromRect:(CGRect)rect 
                         inView:(UIView *)view 
-      permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
+      permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections  __deprecated;
 
 - (void)presentPopoverFromBarButtonItem:(UIBarButtonItem *)item 
-               permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
+               permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections __deprecated;
 
 @end
 
@@ -61,8 +68,8 @@
 @required
 - (void)didLoadContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView;
 - (void)noAdContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView;
-- (void)interstitialAdViewController:(NativeXInterstitialAdViewController *)adView 
-                  didFailWithError:(NSError *)error;
+- (void)interstitialAdViewController:(NativeXInterstitialAdViewController *)adView
+                    didFailWithError:(NSError *)error;
 
 @optional
 // called when view allows its delegate to dismiss it when it's done

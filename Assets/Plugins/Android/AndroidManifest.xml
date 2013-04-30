@@ -65,7 +65,7 @@
             android:screenOrientation="portrait" >
         </activity>
 
-        <receiver android:name="com.w3i.advertiser.ReferralReceiver" >
+        <receiver android:name="com.nativex.advertiser.ReferralReceiver" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>

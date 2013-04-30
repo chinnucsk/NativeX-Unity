@@ -47,7 +47,7 @@
  @li NSDictionary
  @li NSArray
  */
-- (NSString *)JSONRepresentation;
+- (NSString *)nativeXPublisherJSONRepresentation;
 
 @end
 

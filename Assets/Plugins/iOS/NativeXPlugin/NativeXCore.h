@@ -21,7 +21,6 @@
     bool featuredOfferIsAvailable;
     NativeXBannerAdView *bannerView;
     CGPoint myPoint;
-    NativeXInterstitialAdViewController *myInterstitial;
 }
 
 + (NativeXCore*) instance;
@@ -47,6 +46,7 @@
 -(void)close;
 
 @property (nonatomic, retain) NativeXBannerAdView *bannerView;
+@property (nonatomic, retain) NativeXInterstitialAdViewController *myInterstitial;
 @property (nonatomic, retain) UIView *pointView;
 
 @end

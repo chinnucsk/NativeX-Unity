@@ -27,6 +27,13 @@ static NativeXCore *sharedInstance;
         }
 }
 
+- (void)dealloc
+{
+    [_myInterstitial release];
+    _myInterstitial = nil;
+    [super dealloc];
+}
+
 + (NativeXCore*) instance
 {
     if(!sharedInstance) {
@@ -87,17 +94,17 @@ static NativeXCore *sharedInstance;
 {
     showInterstitial = NO;
     BOOL myOrientation = UIInterfaceOrientationIsLandscape(UnityGetGLViewController().interfaceOrientation);
-    myInterstitial = [[NativeXMonetizationSDK sharedInstance] interstitialAdViewControllerWithThemeID:nil delegate:self];
-    myInterstitial.landscapeOrientation = myOrientation;
-    myInterstitial.handleStatusBar = NO;    
+    _myInterstitial = [[[NativeXMonetizationSDK sharedInstance] interstitialAdViewControllerWithThemeID:nil delegate:self]retain];
+    _myInterstitial.landscapeOrientation = myOrientation;
+    _myInterstitial.handleStatusBar = NO;    
     
 }
 
 -(void)showCachedInterstitial
 {
-    if(myInterstitial !=NULL)
+    if(_myInterstitial !=NULL)
     {
-        [UnityGetGLViewController() presentModalViewController:myInterstitial animated:YES];
+        [_myInterstitial presentFromViewController:UnityGetGLViewController()];
     }
 }
 
@@ -113,9 +120,9 @@ static NativeXCore *sharedInstance;
     myPoint = point;
     BOOL myOrientation = UIInterfaceOrientationIsLandscape(UnityGetGLViewController().interfaceOrientation);
     
-    myInterstitial = [[NativeXMonetizationSDK sharedInstance] interstitialAdViewControllerWithThemeID:nil delegate:self];
-    myInterstitial.landscapeOrientation = myOrientation;
-    myInterstitial.handleStatusBar = NO;
+    _myInterstitial = [[[NativeXMonetizationSDK sharedInstance] interstitialAdViewControllerWithThemeID:nil delegate:self]retain];
+    _myInterstitial.landscapeOrientation = myOrientation;
+    _myInterstitial.handleStatusBar = NO;
     
 }
 
@@ -163,13 +170,13 @@ static NativeXCore *sharedInstance;
 //Publisher Delegates
 //_________________________________________________________________________________________________
 
--(void)nativeXPublisherSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable
+-(void)nativeXMonetizationSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable
 {
     //NSString *senderString = isAvailable ? @"1" : @"0";
     UnitySendMessage("NativeXHandler_iOS", "didSDKInitializeSuccessfully", "1");
 }
 
--(void)nativeXPublisherSdkDidFailToInitiate:(NSError *)error
+-(void)nativeXMonetizationSdkDidFailToInitiate:(NSError *)error
 {
     NSLog(@"SDK Inititalization failed with Error: %@", error);
     UnitySendMessage("NativeXHandler_iOS", "didSDKInitializeSuccessfully", "0");
@@ -179,7 +186,7 @@ static NativeXCore *sharedInstance;
 {
     if(balances){
         NSString *myString = @"";
-        myString = [myString stringByAppendingString:[balances JSONRepresentation]];
+        myString = [myString stringByAppendingString:[balances nativeXPublisherJSONRepresentation]];
         NSLog(@"JSON(inXCode): %@", myString);
         UnitySendMessage("NativeXHandler_iOS", "didRedeemBalancesSuccessfully", [myString UTF8String]);
     }else{
@@ -199,6 +206,7 @@ static NativeXCore *sharedInstance;
 
 -(UIViewController *)parentViewControllerForModallyPresentingInterstitialInstructionView:(UIViewController *)interstitialInstructionVC
 {
+    NSLog(@"We have hit the Instuction View");
     return UnityGetGLViewController();
 }
 
@@ -256,16 +264,10 @@ static NativeXCore *sharedInstance;
 
 -(void)didLoadContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
-//    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
-//        [myInterstitial presentPopoverFromRect:CGRectMake(myPoint.x, myPoint.y, 1, 1) inView:UnityGetGLViewController().view permittedArrowDirections:UIPopoverArrowDirectionAny];
-//    }
-//    else{
-//      [UnityGetGLViewController() presentModalViewController:myInterstitial animated:YES];
-//}
     UnitySendMessage("NativeXHandler_iOS", "doesAdContentForInterstitialAdViewExist", "1");
     if(showInterstitial == YES)
     {
-        [UnityGetGLViewController() presentModalViewController:myInterstitial animated:YES];
+        [_myInterstitial presentFromViewController:UnityGetGLViewController()];
     }
 }
 
@@ -277,7 +279,7 @@ static NativeXCore *sharedInstance;
 
 -(void)didDismissForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
-    myInterstitial = nil;
+    _myInterstitial = nil;
     UnitySendMessage("NativeXHandler_iOS", "didInterstitialDismiss", "1");
 }
 
