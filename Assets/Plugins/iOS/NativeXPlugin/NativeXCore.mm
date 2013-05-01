@@ -173,13 +173,13 @@ static NativeXCore *sharedInstance;
 -(void)nativeXMonetizationSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable
 {
     //NSString *senderString = isAvailable ? @"1" : @"0";
-    UnitySendMessage("NativeXHandler_iOS", "didSDKInitializeSuccessfully", "1");
+    UnitySendMessage("NativeXHandler", "didSDKInitializeSuccessfully", "1");
 }
 
 -(void)nativeXMonetizationSdkDidFailToInitiate:(NSError *)error
 {
     NSLog(@"SDK Inititalization failed with Error: %@", error);
-    UnitySendMessage("NativeXHandler_iOS", "didSDKInitializeSuccessfully", "0");
+    UnitySendMessage("NativeXHandler", "didSDKInitializeSuccessfully", "0");
 }
 
 -(void)didRedeemWithBalances:(NSArray *)balances andReceiptId:(NSString *)receiptId
@@ -188,13 +188,13 @@ static NativeXCore *sharedInstance;
         NSString *myString = @"";
         myString = [myString stringByAppendingString:[balances nativeXPublisherJSONRepresentation]];
         NSLog(@"JSON(inXCode): %@", myString);
-        UnitySendMessage("NativeXHandler_iOS", "didRedeemBalancesSuccessfully", [myString UTF8String]);
+        UnitySendMessage("NativeXHandler", "balanceTransfered", [myString UTF8String]);
     }else{
         NSLog(@"No Balance Returned");
     }
     if(receiptId)
     {
-        UnitySendMessage("NativeXHandler_iOS", "receiptId", [receiptId UTF8String]);
+        UnitySendMessage("NativeXHandler", "receiptId", [receiptId UTF8String]);
     }
     
 }
@@ -212,45 +212,45 @@ static NativeXCore *sharedInstance;
 
 -(void)offerWallDidDisplay
 {
-    UnitySendMessage("NativeXHandler_iOS", "didOfferWallDisplay", "1");
+    UnitySendMessage("NativeXHandler", "didOfferWallDisplay", "1");
 }
 
 -(void)offerWallWillDisplay
 {
-    UnitySendMessage("NativeXHandler_iOS", "didOfferWallDisplay", "0");
+    UnitySendMessage("NativeXHandler", "didOfferWallDisplay", "0");
 }
 
 -(void)offerWallWillRedirectUserToAppStore
 {
-    UnitySendMessage("NativeXHandler_iOS", "willOfferWallRedirectUserToAppStore", "1");
+    UnitySendMessage("NativeXHandler", "willOfferWallRedirectUserToAppStore", "1");
 }
 
 -(void)offerWallWillDismiss
 {
-    UnitySendMessage("NativeXHandler_iOS", "didOfferDismiss", "0");
+    UnitySendMessage("NativeXHandler", "didOfferDismiss", "0");
 }
 
 -(void)offerWallDidDismiss
 {
     [self.pointView removeFromSuperview];
     self.pointView = nil;
-    UnitySendMessage("NativeXHandler_iOS", "didOfferDismiss", "1");
+    UnitySendMessage("NativeXHandler", "didOfferDismiss", "1");
 }
 
 -(void)featuredOfferIsAvailable
 {
-    UnitySendMessage("NativeXHandler_iOS", "isFeaturedOfferAvailable", "1");
+    UnitySendMessage("NativeXHandler", "isFeaturedOfferAvailable", "1");
 }
 
 -(void)featuredOfferNotAvailable
 {
-    UnitySendMessage("NativeXHandler_iOS", "isFeaturedOfferAvailable", "0");
+    UnitySendMessage("NativeXHandler", "isFeaturedOfferAvailable", "0");
 }
 
 -(void)featuredOfferDidDismiss
 {
     NSLog(@"We have hit featuredOfferDidDismiss");
-    UnitySendMessage("NativeXHandler_iOS", "didFeaturedOfferDismiss", "1");
+    UnitySendMessage("NativeXHandler", "didFeaturedOfferDismiss", "1");
 }
 
 //_________________________________________________________________________________________________
@@ -264,7 +264,7 @@ static NativeXCore *sharedInstance;
 
 -(void)didLoadContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
-    UnitySendMessage("NativeXHandler_iOS", "doesAdContentForInterstitialAdViewExist", "1");
+    UnitySendMessage("NativeXHandler", "doesAdContentForInterstitialAdViewExist", "1");
     if(showInterstitial == YES)
     {
         [_myInterstitial presentFromViewController:UnityGetGLViewController()];
@@ -274,18 +274,18 @@ static NativeXCore *sharedInstance;
 -(void)noAdContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
     NSLog(@"We were unable to load any content for Interstitial.");
-    UnitySendMessage("NativeXHandler_iOS", "doesAdContentForInterstitialAdViewExist", "0");
+    UnitySendMessage("NativeXHandler", "doesAdContentForInterstitialAdViewExist", "0");
 }
 
 -(void)didDismissForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
     _myInterstitial = nil;
-    UnitySendMessage("NativeXHandler_iOS", "didInterstitialDismiss", "1");
+    UnitySendMessage("NativeXHandler", "didInterstitialDismiss", "1");
 }
 
 -(void)dismissActionForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
-    UnitySendMessage("NativeXHandler_iOS", "didInterstitialDismiss", "1");
+    UnitySendMessage("NativeXHandler", "didInterstitialDismiss", "1");
 }
 
 -(BOOL)interstitialAdViewController:(NativeXInterstitialAdViewController *)adView shouldLeaveApplicationOpeningURL:(NSURL *)url
@@ -302,7 +302,7 @@ static NativeXCore *sharedInstance;
     if(bannerView) {
         [bannerView setHidden:NO];
     }
-    UnitySendMessage("NativeXHandler_iOS", "doesAdContentForBannerAdViewExist", "1");
+    UnitySendMessage("NativeXHandler", "doesAdContentForBannerAdViewExist", "1");
 }
 
 -(void)noAdContentForBannerAdView:(NativeXBannerAdView *)adView
@@ -310,7 +310,7 @@ static NativeXCore *sharedInstance;
     if(bannerView) {
         [bannerView setHidden:YES];
     }
-    UnitySendMessage("NativeXHandler_iOS", "doesAdContentForBannerAdViewExist", "0");
+    UnitySendMessage("NativeXHandler", "doesAdContentForBannerAdViewExist", "0");
 }
 
 -(void)bannerAdView:(NativeXBannerAdView *)adView didFailWithError:(NSError *)error
@@ -330,13 +330,13 @@ static NativeXCore *sharedInstance;
 -(void)trackInAppPurchaseDidSucceedForRequest:(NativeXInAppPurchaseTrackRequest *)inAppPurchaseRequest
 {
     NSLog(@"Tracking did Succeed");
-    UnitySendMessage("NativeXHandler_iOS", "didTrackInAppPurchaseSucceed", "1");
+    UnitySendMessage("NativeXHandler", "didTrackInAppPurchaseSucceed", "1");
 }
 
 -(void)trackInAppPurchaseForRequest:(NativeXInAppPurchaseTrackRequest *)inAppPurchaseRequest didFailWithError:(NSError *)error
 {
     NSLog(@"Tracking failed with Error: %@", error);
-    UnitySendMessage("NativeXHandler_iOS", "didTrackInAppPurchaseSucceed", "0");
+    UnitySendMessage("NativeXHandler", "didTrackInAppPurchaseSucceed", "0");
 }
 
 @end
