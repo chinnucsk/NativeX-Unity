@@ -7,7 +7,7 @@ public class NativeXAndroid : MonoBehaviour {
 	public string packageName;
 	public string displayName;
 	public string publisherUserId;
-	public string actionId;
+	public int actionId;
 	
 	public NativeXAndroid(int applicationId, string packName, string disName, string pubName)
 	{

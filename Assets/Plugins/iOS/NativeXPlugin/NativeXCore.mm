@@ -46,13 +46,18 @@ static NativeXCore *sharedInstance;
 {
     [[NativeXMonetizationSDK sharedInstance] initiateWithAppId:appId andPublisherUserId:pubId];
     [[NativeXMonetizationSDK sharedInstance] setDelegate:self];
+    [[NativeXMonetizationSDK sharedInstance] setShowMessages:NO];
     
 }
 
 -(void)showOfferWall
 {
-    [[NativeXMonetizationSDK sharedInstance] setShouldBeWebOfferWall:NO];
-    [[NativeXMonetizationSDK sharedInstance] openOfferWallFromPresentingViewController:UnityGetGLViewController()];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        [sharedInstance showOfferWallFromPoint:CGPointMake(25.0, 25.0)];
+    }else{
+        [[NativeXMonetizationSDK sharedInstance] setShouldBeWebOfferWall:NO];
+        [[NativeXMonetizationSDK sharedInstance] openOfferWallFromPresentingViewController:UnityGetGLViewController()];
+    }
 }
 
 -(void)showIncentOfferWall
@@ -172,14 +177,13 @@ static NativeXCore *sharedInstance;
 
 -(void)nativeXMonetizationSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable
 {
-    //NSString *senderString = isAvailable ? @"1" : @"0";
-    UnitySendMessage("NativeXHandler", "didSDKInitializeSuccessfully", "1");
+    UnitySendMessage("NativeXHandler", "didSDKinitialize", "1");
 }
 
 -(void)nativeXMonetizationSdkDidFailToInitiate:(NSError *)error
 {
     NSLog(@"SDK Inititalization failed with Error: %@", error);
-    UnitySendMessage("NativeXHandler", "didSDKInitializeSuccessfully", "0");
+    UnitySendMessage("NativeXHandler", "didSDKinitialize", "0");
 }
 
 -(void)didRedeemWithBalances:(NSArray *)balances andReceiptId:(NSString *)receiptId
@@ -202,6 +206,7 @@ static NativeXCore *sharedInstance;
 -(void) didRedeemWithError:(NSError *)error
 {
     NSLog(@"Redemption failed with Error: %@", error);
+    UnitySendMessage("NativeXHandler", "actionFailed", "0");
 }
 
 -(UIViewController *)parentViewControllerForModallyPresentingInterstitialInstructionView:(UIViewController *)interstitialInstructionVC
@@ -212,45 +217,45 @@ static NativeXCore *sharedInstance;
 
 -(void)offerWallDidDisplay
 {
-    UnitySendMessage("NativeXHandler", "didOfferWallDisplay", "1");
+    UnitySendMessage("NativeXHandler", "actionComplete", "1");
 }
 
 -(void)offerWallWillDisplay
 {
-    UnitySendMessage("NativeXHandler", "didOfferWallDisplay", "0");
+    UnitySendMessage("NativeXHandler", "actionComplete", "1");
 }
 
 -(void)offerWallWillRedirectUserToAppStore
 {
-    UnitySendMessage("NativeXHandler", "willOfferWallRedirectUserToAppStore", "1");
+    UnitySendMessage("NativeXHandler", "userLeavingApplication", "1");
 }
 
 -(void)offerWallWillDismiss
 {
-    UnitySendMessage("NativeXHandler", "didOfferDismiss", "0");
+    UnitySendMessage("NativeXHandler", "actionComplete", "1");
 }
 
 -(void)offerWallDidDismiss
 {
     [self.pointView removeFromSuperview];
     self.pointView = nil;
-    UnitySendMessage("NativeXHandler", "didOfferDismiss", "1");
+    UnitySendMessage("NativeXHandler", "actionComplete", "1");
 }
 
 -(void)featuredOfferIsAvailable
 {
-    UnitySendMessage("NativeXHandler", "isFeaturedOfferAvailable", "1");
+    UnitySendMessage("NativeXHandler", "didFeaturedOfferLoad", "1");
 }
 
 -(void)featuredOfferNotAvailable
 {
-    UnitySendMessage("NativeXHandler", "isFeaturedOfferAvailable", "0");
+    UnitySendMessage("NativeXHandler", "didFeaturedOfferLoad", "0");
 }
 
 -(void)featuredOfferDidDismiss
 {
     NSLog(@"We have hit featuredOfferDidDismiss");
-    UnitySendMessage("NativeXHandler", "didFeaturedOfferDismiss", "1");
+    UnitySendMessage("NativeXHandler", "actionComplete", "3");
 }
 
 //_________________________________________________________________________________________________
@@ -260,11 +265,12 @@ static NativeXCore *sharedInstance;
 -(void)interstitialAdViewController:(NativeXInterstitialAdViewController *)adView didFailWithError:(NSError *)error
 {
     NSLog(@"Interstitial failed to inititialize with Error: %@", error);
+    UnitySendMessage("NativeXHandler", "actionFailed", "6");
 }
 
 -(void)didLoadContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
-    UnitySendMessage("NativeXHandler", "doesAdContentForInterstitialAdViewExist", "1");
+    UnitySendMessage("NativeXHandler", "didInterstitialLoad", "1");
     if(showInterstitial == YES)
     {
         [_myInterstitial presentFromViewController:UnityGetGLViewController()];
@@ -274,18 +280,18 @@ static NativeXCore *sharedInstance;
 -(void)noAdContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
     NSLog(@"We were unable to load any content for Interstitial.");
-    UnitySendMessage("NativeXHandler", "doesAdContentForInterstitialAdViewExist", "0");
+    UnitySendMessage("NativeXHandler", "didInterstitial", "0");
 }
 
 -(void)didDismissForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
     _myInterstitial = nil;
-    UnitySendMessage("NativeXHandler", "didInterstitialDismiss", "1");
+    UnitySendMessage("NativeXHandler", "actionComplete", "6");
 }
 
 -(void)dismissActionForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
-    UnitySendMessage("NativeXHandler", "didInterstitialDismiss", "1");
+    UnitySendMessage("NativeXHandler", "actionComplete", "6");
 }
 
 -(BOOL)interstitialAdViewController:(NativeXInterstitialAdViewController *)adView shouldLeaveApplicationOpeningURL:(NSURL *)url
@@ -302,7 +308,7 @@ static NativeXCore *sharedInstance;
     if(bannerView) {
         [bannerView setHidden:NO];
     }
-    UnitySendMessage("NativeXHandler", "doesAdContentForBannerAdViewExist", "1");
+    UnitySendMessage("NativeXHandler", "didBannerLoad", "1");
 }
 
 -(void)noAdContentForBannerAdView:(NativeXBannerAdView *)adView
@@ -310,17 +316,18 @@ static NativeXCore *sharedInstance;
     if(bannerView) {
         [bannerView setHidden:YES];
     }
-    UnitySendMessage("NativeXHandler", "doesAdContentForBannerAdViewExist", "0");
+    UnitySendMessage("NativeXHandler", "didBannerLoad", "0");
 }
 
 -(void)bannerAdView:(NativeXBannerAdView *)adView didFailWithError:(NSError *)error
 {
     NSLog(@"Banner failed with Error: %@", error);
+    UnitySendMessage("NativeXHandler", "actionFailed", "7");
 }
 
 -(BOOL)bannerAdView:(NativeXBannerAdView *)adView shouldLeaveApplicationOpeningURL:(NSURL *)url
 {
-    return YES;
+    UnitySendMessage("NativeXHandler", "userLeavingApplication", "7");
 }
 
 //_________________________________________________________________________________________________

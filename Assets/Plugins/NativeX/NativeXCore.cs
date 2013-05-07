@@ -37,17 +37,25 @@ public class NativeXCore : MonoBehaviour {
 	public static void intitialization(NativeXAndroid android, NativeXiOS iOS)
 	{
 #if UNITY_ANDROID
-		if(Application.platform == RuntimePlatform.Android){
-			Debug.Log("W3i - Initialization called");
-			instance.Call("init", currentAct, android.appId, android.displayName, android.packageName, android.publisherUserId);	
+		if(android != null){
+			if(Application.platform == RuntimePlatform.Android){
+				Debug.Log("W3i - Initialization called");
+				instance.Call("init", currentAct, android.appId, android.displayName, android.packageName, android.publisherUserId);	
+			}
+		}else{
+			Debug.Log("No NativeXAndroid object exists");
 		}
 #elif UNITY_IPHONE	
-		if(Application.platform == RuntimePlatform.IPhonePlayer){
-				uStartWithNameAndApplicationId(iOS.appName, iOS.appId, iOS.publisherUserId);	
-				if(isDebugLogEnabled){
-					Debug.Log("initialization has been hit");
-				}
+		if(iOS!=null){
+			if(Application.platform == RuntimePlatform.IPhonePlayer){
+					uStartWithNameAndApplicationId(iOS.appName, iOS.appId.ToString(), iOS.publisherUserId);	
+					if(isDebugLogEnabled){
+						Debug.Log("initialization has been hit");
+					}
 			}
+		}else{
+			Debug.Log("No NativeXiOS object exists.");
+		}
 #endif
 		return;		
 	}
@@ -330,20 +338,20 @@ public class NativeXCore : MonoBehaviour {
 	[DllImport ("__Internal")]	
 	public static extern void uConnectWithAppId(string appId);
 #endif
-	public static void appWasRun(int androidAppId, int iOSAppId)
+	public static void appWasRun(NativeXAndroid android, NativeXiOS iOS)
 	{
 #if UNITY_ANDROID
-		if(androidAppId!=null)
+		if(android.appId!=null)
 		{
 			if(Application.platform == RuntimePlatform.Android){
-				instance.Call("appWasRun", androidAppId);
+				instance.Call("appWasRun", android.appId);
 			}
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			if(null!=iOSAppId)
+			if(null!=iOS.appId)
 			{
-				uConnectWithAppId(iOSAppId.ToString());
+				uConnectWithAppId(iOS.appId.ToString());
 				if(isDebugLogEnabled){
 					Debug.Log("appWasRun has been hit");
 				}
@@ -357,20 +365,20 @@ public class NativeXCore : MonoBehaviour {
 	[DllImport ("__Internal")]
 	public static extern void uActionTakenWithActionId(string actionId);
 #endif
-	public static void actionTaken(int androidActionId, int iOSActionId)
+	public static void actionTaken(NativeXAndroid android, NativeXiOS iOS)
 	{
 #if UNITY_ANDROID
-		if(androidActionId!=null)
+		if(android.actionId!=null)
 		{
 			if(Application.platform == RuntimePlatform.Android){
-				instance.Call("actionTaken", androidActionId);
+				instance.Call("actionTaken", android.actionId);
 			}
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			if(iOSActionId!=null)
+			if(iOS.actionId!=null)
 			{
-				uActionTakenWithActionId(iOSActionId.ToString());
+				uActionTakenWithActionId(iOS.actionId.ToString());
 				if(isDebugLogEnabled){
 					Debug.Log("actionTaken has been hit");
 				}

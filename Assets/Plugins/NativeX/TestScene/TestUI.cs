@@ -10,12 +10,29 @@ public class TestUI: MonoBehaviour
 	
 	void Start()
 	{
-		iOS = new NativeXiOS("12198", "TestApp", null);
+		iOS = new NativeXiOS(12198, "TestApp", null);
 		android = new NativeXAndroid(5077, "android.PackName", "TestApp", "Test Pub");
+		iOS.actionId = 17;
+		android.actionId = 16;
 		Debug.Log("NativeX - Unity has Started");
 		NativeXCore.intitialization(android, iOS);
 	}
-	
+
+	void OnEnable()
+	{
+		NativeXHandler.e_didSDKinitialize += didSDKInititialize;
+		NativeXHandler.e_didFeaturedOfferLoad += didFeaturedOfferLoad;
+		NativeXHandler.e_didInterstitialLoad += didInterstitialLoad;
+		NativeXHandler.e_didBannerLoad += didBannerLoad;
+		NativeXHandler.e_actionCompleted += actionComplete;
+		NativeXHandler.e_actionFailed += actionFailed;
+		NativeXHandler.e_userLeavingApplication += userLeavingApplication;
+		NativeXHandler.e_balanceTransfered += balanceTransfered;
+		NativeXHandler.e_receiptId += receiptId;
+
+	}
+
+
 	void OnGUI()
 	{
 		float yPos = 5.0f;
@@ -103,13 +120,13 @@ public class TestUI: MonoBehaviour
 		
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "App Was Run" ) )
 		{
-			NativeXCore.appWasRun(5077, 12198);
+			NativeXCore.appWasRun(android, iOS);
 			Debug.Log("App Was Run has been clicked");
 		}
 		
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Action Taken" ) )
 		{
-			NativeXCore.actionTaken(16, 17);
+			NativeXCore.actionTaken(android, iOS);
 			Debug.Log("Action Taken has been clicked");
 		}
 		
@@ -133,9 +150,59 @@ public class TestUI: MonoBehaviour
 		
 		GUI.Label(new Rect(xPos, yPos += heightPlus, width, height), resultText);
 
+	}
 
+	void userLeavingApplication (bool obj)
+	{
+		resultText = "userLeavingApplication:" +obj;
+	}
+	
+	void receiptId (string obj)
+	{
+		resultText = "receiptId:" +obj;
+	}
+	
+	void balanceTransfered (List<NativeXBalance> obj)
+	{
+		resultText = "";
+		foreach(var me in obj){
+			resultText += "balanceTransfered:" +me.ToString()+"\n";
+			Debug.Log("Amout: "+ me.Amount + "-- Display Name: "+me.DisplayName+" -- External: "+me.ExternalCurrencyId+" -- ID: "+me.Id);
+		}
 
 	}
+	
+	void actionFailed (string obj)
+	{
+		resultText = "actionFailed:" +obj;
+	}
+	
+	void actionComplete (string obj)
+	{
+		resultText = "actionComplete:" +obj;
+	}
+	
+	void didInterstitialLoad (bool obj)
+	{
+		resultText = "didInterstitialLoad:" +obj;
+	}
+	
+	void didFeaturedOfferLoad (bool obj)
+	{
+		resultText = "didFeaturedOfferLoad:" +obj;
+	}
+	
+	void didSDKInititialize (bool obj)
+	{
+		resultText = "didSDKInititialize:" +obj;
+	}
+	
+	void didBannerLoad (bool obj)
+	{
+		resultText = "didBannerLoad:" +obj;
+	}
+	
+
 	
 }
 

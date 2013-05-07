@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class NativeXHandler : MonoBehaviour {
 
+	public static event Action<bool> e_didSDKinitialize;
 	public static event Action<bool> e_didInterstitialLoad;
 	public static event Action<bool> e_didFeaturedOfferLoad;
 	public static event Action<bool> e_didBannerLoad;
@@ -16,7 +17,19 @@ public class NativeXHandler : MonoBehaviour {
 	public static event Action<string> e_receiptId;
 
 
-	public static void didInterstitialLoad(string load)
+	public void didSDKinitialize(string init)
+	{
+		if(e_didSDKinitialize!=null){
+			if(init == "1"){
+				e_didSDKinitialize(true);
+			}
+			else{
+				e_didSDKinitialize(false);
+			}
+		}
+	}
+
+	public void didInterstitialLoad(string load)
 	{
 		if(e_didInterstitialLoad!=null){
 			if(load == "1"){
@@ -29,7 +42,7 @@ public class NativeXHandler : MonoBehaviour {
 
 	}
 
-	public static void didFeaturedOfferLoad(string load)
+	public void didFeaturedOfferLoad(string load)
 	{
 		if(e_didFeaturedOfferLoad!=null){
 			if(load == "1"){
@@ -41,7 +54,7 @@ public class NativeXHandler : MonoBehaviour {
 		}
 	}
 
-	public static void didBannerLoad(string load)
+	public void didBannerLoad(string load)
 	{
 		if(e_didBannerLoad!=null){
 			if(load == "1"){
@@ -53,7 +66,7 @@ public class NativeXHandler : MonoBehaviour {
 		}
 	}
 
-	public static void actionComplete(string type)
+	public void actionComplete(string type)
 	{
 		if(e_actionCompleted!=null){
 			if(type!=null){
@@ -62,7 +75,7 @@ public class NativeXHandler : MonoBehaviour {
 		}
 	}
 
-	public static void actionFailed(string type)
+	public void actionFailed(string type)
 	{
 		if(e_actionFailed!=null){
 			if(type !=null){
@@ -71,7 +84,7 @@ public class NativeXHandler : MonoBehaviour {
 		}
 	}
 
-	public static void userLeavingApplication(string leaving)
+	public void userLeavingApplication(string leaving)
 	{
 		if(e_userLeavingApplication!=null){
 			if(leaving == "1")
@@ -83,7 +96,7 @@ public class NativeXHandler : MonoBehaviour {
 		}
 	}
 
-	public static void balanceTransfered(string json)
+	public void balanceTransfered(string json)
 	{
 		if(e_balanceTransfered!=null)
 		{
@@ -100,10 +113,10 @@ public class NativeXHandler : MonoBehaviour {
 		}
 	}
 
-	public static void receiptId(string myReceipt)
+	public void receiptId(string myReceipt)
 	{
 		if(e_receiptId!=null){
-			if(myReceipt){
+			if(myReceipt!=null){
 			e_receiptId(myReceipt);
 			}
 		}

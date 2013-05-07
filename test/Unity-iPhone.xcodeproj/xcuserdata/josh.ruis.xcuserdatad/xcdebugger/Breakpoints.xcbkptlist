@@ -4,29 +4,42 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../Assets/Plugins/iOS/NativeXPlugin/NativeXCore.mm"
-         timestampString = "387401907.646766"
+         timestampString = "389546097.763974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "265"
-         endingLineNumber = "265"
+         startingLineNumber = "271"
+         endingLineNumber = "271"
          landmarkName = "-didLoadContentForInterstitialAdViewController:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../Assets/Plugins/iOS/NativeXPlugin/NativeXCore.mm"
-         timestampString = "387402146.9028"
+         timestampString = "389546097.763974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
          landmarkName = "-showFeaturedOffer"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../Assets/Plugins/iOS/NativeXPlugin/NativeXCore.mm"
+         timestampString = "389546097.763974"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "280"
+         endingLineNumber = "280"
+         landmarkName = "-noAdContentForInterstitialAdViewController:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -34,12 +47,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../Assets/Plugins/iOS/NativeXPlugin/NativeXCore.mm"
-         timestampString = "387402168.746124"
+         timestampString = "389545977.438607"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "274"
-         endingLineNumber = "274"
-         landmarkName = "-noAdContentForInterstitialAdViewController:"
+         startingLineNumber = "55"
+         endingLineNumber = "55"
+         landmarkName = "-showOfferWall"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
