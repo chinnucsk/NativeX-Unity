@@ -30,35 +30,40 @@ public class NativeXCore : MonoBehaviour {
 		}
 #endif
 	}
+
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uStartWithNameAndApplicationId(string name, string applicationId, string publisherId);
+	[DllImport ("__Internal")]
+	public static extern void uSetCoordinates(float bannerX, float bannerY, float bannerHeight, float bannerWidth, float offerWallX, float offerWallY);
 #endif
 	public static void intitialization(NativeXAndroid android, NativeXiOS iOS)
 	{
 #if UNITY_ANDROID
-		if(android != null){
+		//if(android != null){
 			if(Application.platform == RuntimePlatform.Android){
 				Debug.Log("W3i - Initialization called");
 				instance.Call("init", currentAct, android.appId, android.displayName, android.packageName, android.publisherUserId);	
 			}
-		}else{
-			Debug.Log("No NativeXAndroid object exists");
-		}
+		//}else{
+		//	Debug.Log("No NativeXAndroid object exists");
+		//}
 #elif UNITY_IPHONE	
-		if(iOS!=null){
+		//if(iOS!=null){
 			if(Application.platform == RuntimePlatform.IPhonePlayer){
-					uStartWithNameAndApplicationId(iOS.appName, iOS.appId.ToString(), iOS.publisherUserId);	
-					if(isDebugLogEnabled){
-						Debug.Log("initialization has been hit");
-					}
+				uStartWithNameAndApplicationId(iOS.appName, iOS.appId.ToString(), iOS.publisherUserId);
+			uSetCoordinates(iOS.bannerX, iOS.bannerY, iOS.bannerHeight, iOS.bannerWidth, iOS.offerWallX, iOS.offerWallY);
+				if(isDebugLogEnabled){
+					Debug.Log("initialization has been hit");
+				}
 			}
-		}else{
-			Debug.Log("No NativeXiOS object exists.");
-		}
+		//}else{
+		//	Debug.Log("No NativeXiOS object exists.");
+		//}
 #endif
 		return;		
 	}
+
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uShowOfferWall();
@@ -103,6 +108,7 @@ public class NativeXCore : MonoBehaviour {
 			}
 		}
 #endif
+
 		return;
 	}
 
@@ -255,7 +261,7 @@ public class NativeXCore : MonoBehaviour {
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
-	public static extern void uShowBanner(float x, float y, float width, float height);
+	public static extern void uShowBanner();
 #endif
 	public static void showBanner()
 	{
@@ -265,7 +271,7 @@ public class NativeXCore : MonoBehaviour {
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uShowBanner(0,0,Screen.width,Screen.height/20);
+			uShowBanner();
 			if(isDebugLogEnabled){
 				Debug.Log("showBanner has been hit");
 			}

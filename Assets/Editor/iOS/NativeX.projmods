@@ -1,0 +1,9 @@
+{
+	"group": "",
+	"libs": [],
+	"frameworks": ["MessageUI.framework", "StoreKit.framework", "MediaPlayer.framework", "SystemConfiguration.framework", "CoreGraphics.framework", "Foundation.framework", "UIKit.framework", "AdSupport.framework", "QuartzCore.framework"],
+	"headerpaths": [],					
+	"files":   [],
+	"folders": ["Plugins/iOS/NativeXPlugin"],	
+	"excludes": ["^.*.meta$", "^.*.mdown^", "^.*.pdf$", "^.*.DS_Store$"]
+}

@@ -29,15 +29,14 @@
 -(void)showOfferWall;
 -(void)showIncentOfferWall;
 -(void)showNonIncentOfferWall;
--(void)showOfferWallFromPoint:(CGPoint)point;
+-(void)showOfferWallFromPoint;
 -(void)getAndCacheFeaturedOffer;
 -(void)showCachedFeaturedOffer;
 -(void)showFeaturedOffer;
 -(void)getAndCacheInterstitial;
 -(void)showCachedInterstitial;
 -(void)showInterstitial;
--(void)showInterstitialFromPoint:(CGPoint)point;
--(void)showBannerWithRect:(CGRect)rect;
+-(void)showBanner;
 -(void)removeBanner;
 -(void)actionTaken:(NSString*)actionId;
 -(void)connectWithAppId:(NSString*)appId;
@@ -48,5 +47,10 @@
 @property (nonatomic, retain) NativeXBannerAdView *bannerView;
 @property (nonatomic, retain) NativeXInterstitialAdViewController *myInterstitial;
 @property (nonatomic, retain) UIView *pointView;
+@property (nonatomic) CGPoint bannerPoint;
+@property (nonatomic) CGPoint offerWallPoint;
+@property (nonatomic) float bannerHeight;
+@property (nonatomic) float bannerWidth;
+
 
 @end

@@ -20,6 +20,9 @@ static NativeXCore *sharedInstance;
 @implementation NativeXCore
 
 @synthesize bannerView;
+@synthesize bannerHeight;
+@synthesize bannerWidth;
+@synthesize bannerPoint;
 
 + (void)inititialize {
     if(!sharedInstance) {
@@ -53,7 +56,7 @@ static NativeXCore *sharedInstance;
 -(void)showOfferWall
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        [sharedInstance showOfferWallFromPoint:CGPointMake(25.0, 25.0)];
+        [sharedInstance showOfferWallFromPoint];
     }else{
         [[NativeXMonetizationSDK sharedInstance] setShouldBeWebOfferWall:NO];
         [[NativeXMonetizationSDK sharedInstance] openOfferWallFromPresentingViewController:UnityGetGLViewController()];
@@ -71,9 +74,9 @@ static NativeXCore *sharedInstance;
     [[NativeXMonetizationSDK sharedInstance] openNonRewardWebOfferWallFromPresentingViewController:UnityGetGLViewController()];
 }
 
--(void)showOfferWallFromPoint:(CGPoint)point
+-(void)showOfferWallFromPoint
 {
-    CGRect myRect = CGRectMake(point.x, point.y, 25.0, 2.0);
+    CGRect myRect = CGRectMake(_offerWallPoint.x, _offerWallPoint.y, 25.0, 2.0);
     _pointView = [[UIView alloc] initWithFrame:myRect];
     [UnityGetGLViewController().view addSubview:_pointView];
     [[NativeXMonetizationSDK sharedInstance] setShouldBeWebOfferWall:NO];
@@ -116,24 +119,16 @@ static NativeXCore *sharedInstance;
 -(void)showInterstitial
 {
     showInterstitial = YES;
-    [self showInterstitialFromPoint:CGPointZero];
-}
-
--(void)showInterstitialFromPoint:(CGPoint)point
-{
-    showInterstitial = YES;
-    myPoint = point;
     BOOL myOrientation = UIInterfaceOrientationIsLandscape(UnityGetGLViewController().interfaceOrientation);
     
     _myInterstitial = [[[NativeXMonetizationSDK sharedInstance] interstitialAdViewControllerWithThemeID:nil delegate:self]retain];
     _myInterstitial.landscapeOrientation = myOrientation;
     _myInterstitial.handleStatusBar = NO;
-    
 }
 
--(void) showBannerWithRect:(CGRect)rect
+-(void)showBanner
 {
-    self.bannerView = [[NativeXMonetizationSDK sharedInstance] bannerAdViewWithThemeID:nil delegate:self frame:rect];
+    self.bannerView = [[NativeXMonetizationSDK sharedInstance] bannerAdViewWithThemeID:nil delegate:self frame:CGRectMake(bannerPoint.x, bannerPoint.y, bannerWidth, bannerHeight)];
     bannerView.hidden = YES;
     [UnityGetGLViewController().view addSubview:bannerView];
     
@@ -305,6 +300,7 @@ static NativeXCore *sharedInstance;
 
 -(void)didLoadContentForBannerAdView:(NativeXBannerAdView *)adView
 {
+    bannerView = adView;
     if(bannerView) {
         [bannerView setHidden:NO];
     }
@@ -328,6 +324,7 @@ static NativeXCore *sharedInstance;
 -(BOOL)bannerAdView:(NativeXBannerAdView *)adView shouldLeaveApplicationOpeningURL:(NSURL *)url
 {
     UnitySendMessage("NativeXHandler", "userLeavingApplication", "7");
+    return YES;
 }
 
 //_________________________________________________________________________________________________

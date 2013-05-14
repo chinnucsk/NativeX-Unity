@@ -21,6 +21,7 @@ extern "C"
 	extern gpointer*	mono_aot_module_mscorlib_info; // mscorlib.dll
 #endif // !(TARGET_IPHONE_SIMULATOR)
 	void	uStartWithNameAndApplicationId();
+	void	uSetCoordinates();
 	void	uShowOfferWall();
 	void	uShowIncentOfferWall();
 	void	uShowNonIncentOfferWall();
@@ -52,6 +53,7 @@ void RegisterMonoModules()
 	mono_aot_register_module(mono_aot_module_mscorlib_info);
 
 	mono_dl_register_symbol("uStartWithNameAndApplicationId", (void*)&uStartWithNameAndApplicationId);
+	mono_dl_register_symbol("uSetCoordinates", (void*)&uSetCoordinates);
 	mono_dl_register_symbol("uShowOfferWall", (void*)&uShowOfferWall);
 	mono_dl_register_symbol("uShowIncentOfferWall", (void*)&uShowIncentOfferWall);
 	mono_dl_register_symbol("uShowNonIncentOfferWall", (void*)&uShowNonIncentOfferWall);

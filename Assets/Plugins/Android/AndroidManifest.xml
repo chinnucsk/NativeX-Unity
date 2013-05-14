@@ -11,6 +11,12 @@
         android:largeScreens="true"
         android:xlargeScreens="true"
         android:anyDensity="true"/>
+        
+        <com.nativex.MyLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   		android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:padding="10dip"
+    	android:id="@+id/rootview"/>
 
     <application
 		android:icon="@drawable/app_icon"

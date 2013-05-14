@@ -18,6 +18,14 @@ void uStartWithNameAndApplicationId(const char *name, const char *appId, const c
     [[NativeXCore instance] startWithName:GetStringParam(name) applicationId:GetStringParamOrNil(appId) publisherId:GetStringParamOrNil(pubId)];
     
 }
+void uSetCoordinates(float bannerX, float bannerY, float bannerHeight, float bannerWidth, float offerWallX, float offerWallY)
+{
+    [[NativeXCore instance] setBannerPoint:CGPointMake(bannerX, bannerY)];
+    [[NativeXCore instance] setOfferWallPoint:CGPointMake(offerWallX, offerWallY)];
+    [[NativeXCore instance] setBannerHeight:bannerHeight];
+    [[NativeXCore instance] setBannerWidth:bannerWidth];
+    
+}
 void uShowOfferWall()
 {
     [[NativeXCore instance] showOfferWall];
@@ -33,9 +41,9 @@ void uShowNonIncentOfferWall()
     [[NativeXCore instance] showNonIncentOfferWall];
 }
 
-void uShowOfferWallFromPoint(float x, float y)
+void uShowOfferWallFromPoint()
 {
-    [[NativeXCore instance] showOfferWallFromPoint:CGPointMake(x, y)];
+    [[NativeXCore instance] showOfferWallFromPoint];
 }
 
 void uGetAndCacheFeaturedOffer()
@@ -68,14 +76,9 @@ void uShowInterstitial()
     [[NativeXCore instance] showInterstitial];
 }
 
-void uShowInterstitialFromPoint(float x, float y)
+void uShowBanner()
 {
-    [[NativeXCore instance] showInterstitialFromPoint:CGPointMake(x, y)];
-}
-
-void uShowBanner(float x, float y, float width, float height)
-{
-    [[NativeXCore instance] showBannerWithRect:CGRectMake(x, y, width, height)];
+    [[NativeXCore instance] showBanner];
 }
 
 void uRemoveBanner()
