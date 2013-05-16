@@ -15,7 +15,17 @@ public class NativeXHandler : MonoBehaviour {
 	public static event Action<bool> e_userLeavingApplication;
 	public static event Action<List<NativeXBalance>> e_balanceTransfered;
 	public static event Action<string> e_receiptId;
+	public static bool buttonEnabled = false;
 
+
+	void OnGUI()
+	{
+			if (buttonEnabled) {
+						if (GUI.Button (new Rect( 0, 0, Screen.width, Screen.height ), "")) {
+								Debug.Log ("You pushed my button!");
+						}
+			}
+	}
 
 	public void didSDKinitialize(string init)
 	{
@@ -72,6 +82,9 @@ public class NativeXHandler : MonoBehaviour {
 			if(type!=null){
 				e_actionCompleted(type);
 			}
+		}
+		if (type == "6") {
+			buttonEnabled = false;
 		}
 	}
 

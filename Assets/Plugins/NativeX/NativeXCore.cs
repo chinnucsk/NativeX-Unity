@@ -224,8 +224,10 @@ public class NativeXCore : MonoBehaviour {
 
 	public static void showCachedInterstitial()
 	{
+				
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
+			NativeXHandler.buttonEnabled = true;
 			instance.Call("showCachedInterstitial", currentAct);
 		}
 #elif UNITY_IPHONE
@@ -247,6 +249,7 @@ public class NativeXCore : MonoBehaviour {
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
+			NativeXHandler.buttonEnabled = true;
 			instance.Call("showNonRewardInterstitial", currentAct);
 		}
 #elif UNITY_IPHONE

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "567B6254114A9F340000AA1F"
-               BuildableName = "test.app"
+               BuildableName = "W3iUnityTest.app"
                BlueprintName = "Unity-iPhone-simulator"
                ReferencedContainer = "container:Unity-iPhone.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "567B6254114A9F340000AA1F"
-            BuildableName = "test.app"
+            BuildableName = "W3iUnityTest.app"
             BlueprintName = "Unity-iPhone-simulator"
             ReferencedContainer = "container:Unity-iPhone.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "567B6254114A9F340000AA1F"
-            BuildableName = "test.app"
+            BuildableName = "W3iUnityTest.app"
             BlueprintName = "Unity-iPhone-simulator"
             ReferencedContainer = "container:Unity-iPhone.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "567B6254114A9F340000AA1F"
-            BuildableName = "test.app"
+            BuildableName = "W3iUnityTest.app"
             BlueprintName = "Unity-iPhone-simulator"
             ReferencedContainer = "container:Unity-iPhone.xcodeproj">
          </BuildableReference>

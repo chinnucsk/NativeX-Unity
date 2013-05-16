@@ -127,8 +127,8 @@ namespace UnityEditor.XCodeEditor
 			
 			name = System.IO.Path.GetFileNameWithoutExtension( filename );
 			path = System.IO.Path.GetDirectoryName( filename );
-						Debug.Log ("PATH: "+path);
-						string removePath = "/Editor/iOS";
+						//Debug.Log ("PATH: "+path);
+			string removePath = "/Editor/iOS";
 			path = path.Substring(0, path.LastIndexOf(removePath));
 			string contents = projectFileInfo.OpenText().ReadToEnd();
 			_datastore = JsonFx.Json.JsonReader.Deserialize<Hashtable>(contents);
