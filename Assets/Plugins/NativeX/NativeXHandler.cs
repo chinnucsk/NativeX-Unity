@@ -15,6 +15,7 @@ public class NativeXHandler : MonoBehaviour {
 	public static event Action<bool> e_userLeavingApplication;
 	public static event Action<List<NativeXBalance>> e_balanceTransfered;
 	public static event Action<string> e_receiptId;
+	public static event Action<bool> e_didPerformAction;
 	public static bool buttonEnabled = false;
 
 
@@ -134,5 +135,16 @@ public class NativeXHandler : MonoBehaviour {
 			}
 		}
 	}
+
+	public void didPerformAction(string action)
+		{
+				if (e_didPerformAction != null) {
+						if (action == "1") {
+								e_didPerformAction (true);
+						} else {
+								e_didPerformAction (false);
+						}
+				}
+		}
 
 }

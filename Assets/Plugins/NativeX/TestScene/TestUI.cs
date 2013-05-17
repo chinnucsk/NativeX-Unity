@@ -30,6 +30,7 @@ public class TestUI: MonoBehaviour
 		NativeXHandler.e_userLeavingApplication += userLeavingApplication;
 		NativeXHandler.e_balanceTransfered += balanceTransfered;
 		NativeXHandler.e_receiptId += receiptId;
+		NativeXHandler.e_didPerformAction += didPerformAction;
 
 	}
 
@@ -203,7 +204,10 @@ public class TestUI: MonoBehaviour
 		resultText = "didBannerLoad:" +obj;
 	}
 	
-
+	void didPerformAction(bool action)
+		{
+				resultText = "didPerformAction: " + action;
+		}
 	
 }
 
