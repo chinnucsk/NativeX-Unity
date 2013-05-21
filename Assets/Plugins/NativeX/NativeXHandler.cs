@@ -101,12 +101,11 @@ public class NativeXHandler : MonoBehaviour {
 	public void userLeavingApplication(string leaving)
 	{
 		if(e_userLeavingApplication!=null){
-			if(leaving == "1")
-			{
-				e_userLeavingApplication(true);
-			}else{
-				e_userLeavingApplication(false);
-			}
+						if (leaving == "0") {
+								e_userLeavingApplication (false);
+						} else {
+								e_userLeavingApplication (true);
+						}
 		}
 	}
 
