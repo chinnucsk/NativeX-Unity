@@ -130,9 +130,11 @@
 @optional
 - (void)offerWallWillDisplay;
 - (void)offerWallDidDisplay;
-- (void)offerWallWillRedirectUserToAppStore;
 - (void)offerWallWillDismiss;
 - (void)offerWallDidDismiss;
+
+// Called when offerwall or ad offers are about to redirect
+- (void)offerWallWillRedirectUserToAppStore;
 
 - (void)featuredOfferNotAvailable;
 - (void)featuredOfferIsAvailable;

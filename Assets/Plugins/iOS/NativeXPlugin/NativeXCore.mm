@@ -7,7 +7,8 @@
 //
 
 #import "NativeXCore.h"
-#import "NSObject-SBJSON.h"
+//#import "NSObject-SBJSON.h"
+#import "NativeXPublisherSBJsonWriter.h"
 
 UIViewController *UnityGetGLViewController();
 
@@ -43,13 +44,13 @@ static NativeXCore *sharedInstance;
         return sharedInstance = [[[self class]alloc]init];
     }
     return sharedInstance;
+    
 }
 
 -(void)startWithName:(NSString*)name applicationId:(NSString*)appId publisherId:(NSString*)pubId
 {
     [[NativeXMonetizationSDK sharedInstance] initiateWithAppId:appId andPublisherUserId:pubId];
     [[NativeXMonetizationSDK sharedInstance] setDelegate:self];
-    [[NativeXMonetizationSDK sharedInstance] setShowMessages:NO];
     
 }
 
@@ -184,10 +185,12 @@ static NativeXCore *sharedInstance;
 -(void)didRedeemWithBalances:(NSArray *)balances andReceiptId:(NSString *)receiptId
 {
     if(balances){
-        NSString *myString = @"";
-        myString = [myString stringByAppendingString:[balances nativeXPublisherJSONRepresentation]];
-        NSLog(@"JSON(inXCode): %@", myString);
-        UnitySendMessage("NativeXHandler", "balanceTransfered", [myString UTF8String]);
+        NativeXPublisherSBJsonWriter *jsonWriter = [NativeXPublisherSBJsonWriter new];
+        NSString *json = [jsonWriter stringWithObject:balances];
+        if (!json)
+            NSLog(@"-JSONRepresentation failed. Error trace is: %@", [jsonWriter errorTrace]);
+        NSLog(@"JSON(inXCode): %@", json);
+        UnitySendMessage("NativeXHandler", "balanceTransfered", [json UTF8String]);
     }else{
         NSLog(@"No Balance Returned");
     }
