@@ -109,11 +109,26 @@ static NativeXCore *sharedInstance;
     
 }
 
+-(void)getAndCacheEnhancedInterstitial:(NSString*)name
+{
+    showInterstitial = NO;
+    [[NativeXMonetizationSDK sharedInstance] cacheInterstitialAdWithName:name delegate:self];
+    
+}
+
 -(void)showCachedInterstitial
 {
     if(_myInterstitial !=NULL)
     {
         [_myInterstitial presentFromViewController:UnityGetGLViewController()];
+    }
+}
+
+-(void)showCachedEnhancedInterstitial:(NSString*)name
+{
+    if(_myAdView !=NULL)
+    {
+        [_myAdView displayInterstitial];
     }
 }
 
@@ -125,6 +140,12 @@ static NativeXCore *sharedInstance;
     _myInterstitial = [[[NativeXMonetizationSDK sharedInstance] interstitialAdViewControllerWithThemeID:nil delegate:self]retain];
     _myInterstitial.landscapeOrientation = myOrientation;
     _myInterstitial.handleStatusBar = NO;
+}
+
+-(void)showEnhancedInterstitial:(NSString *)name
+{
+    showInterstitial = YES;
+    [[NativeXMonetizationSDK sharedInstance] showInterstitialAd];
 }
 
 -(void)showBanner
@@ -295,6 +316,36 @@ static NativeXCore *sharedInstance;
 -(BOOL)interstitialAdViewController:(NativeXInterstitialAdViewController *)adView shouldLeaveApplicationOpeningURL:(NSURL *)url
 {
     return YES;
+}
+
+//_________________________________________________________________________________________________
+//Enhanced Interstitial Delegates
+//_________________________________________________________________________________________________
+-(void) didLoadEnhancedAdView:(NativeXEnhancedAdView *)adView withName:(NSString *)name
+{
+    if(adView)
+    {
+        _myAdView = adView;
+    }
+    
+    UnitySendMessage("NativeXHandler", "didInterstitialLoad", "1");
+    if(showInterstitial == YES)
+    {
+        //[_myAdView presentFromViewController:UnityGetGLViewController()];
+        [_myAdView displayInterstitial];
+    }
+}
+
+-(void)noAdContentForEnhancedAdView:(NativeXEnhancedAdView *)adView
+{
+    NSLog(@"We were unable to load any content for Enhanced Interstitial.");
+    UnitySendMessage("NativeXHandler", "didInterstitialLoad", "0");
+}
+
+-(void)enhancedAdView:(NativeXEnhancedAdView *)adView didFailWithError:(NSError *)error
+{
+    NSLog(@"Enhanced Interstitial failed to inititialize with Error: %@", error);
+    UnitySendMessage("NativeXHandler", "actionFailed", "6");
 }
 
 //_________________________________________________________________________________________________

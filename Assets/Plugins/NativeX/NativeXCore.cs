@@ -11,6 +11,8 @@ using System.Runtime.InteropServices;
 public class NativeXCore : MonoBehaviour {
 	
 	public static bool isDebugLogEnabled = true;
+	protected static NativeXiOS iOSDevice;
+	protected static NativeXAndroid androidDevice;
 	
 #if UNITY_ANDROID
 	private static AndroidJavaObject instance;
@@ -43,6 +45,7 @@ public class NativeXCore : MonoBehaviour {
 	{
 #if UNITY_ANDROID
 		//if(android != null){
+			androidDevice = android;
 			if(Application.platform == RuntimePlatform.Android){
 				Debug.Log("W3i - Initialization called");
 				instance.Call("init", currentAct, android.appId, android.displayName, android.packageName, android.publisherUserId);	
@@ -52,9 +55,10 @@ public class NativeXCore : MonoBehaviour {
 		//}
 #elif UNITY_IPHONE	
 		//if(iOS!=null){
+			iOSDevice = iOS;
 			if(Application.platform == RuntimePlatform.IPhonePlayer){
 				uStartWithNameAndApplicationId(iOS.appName, iOS.appId.ToString(), iOS.publisherUserId);
-			uSetCoordinates(iOS.bannerX, iOS.bannerY, iOS.bannerHeight, iOS.bannerWidth, iOS.offerWallX, iOS.offerWallY);
+				uSetCoordinates(iOS.bannerX, iOS.bannerY, iOS.bannerHeight, iOS.bannerWidth, iOS.offerWallX, iOS.offerWallY);
 				if(isDebugLogEnabled){
 					Debug.Log("initialization has been hit");
 				}
@@ -201,9 +205,11 @@ public class NativeXCore : MonoBehaviour {
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uGetAndCacheInterstitial();
+	[DllImport ("__Internal")]
+	public static extern void uGetAndCacheEnhancedInterstitial(string name);
 #endif
 
-	public static void getAndCacheInterstitial()
+	public static void getAndCacheInterstitial(string name)
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
@@ -211,7 +217,11 @@ public class NativeXCore : MonoBehaviour {
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uGetAndCacheInterstitial();
+			if(iOSDevice.useOldAds){
+				uGetAndCacheInterstitial();
+			}else{
+				uGetAndCacheEnhancedInterstitial(name);	
+			}
 			if(isDebugLogEnabled){
 				Debug.Log("showInterstitial has been hit");
 			}
@@ -222,9 +232,11 @@ public class NativeXCore : MonoBehaviour {
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uShowCachedInterstitial();
+	[DllImport ("__Internal")]
+	public static extern void uShowCachedEnhancedInterstitial(string name);
 #endif
 
-	public static void showCachedInterstitial()
+	public static void showCachedInterstitial(string name)
 	{
 				
 #if UNITY_ANDROID
@@ -234,7 +246,12 @@ public class NativeXCore : MonoBehaviour {
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uShowCachedInterstitial();
+			if(iOSDevice.useOldAds){
+				uShowCachedInterstitial();
+			}else{
+				uShowCachedEnhancedInterstitial(name);	
+			}
+			
 			if(isDebugLogEnabled){
 				Debug.Log("showInterstitial has been hit");
 			}
@@ -245,9 +262,11 @@ public class NativeXCore : MonoBehaviour {
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uShowInterstitial();
+	[DllImport ("__Internal")]
+	public static extern void uShowEnhancedInterstitial(string name);
 #endif
 
-	public static void showInterstitial()
+	public static void showInterstitial(string name)
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
@@ -256,7 +275,12 @@ public class NativeXCore : MonoBehaviour {
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uShowInterstitial();
+			if(iOSDevice.useOldAds){
+				uShowInterstitial();
+			}else{
+				uShowEnhancedInterstitial(name);
+			}
+			
 			if(isDebugLogEnabled){
 				Debug.Log("showInterstitial has been hit");
 			}
@@ -349,20 +373,20 @@ public class NativeXCore : MonoBehaviour {
 	[DllImport ("__Internal")]	
 	public static extern void uConnectWithAppId(string appId);
 #endif
-	public static void appWasRun(NativeXAndroid android, NativeXiOS iOS)
+	public static void appWasRun()
 	{
 #if UNITY_ANDROID
-		if(android.appId!=null)
+		if(androidDevice.appId!=null)
 		{
 			if(Application.platform == RuntimePlatform.Android){
-				instance.Call("appWasRun", android.appId);
+				instance.Call("appWasRun", androidDevice.appId);
 			}
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			if(null!=iOS.appId)
+			if(null!=iOSDevice.appId)
 			{
-				uConnectWithAppId(iOS.appId.ToString());
+				uConnectWithAppId(iOSDevice.appId.ToString());
 				if(isDebugLogEnabled){
 					Debug.Log("appWasRun has been hit");
 				}
@@ -376,20 +400,20 @@ public class NativeXCore : MonoBehaviour {
 	[DllImport ("__Internal")]
 	public static extern void uActionTakenWithActionId(string actionId);
 #endif
-	public static void actionTaken(NativeXAndroid android, NativeXiOS iOS)
+	public static void actionTaken()
 	{
 #if UNITY_ANDROID
-		if(android.actionId!=null)
+		if(androidDevice.actionId!=null)
 		{
 			if(Application.platform == RuntimePlatform.Android){
-				instance.Call("actionTaken", android.actionId);
+				instance.Call("actionTaken", androidDevice.actionId);
 			}
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			if(iOS.actionId!=null)
+			if(iOSDevice.actionId!=null)
 			{
-				uActionTakenWithActionId(iOS.actionId.ToString());
+				uActionTakenWithActionId(iOSDevice.actionId.ToString());
 				if(isDebugLogEnabled){
 					Debug.Log("actionTaken has been hit");
 				}

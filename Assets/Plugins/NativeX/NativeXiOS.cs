@@ -7,6 +7,7 @@ public class NativeXiOS : MonoBehaviour {
 	public string publisherUserId;
 	public string appName;
 	public int actionId;
+	public bool useOldAds = false;
 	public float bannerX=0f;
 	public float bannerY=0f;
 	public float bannerHeight = Screen.height/20f;

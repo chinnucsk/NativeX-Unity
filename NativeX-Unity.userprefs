@@ -1,6 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/NativeX/TestScene/TestUI.cs">
+    <Files>
+      <File FileName="Assets/Plugins/NativeX/TestScene/TestUI.cs" Line="91" Column="45" />
+      <File FileName="Assets/Plugins/NativeX/NativeXCore.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/NativeX/NativeXAndroid.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/NativeX/NativeXiOS.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/iOS/NativeXPlugin/NativeXMonetizationSDKBundle.bundle/nativeXMraidController.js" Line="509" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

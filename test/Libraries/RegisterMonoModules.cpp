@@ -29,8 +29,11 @@ extern "C"
 	void	uShowCachedFeaturedOffer();
 	void	uShowFeaturedOffer();
 	void	uGetAndCacheInterstitial();
+	void	uGetAndCacheEnhancedInterstitial();
 	void	uShowCachedInterstitial();
+	void	uShowCachedEnhancedInterstitial();
 	void	uShowInterstitial();
+	void	uShowEnhancedInterstitial();
 	void	uShowBanner();
 	void	uRemoveBanner();
 	void	uRedeemCurrency();
@@ -61,8 +64,11 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("uShowCachedFeaturedOffer", (void*)&uShowCachedFeaturedOffer);
 	mono_dl_register_symbol("uShowFeaturedOffer", (void*)&uShowFeaturedOffer);
 	mono_dl_register_symbol("uGetAndCacheInterstitial", (void*)&uGetAndCacheInterstitial);
+	mono_dl_register_symbol("uGetAndCacheEnhancedInterstitial", (void*)&uGetAndCacheEnhancedInterstitial);
 	mono_dl_register_symbol("uShowCachedInterstitial", (void*)&uShowCachedInterstitial);
+	mono_dl_register_symbol("uShowCachedEnhancedInterstitial", (void*)&uShowCachedEnhancedInterstitial);
 	mono_dl_register_symbol("uShowInterstitial", (void*)&uShowInterstitial);
+	mono_dl_register_symbol("uShowEnhancedInterstitial", (void*)&uShowEnhancedInterstitial);
 	mono_dl_register_symbol("uShowBanner", (void*)&uShowBanner);
 	mono_dl_register_symbol("uRemoveBanner", (void*)&uRemoveBanner);
 	mono_dl_register_symbol("uRedeemCurrency", (void*)&uRedeemCurrency);

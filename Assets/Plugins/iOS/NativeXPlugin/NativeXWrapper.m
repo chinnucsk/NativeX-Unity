@@ -66,14 +66,29 @@ void uGetAndCacheInterstitial()
     [[NativeXCore instance] getAndCacheInterstitial];
 }
 
+void uGetAndCacheEnhancedInterstitial(const char* name)
+{
+    [[NativeXCore instance] getAndCacheEnhancedInterstitial:GetStringParamOrNil(name)];
+}
+
 void uShowCachedInterstitial()
 {
     [[NativeXCore instance] showCachedInterstitial];
 }
 
+void uShowCachedEnhancedInterstitial(const char* name)
+{
+    [[NativeXCore instance] showCachedEnhancedInterstitial:GetStringParamOrNil(name)];
+}
+
 void uShowInterstitial()
 {
     [[NativeXCore instance] showInterstitial];
+}
+
+void uShowEnhancedInterstitial(const char* name)
+{
+    [[NativeXCore instance] showEnhancedInterstitial:GetStringParamOrNil(name)];
 }
 
 void uShowBanner()

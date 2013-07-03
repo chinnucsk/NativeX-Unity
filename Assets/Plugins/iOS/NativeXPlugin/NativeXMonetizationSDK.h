@@ -12,13 +12,12 @@
 #import <UIKit/UIKit.h>
 #import "NativeXBannerAdView.h"
 #import "NativeXInterstitialAdViewController.h"
+#import "NativeXEnhancedAdView.h"
 #import "NativeXInAppPurchaseTrackRequest.h"
 
 @protocol NativeXMonetizationDelegate;
 
-/** Main class for NativeXPublisherSDK
-
-*/
+/** Main class for NativeXPublisherSDK */
 @interface NativeXMonetizationSDK : NSObject
 
 @property (nonatomic, copy) NSString *gameTitle;
@@ -35,72 +34,157 @@
 
 #pragma mark - Publisher API
 
-// This method provides access to the NativeXPublisherSDK object.
-// Returns: a singleton NativeXPublisherSDK instance.
+/** 
+ This method provides access to the NativeXMonetizationSDK shared object.
+ 
+ @return a singleton NativeXMonetizationSDK instance.
+ */
 + (id)sharedInstance;
 
-// This method provides access to NativeX SDK version
-// Returns: NativeXPublisherSDK Version 
+/** 
+ This method provides access to the NativeXMonetizationSDK version
+ 
+ @return NativeXMonetizationSDK Version
+ */
 - (NSString *)getSDKVersion;
 
-// Create a session with NativeX offer network
-// param: appID -- is the unique Identifier you receive from NativeX
-// param: publisherUserId -- Id used for publisher currency postback if used
-// call this in AppDidFinishLaunchingWithOptions
+/**
+ Create a session with NativeX offer network.
+ Call this in AppDidFinishLaunchingWithOptions{}
+ 
+ @param appID is the unique Identifier you receive from NativeX
+ @param publisherUserId Id used for publisher currency postback if used
+ */
 - (void)initiateWithAppId:(NSString *)appId
        andPublisherUserId:(NSString *)publisherUserId;
 
-// iPhone offer wall presentation
+/**
+ Reward Discovery Wall presentation 
+ 
+ @param presentingViewController View Controller the SDK will use as parent to Discovery Wall
+ */
 - (void)openOfferWallFromPresentingViewController:(UIViewController *)presentingViewController;
 
-// iPad offer wall presentation
+/**
+ Native iPad reward Discovery Wall presentation
+ 
+ @param popoverView UIView used to position the popOver and direction arrows
+ */
 - (void)openOfferWallFromPopoverView:(UIView *)popoverView;
 
-// Gets and shows a featured offer alert
+/**
+ Non-reward web Discovery Wall presentation
+ 
+ @param presentingViewController View Controller the SDK will use as the parent of non-reward discovery wall
+ */
+- (void)openNonRewardWebOfferWallFromPresentingViewController:(UIViewController *)presentingViewController;
+
+/**
+ Gets and shows a featured offer alert
+ */
 - (void)showFeaturedOffer;
 
-// Gets and caches a featured offer alert
+/**
+ Gets and caches a featured offer alert
+ */
 - (void)getAndCacheFeaturedOffer;
 
-// Shows cached featured offer alert
+/**
+ Shows cached featured offer alert
+ */
 - (void)showCachedFeaturedOffer;
 
-// Call redeem currency 
+/** 
+ Call redeem currency
+ */
 - (void)redeemCurrency;
 
-// Banner Ad View
+#pragma mark - Enhanced Interstitial Ad Methods (MRAID)
+
+/**
+ Show an MRAID complient interstitial from key window
+ */
+- (void)showInterstitialAd;
+
+/**
+ Show an MRAID complient interstitial with placement name from key window, used for targeting certain ads for cetain in app placements.
+ 
+ @param name   NSString representation of placement name
+ */
+- (void)showInterstitialAdWithName:(NSString *)name;
+
+/**
+ Cache an MRAID complient interstitial
+ 
+ @param name   NSString representation of placement name (optional)
+ @param delegate        used to set delegate
+ */
+- (void)cacheInterstitialAdWithName:(NSString *) name delegate:(id<NativeXEnhancedAdViewDelegate>)aDelegate;
+
+#pragma mark - Regular Ad methods
+/**
+ Initialize an instance of Banner Ad
+ 
+ @param themeId
+ @param delegate
+ @param frame
+ 
+ @return NativeXBannerAdView 
+ */
 - (NativeXBannerAdView *)bannerAdViewWithThemeID:(NSNumber *)themeID
                                         delegate:(id<NativeXBannerAdViewDelegate>)delegate
                                            frame:(CGRect)frame;
 
-// Interstitial Ad View
+/**
+ Initialize an instance of Interstitial Ad
+ 
+ @param themeId
+ @param delegate
+ 
+ @return NativeXInterstitialAdView
+ */
 - (NativeXInterstitialAdViewController *)interstitialAdViewControllerWithThemeID:(NSNumber *)themeID
                                                                         delegate:(id<NativeXInterstitialAdViewControllerDelegate>)delegate;
 
+#pragma mark - In App Purchase Tracking (IAPT) methods
+/**
+ Used for In App Purchase Tracking
+ 
+ @param trackRecord
+ @param delegate
+ 
+ @return NativeXInAppPurchaseRequest
+ */
 - (NativeXInAppPurchaseTrackRequest *)trackInAppPurchaseWithTrackRecord:(NativeXInAppPurchaseTrackRecord *)trackRecord
                                                                delegate:(id<NativeXInAppPurchaseTrackDelegate>)delegate; //if the delegate is about to be deallocated clear return value's delegate property
 
-// Non-reward web offer wall iPhone and iPad presentation
-- (void)openNonRewardWebOfferWallFromPresentingViewController:(UIViewController *)presentingViewController;
 
-// returns the sessionId
+/**
+ Use this method to get sessionId for current session
+ @return the current sessionId
+ */
 - (NSString *) getSessionId;
 
 
 #pragma mark - NativeX Advertiser API
-// NativeX Advertiser API
 
-// call this to connect to NativeX and inform that the app "appID" was run
-// param: appID -- is the unique Identifier you receive from NativeX
-// call this in AppDidFinishLaunchingWithOptions
-- (void) connectWithAppID:(NSString*)appID;
+/**
+ call this to connect to NativeX and inform that the app "appID" was run
+ call this in AppDidFinishLaunchingWithOptions
+ 
+ @param appID -- is the unique Application Identifier you receive from NativeX
+*/
+- (void)connectWithAppID:(NSString*)appID;
 
-// call this to connect to NativeX and inform that the app "actionID" was performed
-// param: actionID -- is the unique Identifier for the action, that you receive from NativeX
+/**
+ call this to connect to NativeX and inform that the app "actionID" was performed
+ @param actionID is the unique Action Identifier for the action, that you receive from NativeX
+ */
 - (void)actionTakenWithActionID:(NSString*)actionID;
 
-// call this when you no longer need the shared connector object
-// usually in AppWillTerminate
+/**
+ call this when you no longer need the shared connector object, usually in AppWillTerminate
+ */
 - (void)close;
 
 @end
@@ -111,33 +195,65 @@
 
 @required
 
-// Called when the Offer Wall is successfully initialized.
+/** Called when the Offer Wall is successfully initialized. 
+ @param isAvailable -- boolean flag to let developer know if discovery wall is available
+ */
 - (void)nativeXMonetizationSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable;
 
-// Called when there is an error trying to initialize the Offer Wall.
+/** Called when there is an error trying to initialize the Offer Wall. 
+ @param error
+ */
 - (void)nativeXMonetizationSdkDidFailToInitiate: (NSError *) error;
 
-// Called when the currency redemption is successfull.
+/** Called when the currency redemption is successfull. 
+ @param balances -- an array
+ @param recieptId 
+ */
 - (void)didRedeemWithBalances:(NSArray *)balances
                  andReceiptId:(NSString *)receiptId;
 
-// Called when the currency redemption is unsuccessfull.
+/** Called when the currency redemption is unsuccessfull. 
+ @param error
+ */
 - (void)didRedeemWithError:(NSError *)error;
 
-// Called when publisher is about to display modally fullscreen instruction view for a chosen featured offer
+/** Called when publisher is about to display modally fullscreen instruction view for a chosen featured offer 
+ @param interstitialInstructionVC   This VCs view will be added at the child to the Vc that is returned in this method.
+ @return UIViewController VC used to present modal interstitial screens
+ */
 - (UIViewController *)parentViewControllerForModallyPresentingInterstitialInstructionView:(UIViewController *)interstitialInstructionVC;
 
 @optional
+/* Called when offerwall is about to display */
 - (void)offerWallWillDisplay;
+
+/* Called after offerwall did display*/
 - (void)offerWallDidDisplay;
+
+/* Called when offerwall is about to dismiss */
 - (void)offerWallWillDismiss;
+
+/* Called after offerwall did dismiss */
 - (void)offerWallDidDismiss;
 
-// Called when offerwall or ad offers are about to redirect
-- (void)offerWallWillRedirectUserToAppStore;
+/* Called when offerwall or ad offers are about to redirect 
+ * DEPRECATED - please use "SDKWillRedirectUser" 
+ */
+- (void)offerWallWillRedirectUserToAppStore __deprecated;
 
+/* Called when redirecting user away from application (safari or app store) */
+- (void)SDKWillRedirectUser;
+
+/* Called when a freatured offer alert is not available */
 - (void)featuredOfferNotAvailable;
+
+/* Called when a featured offer alert is available */
 - (void)featuredOfferIsAvailable;
+
+/* Called after featured offer alert did dismiss */
 - (void)featuredOfferDidDismiss;
+
+//TODO: add enhanceAd delegate AdWillShow method so devs can pause game play
+- (void)adWillShow;
 
 @end

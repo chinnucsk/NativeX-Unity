@@ -8,6 +8,7 @@ public class NativeXAndroid : MonoBehaviour {
 	public string displayName;
 	public string publisherUserId;
 	public int actionId;
+	public bool useOldAds = false;
 	
 	public NativeXAndroid(int applicationId, string packName, string disName, string pubName)
 	{

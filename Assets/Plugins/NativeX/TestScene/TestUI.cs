@@ -82,19 +82,19 @@ public class TestUI: MonoBehaviour
 
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Get And Cache Interstitial" ) )
 		{
-			NativeXCore.getAndCacheInterstitial();
+			NativeXCore.getAndCacheInterstitial("Blah");
 			Debug.Log("Get And Cache Interstitial has been clicked");
 		}
 
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Cached Interstitial" ) )
 		{
-			NativeXCore.showCachedInterstitial();
+			NativeXCore.showCachedInterstitial("Blah");
 			Debug.Log("Show Cached Interstitial has been clicked");
 		}
 
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Interstitial" ) )
 		{
-			NativeXCore.showInterstitial();
+			NativeXCore.showInterstitial("Blah");
 			Debug.Log("Show Interstitial has been clicked.");
 		}
 
@@ -122,13 +122,13 @@ public class TestUI: MonoBehaviour
 		
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "App Was Run" ) )
 		{
-			NativeXCore.appWasRun(android, iOS);
+			NativeXCore.appWasRun();
 			Debug.Log("App Was Run has been clicked");
 		}
 		
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Action Taken" ) )
 		{
-			NativeXCore.actionTaken(android, iOS);
+			NativeXCore.actionTaken();
 			Debug.Log("Action Taken has been clicked");
 		}
 		
