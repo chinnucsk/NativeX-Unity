@@ -278,7 +278,7 @@ static NativeXCore *sharedInstance;
 -(void)noAdContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
 {
     NSLog(@"We were unable to load any content for Interstitial.");
-    UnitySendMessage("NativeXHandler", "didInterstitial", "0");
+    UnitySendMessage("NativeXHandler", "didInterstitialLoad", "0");
 }
 
 -(void)didDismissForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView

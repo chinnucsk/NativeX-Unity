@@ -1,43 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/NativeX/NativeXCore.cs">
-    <Files>
-      <File FileName="../Survival/Assets/Scripts/MainCharacterController.cs" Line="6" Column="8" />
-      <File FileName="Assets/Plugins/NativeX/NativeXCore.cs" Line="225" Column="21" />
-      <File FileName="Assets/Plugins/NativeX/NativeXAndroid.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/NativeX/NativeXiOS.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/NativeX/TestScene/TestUI.cs" Line="1" Column="1" />
-      <File FileName="../NativeX-Android-SDK/Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="../NativeX-Android-SDK/Assets/Plugins/NativeXAndroid/Manifest.xml" Line="1" Column="1" />
-      <File FileName="../NativeX-Android-SDK/Assets/Plugins/NativeXAndroid/NaviteXCore_Android.cs" Line="1" Column="1" />
-      <File FileName="../NativeX-Android-SDK/Assets/Plugins/NativeXAndroid/TestScene/NativeXTestUI.cs" Line="1" Column="1" />
-      <File FileName="../NativeX-iOS-SDK/Assets/Plugins/NativeX_iOS/TestScene/NativeXTestSceneUI.cs" Line="154" Column="39" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp-firstpass" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Plugins" expanded="True">
-                <Node name="NativeX" expanded="True">
-                  <Node name="TestScene" expanded="True" />
-                  <Node name="NativeXCore.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State expanded="True" selected="True" />
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>Click here to add a new watch</Value>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

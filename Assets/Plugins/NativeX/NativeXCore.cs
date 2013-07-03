@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-//Version:3.0.1
+//Version:3.0.2
 //AndroidSDK: 4.1.1
 //iOS SDK: 4.1.1
 
