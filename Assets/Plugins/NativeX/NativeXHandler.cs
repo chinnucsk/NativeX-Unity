@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class NativeXHandler : MonoBehaviour {
 
 	public static event Action<bool> e_didSDKinitialize;
-	public static event Action<bool> e_didInterstitialLoad;
+	public static event Action<string> e_didInterstitialLoad;
 	public static event Action<bool> e_didFeaturedOfferLoad;
 	public static event Action<bool> e_didBannerLoad;
 	public static event Action<string> e_actionCompleted;
@@ -46,8 +46,11 @@ public class NativeXHandler : MonoBehaviour {
 			if(load == "1"){
 				e_didInterstitialLoad(true);
 			}
-			else{
+			else if (load == "0"){
 				e_didInterstitialLoad(false);
+			}
+			else{
+				e_didInterstitialLoad(load);	
 			}
 		}
 

@@ -88,7 +88,7 @@ void uShowInterstitial()
 
 void uShowEnhancedInterstitial(const char* name)
 {
-    [[NativeXCore instance] showEnhancedInterstitial:GetStringParamOrNil(name)];
+    [[NativeXCore instance] showEnhancedInsterstitial:GetStringParamOrNil(name)];
 }
 
 void uShowBanner()

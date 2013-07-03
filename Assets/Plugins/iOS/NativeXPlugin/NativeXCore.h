@@ -55,7 +55,7 @@
 @property (nonatomic) CGPoint offerWallPoint;
 @property (nonatomic) float bannerHeight;
 @property (nonatomic) float bannerWidth;
-@property (nonatomic, retain) NSMutableArray *interstitialArray;
+@property (nonatomic, retain) NSDictionary *interstitialDic;
 
 
 @end
