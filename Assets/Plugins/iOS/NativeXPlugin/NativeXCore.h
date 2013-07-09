@@ -33,12 +33,9 @@
 -(void)getAndCacheFeaturedOffer;
 -(void)showCachedFeaturedOffer;
 -(void)showFeaturedOffer;
--(void)getAndCacheInterstitial;
--(void)getAndCacheEnhancedInterstitial:(NSString*)name;
--(void)showCachedInterstitial;
--(void)showCachedEnhancedInterstitial:(NSString*)name;
--(void)showInterstitial;
--(void)showEnhancedInterstitial:(NSString*)name;
+-(void)getAndCacheInterstitial:(NSString*)name;
+-(void)showCachedInterstitial:(NSString*)name;
+-(void)showInterstitial:(NSString*)name;
 -(void)showBanner;
 -(void)removeBanner;
 -(void)actionTaken:(NSString*)actionId;

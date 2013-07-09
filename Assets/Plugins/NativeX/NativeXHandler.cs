@@ -7,8 +7,7 @@ using System.Collections.Generic;
 public class NativeXHandler : MonoBehaviour {
 
 	public static event Action<bool> e_didSDKinitialize;
-	public static event Action<bool> e_didInterstitialLoad;
-	public static event Action<string> e_interstitialLoaded;
+	public static event Action<string> e_didInterstitialLoad;
 	public static event Action<bool> e_didFeaturedOfferLoad;
 	public static event Action<bool> e_didBannerLoad;
 	public static event Action<string> e_actionCompleted;
@@ -41,18 +40,10 @@ public class NativeXHandler : MonoBehaviour {
 		}
 	}
 
-	public void didInterstitialLoad(string load)
+	public void didInterstitialLoad(string i_name)
 	{
 		if(e_didInterstitialLoad!=null){
-			if(load == "INTERSTITIAL_LOADED"){
-				e_didInterstitialLoad(true);
-			}
-			else if (load == "NO_INTERSTITIAL_LOADED"){
-				e_didInterstitialLoad(false);
-			}
-			else{
-				e_interstitialLoaded(load);	
-			}
+			e_didInterstitialLoad(i_name);
 		}
 
 	}

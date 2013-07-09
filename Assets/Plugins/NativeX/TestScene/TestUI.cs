@@ -24,7 +24,6 @@ public class TestUI: MonoBehaviour
 		NativeXHandler.e_didSDKinitialize += didSDKInititialize;
 		NativeXHandler.e_didFeaturedOfferLoad += didFeaturedOfferLoad;
 		NativeXHandler.e_didInterstitialLoad += didInterstitialLoad;
-		NativeXHandler.e_interstitialLoaded += interstitialLoaded;
 		NativeXHandler.e_didBannerLoad += didBannerLoad;
 		NativeXHandler.e_actionCompleted += actionComplete;
 		NativeXHandler.e_actionFailed += actionFailed;
@@ -188,14 +187,9 @@ public class TestUI: MonoBehaviour
 		resultText = "actionComplete:" +obj;
 	}
 	
-	void didInterstitialLoad (bool obj)
+	void didInterstitialLoad (string obj)
 	{
 		resultText = "didInterstitialLoad:" +obj;
-	}
-	
-	void interstitialLoaded(string obj)
-	{
-		resultText = "interstitialLoaded: " +obj;	
 	}
 	
 	void didFeaturedOfferLoad (bool obj)

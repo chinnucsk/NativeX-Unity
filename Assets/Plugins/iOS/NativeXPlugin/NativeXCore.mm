@@ -99,46 +99,21 @@ static NativeXCore *sharedInstance;
     [[NativeXMonetizationSDK sharedInstance] showFeaturedOffer];
 }
 
--(void)getAndCacheInterstitial
-{
-    showInterstitial = NO;
-    BOOL myOrientation = UIInterfaceOrientationIsLandscape(UnityGetGLViewController().interfaceOrientation);
-    _myInterstitial = [[[NativeXMonetizationSDK sharedInstance] interstitialAdViewControllerWithThemeID:nil delegate:self]retain];
-    _myInterstitial.landscapeOrientation = myOrientation;
-    _myInterstitial.handleStatusBar = NO;    
-    
-}
 
--(void)getAndCacheEnhancedInterstitial:(NSString*)name
+-(void)getAndCacheInterstitial:(NSString*)name
 {
     showInterstitial = NO;
     [[NativeXMonetizationSDK sharedInstance] cacheInterstitialAdWithName:name delegate:self];
 }
 
--(void)showCachedInterstitial
-{
-    if(_myInterstitial !=NULL)
-    {
-        [_myInterstitial presentFromViewController:UnityGetGLViewController()];
-    }
-}
 
--(void)showCachedEnhancedInterstitial:(NSString*)name
+-(void)showCachedInterstitial:(NSString*)name
 {
     [[NativeXMonetizationSDK sharedInstance] showInterstitialAdWithName:name];
 }
 
--(void)showInterstitial
-{
-    showInterstitial = YES;
-    BOOL myOrientation = UIInterfaceOrientationIsLandscape(UnityGetGLViewController().interfaceOrientation);
-    
-    _myInterstitial = [[[NativeXMonetizationSDK sharedInstance] interstitialAdViewControllerWithThemeID:nil delegate:self]retain];
-    _myInterstitial.landscapeOrientation = myOrientation;
-    _myInterstitial.handleStatusBar = NO;
-}
 
--(void)showEnhancedInterstitial:(NSString *)name
+-(void)showInterstitial:(NSString *)name
 {
     showInterstitial = YES;
     [[NativeXMonetizationSDK sharedInstance] cacheInterstitialAdWithName:name delegate:self];
@@ -274,47 +249,6 @@ static NativeXCore *sharedInstance;
 }
 
 //_________________________________________________________________________________________________
-//Interstitial Delegates
-//_________________________________________________________________________________________________
-
--(void)interstitialAdViewController:(NativeXInterstitialAdViewController *)adView didFailWithError:(NSError *)error
-{
-    NSLog(@"Interstitial failed to inititialize with Error: %@", error);
-    UnitySendMessage("NativeXHandler", "actionFailed", "6");
-}
-
--(void)didLoadContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
-{
-    UnitySendMessage("NativeXHandler", "didInterstitialLoad", "INTERSTITIAL_LOADED");
-    if(showInterstitial == YES)
-    {
-        [_myInterstitial presentFromViewController:UnityGetGLViewController()];
-    }
-}
-
--(void)noAdContentForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
-{
-    NSLog(@"We were unable to load any content for Interstitial.");
-    UnitySendMessage("NativeXHandler", "didInterstitialLoad", "NO_INTERSTITIAL_LOADED");
-}
-
--(void)didDismissForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
-{
-    _myInterstitial = nil;
-    UnitySendMessage("NativeXHandler", "actionComplete", "6");
-}
-
--(void)dismissActionForInterstitialAdViewController:(NativeXInterstitialAdViewController *)adView
-{
-    UnitySendMessage("NativeXHandler", "actionComplete", "6");
-}
-
--(BOOL)interstitialAdViewController:(NativeXInterstitialAdViewController *)adView shouldLeaveApplicationOpeningURL:(NSURL *)url
-{
-    return YES;
-}
-
-//_________________________________________________________________________________________________
 //Enhanced Interstitial Delegates
 //_________________________________________________________________________________________________
 -(void) didLoadEnhancedAdView:(NativeXEnhancedAdView *)adView withName:(NSString *)name
@@ -339,7 +273,11 @@ static NativeXCore *sharedInstance;
 -(void)enhancedAdView:(NativeXEnhancedAdView *)adView didFailWithError:(NSError *)error
 {
     NSLog(@"Enhanced Interstitial failed to inititialize with Error: %@", error);
-    UnitySendMessage("NativeXHandler", "actionFailed", "6");
+    if(adView.name){
+        UnitySendMessage("NativeXHandler", "actionFailed", [adView.name UTF8String]);
+    }else{
+        UnitySendMessage("NativeXHandler", "actionFailed", "6");
+    }
 }
 
 -(void) enhancedAdViewWillDisplay:(NativeXEnhancedAdView *)adView
@@ -354,11 +292,11 @@ static NativeXCore *sharedInstance;
 
 -(void) enhancedAdViewDidDismiss:(NativeXEnhancedAdView *)adView
 {
-//    if(adView.name){
-//        UnitySendMessage("NativeXHandler", "actionComplete", [adView.name UTF8String]);
-//    }else{
+   if(adView.name){
+        UnitySendMessage("NativeXHandler", "actionComplete", [adView.name UTF8String]);
+    }else{
         UnitySendMessage("NativeXHandler", "actionComplete", "6");
-//    }
+    }
     adView = nil;
 }
 
