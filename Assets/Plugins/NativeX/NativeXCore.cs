@@ -205,9 +205,7 @@ public class NativeXCore : MonoBehaviour {
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
-	public static extern void uGetAndCacheInterstitial();
-	[DllImport ("__Internal")]
-	public static extern void uGetAndCacheEnhancedInterstitial(string name);
+	public static extern void uGetAndCacheInterstitial(string name);
 #endif
 
 	public static void getAndCacheInterstitial(string name)
@@ -221,7 +219,7 @@ public class NativeXCore : MonoBehaviour {
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uGetAndCacheEnhancedInterstitial(name);	
+			uGetAndCacheInterstitial(name);	
 		}
 #endif
 		if(isDebugLogEnabled){
@@ -231,9 +229,7 @@ public class NativeXCore : MonoBehaviour {
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
-	public static extern void uShowCachedInterstitial();
-	[DllImport ("__Internal")]
-	public static extern void uShowCachedEnhancedInterstitial(string name);
+	public static extern void uShowCachedInterstitial(string name);
 #endif
 
 	public static void showCachedInterstitial(string name)
@@ -248,7 +244,7 @@ public class NativeXCore : MonoBehaviour {
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uShowCachedEnhancedInterstitial(name);		
+			uShowCachedInterstitial(name);		
 		}
 #endif
 		if(isDebugLogEnabled){
@@ -258,9 +254,7 @@ public class NativeXCore : MonoBehaviour {
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
-	public static extern void uShowInterstitial();
-	[DllImport ("__Internal")]
-	public static extern void uShowEnhancedInterstitial(string name);
+	public static extern void uShowInterstitial(string name);
 #endif
 
 	public static void showInterstitial(string name)
@@ -274,7 +268,7 @@ public class NativeXCore : MonoBehaviour {
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uShowEnhancedInterstitial(name);
+			uShowInterstitial(name);
 		}
 #endif
 		if(isDebugLogEnabled){

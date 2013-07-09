@@ -17,21 +17,72 @@ bl p_1
 Lme_0:
 	.align 2
 Lm_1:
+NativeXAndroid_ToString:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,44,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . -4
+	.byte 0,0,159,231,8,16,160,227
+bl p_2
+
+	.byte 0,16,160,225,32,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - .
+	.byte 2,32,159,231,0,16,160,227
+bl p_3
+
+	.byte 32,0,155,229,28,0,139,229,24,0,139,229,28,0,138,226
+bl p_4
+
+	.byte 0,32,160,225,28,0,155,229,1,16,160,227
+bl p_3
+
+	.byte 24,0,155,229,0,16,160,225,20,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 4
+	.byte 2,32,159,231,2,16,160,227
+bl p_3
+
+	.byte 20,0,155,229,0,16,160,225,16,16,139,229,16,32,154,229,3,16,160,227
+bl p_3
+
+	.byte 16,0,155,229,0,16,160,225,12,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 8
+	.byte 2,32,159,231,4,16,160,227
+bl p_3
+
+	.byte 12,0,155,229,0,16,160,225,8,16,139,229,20,32,154,229,5,16,160,227
+bl p_3
+
+	.byte 8,0,155,229,0,16,160,225,4,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 12
+	.byte 2,32,159,231,6,16,160,227
+bl p_3
+
+	.byte 4,0,155,229,0,16,160,225,0,16,139,229,24,32,154,229,7,16,160,227
+bl p_3
+
+	.byte 0,0,155,229
+bl p_5
+
+	.byte 44,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
+
+Lme_1:
+	.align 2
+Lm_2:
 NativeXBalance__ctor:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,10,0,160,225
 bl p_1
 
 	.byte 0,0,160,227,24,0,138,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . -4
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 16
 	.byte 0,0,159,231,0,0,144,229,16,0,138,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . -4
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 16
 	.byte 0,0,159,231,0,0,144,229,20,0,138,229,0,0,160,227,28,0,138,229,4,208,139,226,0,13,189,232,8,112,157,229
 	.byte 0,160,157,232
 
-Lme_1:
+Lme_2:
 	.align 2
-Lm_2:
+Lm_3:
 NativeXBalance__ctor_int_string_string_int:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,20,208,77,226,13,176,160,225,0,160,160,225,0,16,139,229
@@ -41,181 +92,181 @@ bl p_1
 	.byte 0,0,155,229,24,0,138,229,4,0,155,229,16,0,138,229,8,0,155,229,20,0,138,229,12,0,155,229,28,0,138,229
 	.byte 20,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
 
-Lme_2:
+Lme_3:
 	.align 2
-Lm_3:
+Lm_4:
 NativeXBalance_convertJson_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,112,93,45,233,8,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - .
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 20
 	.byte 0,0,159,231,10,16,160,225
-bl p_2
-bl p_3
+bl p_6
+bl p_7
 
 	.byte 0,128,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 4
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 24
 	.byte 8,128,159,231,10,0,160,225
-bl p_4
+bl p_8
 
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 8
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 28
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 0,16,160,225,0,0,155,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 12
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 32
 	.byte 2,32,159,231,0,32,146,229,8,32,129,229,1,160,160,225,0,80,160,225,0,64,160,227,11,0,0,234,12,0,149,229
 	.byte 4,0,80,225,16,0,0,155,4,1,160,225,0,0,133,224,16,0,128,226,0,96,144,229,10,0,160,225,6,16,160,225
 	.byte 0,224,154,229
-bl p_6
+bl p_10
 
 	.byte 1,64,132,226,12,0,149,229,0,0,84,225,240,255,255,186,10,0,160,225,8,208,139,226,112,13,189,232,8,112,157,229
 	.byte 0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 118,6,0,2
-
-Lme_3:
-	.align 2
-Lm_4:
-NativeXBalance_getAmount:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,0,0,155,229
-	.byte 24,0,128,226
-bl p_8
-
-	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_4:
 	.align 2
 Lm_5:
+NativeXBalance_getAmount:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,0,0,155,229
+	.byte 24,0,128,226
+bl p_4
+
+	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+
+Lme_5:
+	.align 2
+Lm_6:
 NativeXBalance_setAmount_int:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 4,16,155,229,0,0,155,229,24,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_5:
+Lme_6:
 	.align 2
-Lm_6:
+Lm_7:
 NativeXBalance_getDisplayName:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,0,0,155,229
 	.byte 16,0,144,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_6:
+Lme_7:
 	.align 2
-Lm_7:
+Lm_8:
 NativeXBalance_setDisplayName_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 4,16,155,229,0,0,155,229,16,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_7:
+Lme_8:
 	.align 2
-Lm_8:
+Lm_9:
 NativeXBalance_getExternalCurrencyId:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,0,0,155,229
 	.byte 20,0,144,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_8:
+Lme_9:
 	.align 2
-Lm_9:
+Lm_a:
 NativeXBalance_setExternalCurrencyId_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 4,16,155,229,0,0,155,229,20,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_9:
+Lme_a:
 	.align 2
-Lm_a:
+Lm_b:
 NativeXBalance_getId:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,0,0,155,229
 	.byte 28,0,128,226
-bl p_8
+bl p_4
 
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_a:
+Lme_b:
 	.align 2
-Lm_b:
+Lm_c:
 NativeXBalance_setId_int:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 4,16,155,229,0,0,155,229,28,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_b:
+Lme_c:
 	.align 2
-Lm_c:
+Lm_d:
 NativeXBalance_clear:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,160,227
 	.byte 24,0,138,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . -4
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 16
 	.byte 0,0,159,231,0,0,144,229,16,0,138,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . -4
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 16
 	.byte 0,0,159,231,0,0,144,229,20,0,138,229,0,0,160,227,28,0,138,229,4,208,139,226,0,13,189,232,8,112,157,229
 	.byte 0,160,157,232
-
-Lme_c:
-	.align 2
-Lm_d:
-NativeXBalance_ToString:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,44,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 16
-	.byte 0,0,159,231,8,16,160,227
-bl p_9
-
-	.byte 0,16,160,225,36,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 20
-	.byte 2,32,159,231,0,16,160,227
-bl p_10
-
-	.byte 36,0,155,229,32,0,139,229,28,0,139,229,28,0,138,226
-bl p_8
-
-	.byte 0,32,160,225,32,0,155,229,1,16,160,227
-bl p_10
-
-	.byte 28,0,155,229,0,16,160,225,24,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 24
-	.byte 2,32,159,231,2,16,160,227
-bl p_10
-
-	.byte 24,0,155,229,0,16,160,225,20,16,139,229,16,32,154,229,3,16,160,227
-bl p_10
-
-	.byte 20,0,155,229,0,16,160,225,16,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 28
-	.byte 2,32,159,231,4,16,160,227
-bl p_10
-
-	.byte 16,0,155,229,0,16,160,225,12,16,139,229,20,32,154,229,5,16,160,227
-bl p_10
-
-	.byte 12,0,155,229,0,16,160,225,8,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 32
-	.byte 2,32,159,231,6,16,160,227
-bl p_10
-
-	.byte 8,0,155,229,4,0,139,229,0,0,139,229,24,0,138,226
-bl p_8
-
-	.byte 0,32,160,225,4,0,155,229,7,16,160,227
-bl p_10
-
-	.byte 0,0,155,229
-bl p_11
-
-	.byte 44,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
 
 Lme_d:
 	.align 2
 Lm_e:
+NativeXBalance_ToString:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,44,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . -4
+	.byte 0,0,159,231,8,16,160,227
+bl p_2
+
+	.byte 0,16,160,225,36,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.byte 2,32,159,231,0,16,160,227
+bl p_3
+
+	.byte 36,0,155,229,32,0,139,229,28,0,139,229,28,0,138,226
+bl p_4
+
+	.byte 0,32,160,225,32,0,155,229,1,16,160,227
+bl p_3
+
+	.byte 28,0,155,229,0,16,160,225,24,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 40
+	.byte 2,32,159,231,2,16,160,227
+bl p_3
+
+	.byte 24,0,155,229,0,16,160,225,20,16,139,229,16,32,154,229,3,16,160,227
+bl p_3
+
+	.byte 20,0,155,229,0,16,160,225,16,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 44
+	.byte 2,32,159,231,4,16,160,227
+bl p_3
+
+	.byte 16,0,155,229,0,16,160,225,12,16,139,229,20,32,154,229,5,16,160,227
+bl p_3
+
+	.byte 12,0,155,229,0,16,160,225,8,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 48
+	.byte 2,32,159,231,6,16,160,227
+bl p_3
+
+	.byte 8,0,155,229,4,0,139,229,0,0,139,229,24,0,138,226
+bl p_4
+
+	.byte 0,32,160,225,4,0,155,229,7,16,160,227
+bl p_3
+
+	.byte 0,0,155,229
+bl p_5
+
+	.byte 44,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
+
+Lme_e:
+	.align 2
+Lm_f:
 NativeXCore__ctor:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,0,0,155,229
@@ -223,53 +274,53 @@ bl p_1
 
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_e:
+Lme_f:
 	.align 2
-Lm_f:
+Lm_10:
 NativeXCore__cctor:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,1,16,160,227,0,16,192,229,0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_f:
+Lme_10:
 	.align 2
-Lm_12:
+Lm_13:
 NativeXCore_intitialization_NativeXAndroid_NativeXiOS:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,36,208,77,226,13,176,160,225,16,0,139,229,1,160,160,225
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 40
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 56
 	.byte 0,0,159,231,0,160,128,229
 bl p_13
 
 	.byte 8,0,80,227,49,0,0,26,20,0,154,229,24,0,139,229,24,0,138,226
-bl p_8
+bl p_4
 
 	.byte 0,16,160,225,24,0,155,229,16,32,154,229
 bl p_14
 
-	.byte 9,10,154,237,192,122,183,238,10,10,154,237,192,106,183,238,11,10,154,237,192,90,183,238,12,10,154,237,192,74,183,238
-	.byte 13,10,154,237,192,58,183,238,14,10,154,237,192,42,183,238,199,11,183,238,2,10,13,237,8,0,29,229,198,11,183,238
+	.byte 8,10,154,237,192,122,183,238,9,10,154,237,192,106,183,238,10,10,154,237,192,90,183,238,11,10,154,237,192,74,183,238
+	.byte 12,10,154,237,192,58,183,238,13,10,154,237,192,42,183,238,199,11,183,238,2,10,13,237,8,0,29,229,198,11,183,238
 	.byte 2,10,13,237,8,16,29,229,197,11,183,238,2,10,13,237,8,32,29,229,196,11,183,238,2,10,13,237,8,48,29,229
 	.byte 195,11,183,238,0,10,141,237,194,11,183,238,1,10,141,237
 bl p_15
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 44
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 60
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 36,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
 
-Lme_12:
+Lme_13:
 	.align 2
-Lm_14:
+Lm_15:
 NativeXCore_showRewardOfferWall:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
@@ -280,17 +331,17 @@ bl p_16
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 48
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 64
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_14:
+Lme_15:
 	.align 2
-Lm_16:
+Lm_17:
 NativeXCore_showRewardWebOfferwall:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
@@ -301,17 +352,17 @@ bl p_17
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
-	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
+	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 68
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_16:
+Lme_17:
 	.align 2
-Lm_18:
+Lm_19:
 NativeXCore_showNonRewardWebOfferwall:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
@@ -322,17 +373,17 @@ bl p_18
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 56
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 72
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_18:
+Lme_19:
 	.align 2
-Lm_1a:
+Lm_1b:
 NativeXCore_getAndCacheFeaturedOffer:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
@@ -343,17 +394,17 @@ bl p_19
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 60
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 76
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_1a:
+Lme_1b:
 	.align 2
-Lm_1c:
+Lm_1d:
 NativeXCore_showCachedFeaturedOffer:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
@@ -364,36 +415,36 @@ bl p_20
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 64
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 80
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_1c:
+Lme_1d:
 	.align 2
-Lm_1e:
+Lm_1f:
 NativeXCore_showFeaturedOffer:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
 bl p_13
 
-	.byte 8,0,80,227,13,0,0,26
+	.byte 8,0,80,227,0,0,0,26
 bl p_21
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 68
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 84
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_1e:
+Lme_1f:
 	.align 2
 Lm_21:
 NativeXCore_getAndCacheInterstitial_string:
@@ -401,151 +452,127 @@ NativeXCore_getAndCacheInterstitial_string:
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229
 bl p_13
 
-	.byte 8,0,80,227,25,0,0,26
-bl p_12
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 40
-	.byte 0,0,159,231,0,0,144,229,32,0,208,229,0,0,80,227,1,0,0,10
+	.byte 8,0,80,227,1,0,0,26,0,0,155,229
 bl p_22
-
-	.byte 1,0,0,234,0,0,155,229
-bl p_23
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 72
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 88
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_21:
 	.align 2
-Lm_24:
+Lm_23:
 NativeXCore_showCachedInterstitial_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229
 bl p_13
 
-	.byte 8,0,80,227,25,0,0,26
+	.byte 8,0,80,227,1,0,0,26,0,0,155,229
+bl p_23
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 40
-	.byte 0,0,159,231,0,0,144,229,32,0,208,229,0,0,80,227,1,0,0,10
-bl p_24
-
-	.byte 1,0,0,234,0,0,155,229
-bl p_25
-bl p_12
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 72
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 92
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_24:
+Lme_23:
 	.align 2
-Lm_27:
+Lm_25:
 NativeXCore_showInterstitial_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229
 bl p_13
 
-	.byte 8,0,80,227,25,0,0,26
+	.byte 8,0,80,227,1,0,0,26,0,0,155,229
+bl p_24
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 40
-	.byte 0,0,159,231,0,0,144,229,32,0,208,229,0,0,80,227,1,0,0,10
-bl p_26
-
-	.byte 1,0,0,234,0,0,155,229
-bl p_27
-bl p_12
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 72
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 96
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_27:
+Lme_25:
 	.align 2
-Lm_29:
+Lm_27:
 NativeXCore_showBanner:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
 bl p_13
 
 	.byte 8,0,80,227,13,0,0,26
-bl p_28
+bl p_25
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 76
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_29:
+Lme_27:
 	.align 2
-Lm_2b:
+Lm_29:
 NativeXCore_removeBanner:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
 bl p_13
 
 	.byte 8,0,80,227,13,0,0,26
-bl p_29
+bl p_26
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 80
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 104
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_2b:
+Lme_29:
 	.align 2
-Lm_2d:
+Lm_2b:
 NativeXCore_redeemCurrency:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
 bl p_13
 
 	.byte 8,0,80,227,13,0,0,26
-bl p_30
+bl p_27
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 84
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 108
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_2d:
+Lme_2b:
 	.align 2
-Lm_2f:
+Lm_2d:
 NativeXCore_appWasRun:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
@@ -555,23 +582,23 @@ bl p_13
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 40
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 56
 	.byte 0,0,159,231,0,0,144,229,24,0,128,226
-bl p_8
-bl p_31
+bl p_4
+bl p_28
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 88
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_2f:
+Lme_2d:
 	.align 2
-Lm_31:
+Lm_2f:
 NativeXCore_actionTaken:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225
@@ -581,39 +608,39 @@ bl p_13
 bl p_12
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 40
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 56
 	.byte 0,0,159,231,0,0,144,229,28,0,128,226
-bl p_8
-bl p_32
+bl p_4
+bl p_29
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 36
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 52
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 92
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 116
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_31:
+Lme_2f:
 	.align 2
-Lm_32:
+Lm_30:
 NativeXCore_upgradeAndroidApp_string_int:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_32:
+Lme_30:
 	.align 2
-Lm_33:
+Lm_31:
 NativeXCore_rateAndroidApp_string_int:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_33:
+Lme_31:
 	.align 2
-Lm_35:
+Lm_33:
 NativeXCore_trackInAppPurchase_string_string_single_int_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,40,208,77,226,13,176,160,225,16,0,139,229,20,16,139,229
@@ -622,13 +649,13 @@ bl p_13
 
 	.byte 8,0,80,227,10,0,0,26,6,10,155,237,192,42,183,238,16,0,155,229,20,16,155,229,194,11,183,238,2,10,13,237
 	.byte 8,32,29,229,28,48,155,229,32,192,155,229,0,192,141,229
-bl p_33
+bl p_30
 
 	.byte 40,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_35:
+Lme_33:
 	.align 2
-Lm_36:
+Lm_34:
 NativeXHandler__ctor:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,0,0,155,229
@@ -636,880 +663,822 @@ bl p_1
 
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_36:
+Lme_34:
 	.align 2
-Lm_37:
+Lm_35:
 NativeXHandler__cctor:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225,0,208,139,226,0,9,189,232,8,112,157,229
 	.byte 0,160,157,232
 
-Lme_37:
+Lme_35:
 	.align 2
-Lm_38:
+Lm_36:
 NativeXHandler_add_e_didSDKinitialize_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 96
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 96
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
+
+	.byte 120,6,0,2
+
+Lme_36:
+	.align 2
+Lm_37:
+NativeXHandler_remove_e_didSDKinitialize_System_Action_1_bool:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
+	.byte 0,0,159,231,0,0,144,229,10,16,160,225
+bl p_32
+
+	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
+	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
+	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
+bl p_11
+
+	.byte 120,6,0,2
+
+Lme_37:
+	.align 2
+Lm_38:
+NativeXHandler_add_e_didInterstitialLoad_System_Action_1_string:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
+	.byte 0,0,159,231,0,0,144,229,10,16,160,225
+bl p_31
+
+	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
+	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
+	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_38:
 	.align 2
 Lm_39:
-NativeXHandler_remove_e_didSDKinitialize_System_Action_1_bool:
+NativeXHandler_remove_e_didInterstitialLoad_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 96
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 96
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_39:
 	.align 2
 Lm_3a:
-NativeXHandler_add_e_didInterstitialLoad_System_Action_1_bool:
+NativeXHandler_add_e_didFeaturedOfferLoad_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 104
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 104
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_3a:
 	.align 2
 Lm_3b:
-NativeXHandler_remove_e_didInterstitialLoad_System_Action_1_bool:
+NativeXHandler_remove_e_didFeaturedOfferLoad_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 104
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 104
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_3b:
 	.align 2
 Lm_3c:
-NativeXHandler_add_e_interstitialLoaded_System_Action_1_string:
+NativeXHandler_add_e_didBannerLoad_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 108
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 108
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_3c:
 	.align 2
 Lm_3d:
-NativeXHandler_remove_e_interstitialLoaded_System_Action_1_string:
+NativeXHandler_remove_e_didBannerLoad_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 108
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 108
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_3d:
 	.align 2
 Lm_3e:
-NativeXHandler_add_e_didFeaturedOfferLoad_System_Action_1_bool:
+NativeXHandler_add_e_actionCompleted_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 116
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 116
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_3e:
 	.align 2
 Lm_3f:
-NativeXHandler_remove_e_didFeaturedOfferLoad_System_Action_1_bool:
+NativeXHandler_remove_e_actionCompleted_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 116
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 116
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_3f:
 	.align 2
 Lm_40:
-NativeXHandler_add_e_didBannerLoad_System_Action_1_bool:
+NativeXHandler_add_e_actionFailed_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_40:
 	.align 2
 Lm_41:
-NativeXHandler_remove_e_didBannerLoad_System_Action_1_bool:
+NativeXHandler_remove_e_actionFailed_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_41:
 	.align 2
 Lm_42:
-NativeXHandler_add_e_actionCompleted_System_Action_1_string:
+NativeXHandler_add_e_userLeavingApplication_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
-	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
+	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_42:
 	.align 2
 Lm_43:
-NativeXHandler_remove_e_actionCompleted_System_Action_1_string:
+NativeXHandler_remove_e_userLeavingApplication_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
-	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
+	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_43:
 	.align 2
 Lm_44:
-NativeXHandler_add_e_actionFailed_System_Action_1_string:
+NativeXHandler_add_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 156
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 160
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 156
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_44:
 	.align 2
 Lm_45:
-NativeXHandler_remove_e_actionFailed_System_Action_1_string:
+NativeXHandler_remove_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 156
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 160
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 156
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_45:
 	.align 2
 Lm_46:
-NativeXHandler_add_e_userLeavingApplication_System_Action_1_bool:
+NativeXHandler_add_e_receiptId_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 164
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
-	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
+	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 164
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_46:
 	.align 2
 Lm_47:
-NativeXHandler_remove_e_userLeavingApplication_System_Action_1_bool:
+NativeXHandler_remove_e_receiptId_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 164
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
-	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
+	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 164
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_47:
 	.align 2
 Lm_48:
-NativeXHandler_add_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
+NativeXHandler_add_e_didPerformAction_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 168
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
+bl p_31
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 168
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_48:
 	.align 2
 Lm_49:
-NativeXHandler_remove_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
+NativeXHandler_remove_e_didPerformAction_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 168
 	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
+bl p_32
 
 	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
 	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 168
 	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
+bl p_11
 
 	.byte 120,6,0,2
 
 Lme_49:
 	.align 2
 Lm_4a:
-NativeXHandler_add_e_receiptId_System_Action_1_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
-	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
-
-	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
-	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
-	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
-
-	.byte 120,6,0,2
-
-Lme_4a:
-	.align 2
-Lm_4b:
-NativeXHandler_remove_e_receiptId_System_Action_1_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
-	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
-
-	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 112
-	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
-	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
-
-	.byte 120,6,0,2
-
-Lme_4b:
-	.align 2
-Lm_4c:
-NativeXHandler_add_e_didPerformAction_System_Action_1_bool:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
-	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_34
-
-	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
-	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
-	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
-
-	.byte 120,6,0,2
-
-Lme_4c:
-	.align 2
-Lm_4d:
-NativeXHandler_remove_e_didPerformAction_System_Action_1_bool:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
-	.byte 0,0,159,231,0,0,144,229,10,16,160,225
-bl p_35
-
-	.byte 0,160,160,225,0,0,90,227,9,0,0,10,0,0,154,229,0,0,144,229,8,0,144,229,12,0,144,229,0,16,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 100
-	.byte 1,16,159,231,1,0,80,225,8,0,0,27,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
-	.byte 0,0,159,231,0,160,128,229,4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232,14,16,160,225,0,0,159,229
-bl p_7
-
-	.byte 120,6,0,2
-
-Lme_4d:
-	.align 2
-Lm_4e:
 NativeXHandler_OnGUI:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,80,208,77,226,13,176,160,225,48,0,139,229,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 172
 	.byte 0,0,159,231,0,0,208,229,0,0,80,227,68,0,0,10,0,42,159,237,0,0,0,234,0,0,0,0,194,42,183,238
 	.byte 18,43,139,237,0,42,159,237,0,0,0,234,0,0,0,0,194,42,183,238,16,43,139,237
-bl p_36
+bl p_33
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,14,43,139,237
-bl p_37
+bl p_34
 
 	.byte 14,59,155,237,16,75,155,237,18,91,155,237,16,10,0,238,192,10,184,238,192,42,183,238,0,0,160,227,16,0,139,229
 	.byte 0,0,160,227,20,0,139,229,0,0,160,227,24,0,139,229,0,0,160,227,28,0,139,229,16,0,139,226,197,11,183,238
 	.byte 2,10,13,237,8,16,29,229,196,11,183,238,2,10,13,237,8,32,29,229,195,11,183,238,2,10,13,237,8,48,29,229
 	.byte 194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 16,0,155,229,32,0,139,229,20,0,155,229,36,0,139,229,24,0,155,229,40,0,139,229,28,0,155,229,44,0,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . -4
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 16
 	.byte 0,0,159,231,0,192,144,229,32,0,155,229,36,16,155,229,40,32,155,229,44,48,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,4,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 156
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 176
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 80,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_4e:
+Lme_4a:
 	.align 2
-Lm_4f:
+Lm_4b:
 NativeXHandler_didSDKinitialize_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 96
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,26,0,0,10,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 160
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 180
 	.byte 1,16,159,231,4,0,155,229
-bl p_40
+bl p_37
 
 	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 96
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
 	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 96
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
 	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
 	.byte 8,112,157,229,0,160,157,232
+
+Lme_4b:
+	.align 2
+Lm_4c:
+NativeXHandler_didInterstitialLoad_string:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,8,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,4,16,155,229,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
+	.byte 8,112,157,229,0,160,157,232
+
+Lme_4c:
+	.align 2
+Lm_4d:
+NativeXHandler_didFeaturedOfferLoad_string:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,26,0,0,10,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 180
+	.byte 1,16,159,231,4,0,155,229
+bl p_37
+
+	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
+	.byte 8,112,157,229,0,160,157,232
+
+Lme_4d:
+	.align 2
+Lm_4e:
+NativeXHandler_didBannerLoad_string:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,26,0,0,10,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 180
+	.byte 1,16,159,231,4,0,155,229
+bl p_37
+
+	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 140
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
+	.byte 8,112,157,229,0,160,157,232
+
+Lme_4e:
+	.align 2
+Lm_4f:
+NativeXHandler_actionComplete_string:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,12,208,77,226,13,176,160,225,0,0,139,229,1,160,160,225
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,10,0,0,10,0,0,90,227,8,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,10,16,160,225,15,224,160,225,12,240,146,229,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 184
+	.byte 1,16,159,231,10,0,160,225
+bl p_37
+
+	.byte 0,0,80,227,5,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 172
+	.byte 0,0,159,231,0,16,160,227,0,16,192,229,12,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
 
 Lme_4f:
 	.align 2
 Lm_50:
-NativeXHandler_didInterstitialLoad_string:
+NativeXHandler_actionFailed_string:
 
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,12,208,77,226,13,176,160,225,0,0,139,229,1,160,160,225
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 104
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,44,0,0,10,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 164
-	.byte 1,16,159,231,10,0,160,225
-bl p_40
-
-	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 104
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,26,0,0,234,0,16,159,229
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,11,0,0,10,4,0,155,229,0,0,80,227,8,0,0,10,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 168
-	.byte 1,16,159,231,10,0,160,225
-bl p_40
-
-	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 104
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 108
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,10,16,160,225,15,224,160,225,12,240,146,229,12,208,139,226,0,13,189,232
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,4,16,155,229,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
 	.byte 8,112,157,229,0,160,157,232
 
 Lme_50:
 	.align 2
 Lm_51:
-NativeXHandler_didFeaturedOfferLoad_string:
+NativeXHandler_userLeavingApplication_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 116
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,26,0,0,10,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 160
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 188
 	.byte 1,16,159,231,4,0,155,229
-bl p_40
+bl p_37
 
 	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 116
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 116
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
 	.byte 8,112,157,229,0,160,157,232
 
 Lme_51:
 	.align 2
 Lm_52:
-NativeXHandler_didBannerLoad_string:
+NativeXHandler_balanceTransfered_string:
 
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,20,208,77,226,13,176,160,225,0,0,139,229,1,160,160,225
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,26,0,0,10,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 160
-	.byte 1,16,159,231,4,0,155,229
-bl p_40
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 156
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,52,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 192
+	.byte 0,0,159,231
+bl p_7
 
-	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 120
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
+	.byte 0,0,90,227,45,0,0,10,8,0,154,229,0,0,80,227,20,0,0,218,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 196
+	.byte 0,0,159,231
+bl p_7
+
+	.byte 10,0,160,225
+bl p_7
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 156
+	.byte 0,0,159,231,0,0,144,229,8,0,139,229,10,0,160,225
+bl p_38
+
+	.byte 0,16,160,225,8,32,155,229,2,0,160,225,15,224,160,225,12,240,146,229,21,0,0,234,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 156
+	.byte 0,0,159,231,0,0,144,229,8,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 28
+	.byte 0,0,159,231
+bl p_9
+
+	.byte 0,16,160,225,8,32,155,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 32
+	.byte 0,0,159,231,0,0,144,229,8,0,129,229,2,0,160,225,15,224,160,225,12,240,146,229,20,208,139,226,0,13,189,232
 	.byte 8,112,157,229,0,160,157,232
 
 Lme_52:
 	.align 2
 Lm_53:
-NativeXHandler_actionComplete_string:
+NativeXHandler_receiptId_string:
 
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,12,208,77,226,13,176,160,225,0,0,139,229,1,160,160,225
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,10,0,0,10,0,0,90,227,8,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 124
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,10,16,160,225,15,224,160,225,12,240,146,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 172
-	.byte 1,16,159,231,10,0,160,225
-bl p_40
-
-	.byte 0,0,80,227,5,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 152
-	.byte 0,0,159,231,0,16,160,227,0,16,192,229,12,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 164
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,11,0,0,10,4,0,155,229,0,0,80,227,8,0,0,10,0,0,159,229
+	.byte 0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 164
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,4,16,155,229,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
+	.byte 8,112,157,229,0,160,157,232
 
 Lme_53:
 	.align 2
 Lm_54:
-NativeXHandler_actionFailed_string:
+NativeXHandler_didPerformAction_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,11,0,0,10,4,0,155,229,0,0,80,227,8,0,0,10,0,0,159,229
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 168
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,26,0,0,10,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 180
+	.byte 1,16,159,231,4,0,155,229
+bl p_37
+
+	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 168
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 128
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,4,16,155,229,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 168
+	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
 	.byte 8,112,157,229,0,160,157,232
 
 Lme_54:
 	.align 2
 Lm_55:
-NativeXHandler_userLeavingApplication_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,26,0,0,10,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 176
-	.byte 1,16,159,231,4,0,155,229
-bl p_40
-
-	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 132
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
-	.byte 8,112,157,229,0,160,157,232
-
-Lme_55:
-	.align 2
-Lm_56:
-NativeXHandler_balanceTransfered_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,20,208,77,226,13,176,160,225,0,0,139,229,1,160,160,225
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,52,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 180
-	.byte 0,0,159,231
-bl p_3
-
-	.byte 0,0,90,227,45,0,0,10,8,0,154,229,0,0,80,227,20,0,0,218,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 184
-	.byte 0,0,159,231
-bl p_3
-
-	.byte 10,0,160,225
-bl p_3
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
-	.byte 0,0,159,231,0,0,144,229,8,0,139,229,10,0,160,225
-bl p_41
-
-	.byte 0,16,160,225,8,32,155,229,2,0,160,225,15,224,160,225,12,240,146,229,21,0,0,234,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 136
-	.byte 0,0,159,231,0,0,144,229,8,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 8
-	.byte 0,0,159,231
-bl p_5
-
-	.byte 0,16,160,225,8,32,155,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 12
-	.byte 0,0,159,231,0,0,144,229,8,0,129,229,2,0,160,225,15,224,160,225,12,240,146,229,20,208,139,226,0,13,189,232
-	.byte 8,112,157,229,0,160,157,232
-
-Lme_56:
-	.align 2
-Lm_57:
-NativeXHandler_receiptId_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,11,0,0,10,4,0,155,229,0,0,80,227,8,0,0,10,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 144
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,4,16,155,229,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
-	.byte 8,112,157,229,0,160,157,232
-
-Lme_57:
-	.align 2
-Lm_58:
-NativeXHandler_didPerformAction_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,26,0,0,10,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 160
-	.byte 1,16,159,231,4,0,155,229
-bl p_40
-
-	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,1,16,160,227,15,224,160,225,12,240,146,229,8,0,0,234,0,0,159,229
-	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 148
-	.byte 0,0,159,231,0,32,144,229,2,0,160,225,0,16,160,227,15,224,160,225,12,240,146,229,8,208,139,226,0,9,189,232
-	.byte 8,112,157,229,0,160,157,232
-
-Lme_58:
-	.align 2
-Lm_59:
 NativeXiOS__ctor_int_string_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,16,89,45,233,20,208,77,226,13,176,160,225,0,64,160,225,0,16,139,229
 	.byte 4,32,139,229,8,48,139,229
-bl p_37
+bl p_34
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,0,58,159,237,0,0,0,234,0,0,160,65,195,58,183,238,3,43,130,238
-	.byte 194,11,183,238,11,10,132,237
-bl p_36
+	.byte 194,11,183,238,10,10,132,237
+bl p_33
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,0,58,159,237,0,0,0,234,0,0,0,64,195,58,183,238,3,43,130,238
-	.byte 194,11,183,238,12,10,132,237,4,0,160,225
+	.byte 194,11,183,238,11,10,132,237,4,0,160,225
 bl p_1
 
 	.byte 0,0,155,229,24,0,132,229,4,0,155,229,20,0,132,229,8,0,155,229,16,0,132,229,20,208,139,226,16,9,189,232
 	.byte 8,112,157,229,0,160,157,232
 
-Lme_59:
+Lme_55:
 	.align 2
-Lm_5a:
+Lm_56:
 NativeXiOS__ctor_int_string_string_int_int_int_int:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,36,208,77,226,13,176,160,225,0,160,160,225,0,16,139,229
 	.byte 4,32,139,229,8,48,139,229,64,224,157,229,12,224,139,229,68,224,157,229,16,224,139,229,72,224,157,229,20,224,139,229
 	.byte 76,224,157,229,24,224,139,229
-bl p_37
+bl p_34
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,0,58,159,237,0,0,0,234,0,0,160,65,195,58,183,238,3,43,130,238
-	.byte 194,11,183,238,11,10,138,237
-bl p_36
+	.byte 194,11,183,238,10,10,138,237
+bl p_33
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,0,58,159,237,0,0,0,234,0,0,0,64,195,58,183,238,3,43,130,238
-	.byte 194,11,183,238,12,10,138,237,10,0,160,225
+	.byte 194,11,183,238,11,10,138,237,10,0,160,225
 bl p_1
 
 	.byte 0,0,155,229,24,0,138,229,4,0,155,229,20,0,138,229,8,0,155,229,16,0,138,229,12,0,155,229,16,10,0,238
-	.byte 192,10,184,238,192,42,183,238,194,11,183,238,9,10,138,237,16,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238
-	.byte 194,11,183,238,10,10,138,237,20,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,11,10,138,237
-	.byte 24,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,12,10,138,237,36,208,139,226,0,13,189,232
+	.byte 192,10,184,238,192,42,183,238,194,11,183,238,8,10,138,237,16,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238
+	.byte 194,11,183,238,9,10,138,237,20,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,10,10,138,237
+	.byte 24,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,11,10,138,237,36,208,139,226,0,13,189,232
 	.byte 8,112,157,229,0,160,157,232
 
-Lme_5a:
+Lme_56:
 	.align 2
-Lm_5b:
+Lm_57:
 NativeXiOS__ctor_int_string_string_int_int_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,28,208,77,226,13,176,160,225,0,160,160,225,0,16,139,229
 	.byte 4,32,139,229,8,48,139,229,56,224,157,229,12,224,139,229,60,224,157,229,16,224,139,229,64,224,157,229,20,224,203,229
-bl p_37
+bl p_34
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,0,58,159,237,0,0,0,234,0,0,160,65,195,58,183,238,3,43,130,238
-	.byte 194,11,183,238,11,10,138,237
-bl p_36
+	.byte 194,11,183,238,10,10,138,237
+bl p_33
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,0,58,159,237,0,0,0,234,0,0,0,64,195,58,183,238,3,43,130,238
-	.byte 194,11,183,238,12,10,138,237,10,0,160,225
+	.byte 194,11,183,238,11,10,138,237,10,0,160,225
 bl p_1
 
 	.byte 0,0,155,229,24,0,138,229,4,0,155,229,20,0,138,229,8,0,155,229,16,0,138,229,12,0,155,229,16,10,0,238
-	.byte 192,10,184,238,192,42,183,238,194,11,183,238,13,10,138,237,16,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238
-	.byte 194,11,183,238,14,10,138,237,28,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
+	.byte 192,10,184,238,192,42,183,238,194,11,183,238,12,10,138,237,16,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238
+	.byte 194,11,183,238,13,10,138,237,28,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
 
-Lme_5b:
+Lme_57:
 	.align 2
-Lm_5c:
+Lm_58:
 NativeXiOS__ctor_int_string_string_int_int_int_int_int_int:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,44,208,77,226,13,176,160,225,0,160,160,225,0,16,139,229
 	.byte 4,32,139,229,8,48,139,229,72,224,157,229,12,224,139,229,76,224,157,229,16,224,139,229,80,224,157,229,20,224,139,229
 	.byte 84,224,157,229,24,224,139,229,88,224,157,229,28,224,139,229,92,224,157,229,32,224,139,229
-bl p_37
+bl p_34
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,0,58,159,237,0,0,0,234,0,0,160,65,195,58,183,238,3,43,130,238
-	.byte 194,11,183,238,11,10,138,237
-bl p_36
+	.byte 194,11,183,238,10,10,138,237
+bl p_33
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,0,58,159,237,0,0,0,234,0,0,0,64,195,58,183,238,3,43,130,238
-	.byte 194,11,183,238,12,10,138,237,10,0,160,225
+	.byte 194,11,183,238,11,10,138,237,10,0,160,225
 bl p_1
 
 	.byte 0,0,155,229,24,0,138,229,4,0,155,229,20,0,138,229,8,0,155,229,16,0,138,229,12,0,155,229,16,10,0,238
-	.byte 192,10,184,238,192,42,183,238,194,11,183,238,9,10,138,237,16,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238
-	.byte 194,11,183,238,10,10,138,237,20,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,11,10,138,237
-	.byte 24,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,12,10,138,237,28,0,155,229,16,10,0,238
-	.byte 192,10,184,238,192,42,183,238,194,11,183,238,13,10,138,237,32,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238
-	.byte 194,11,183,238,14,10,138,237,44,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
+	.byte 192,10,184,238,192,42,183,238,194,11,183,238,8,10,138,237,16,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238
+	.byte 194,11,183,238,9,10,138,237,20,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,10,10,138,237
+	.byte 24,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,11,10,138,237,28,0,155,229,16,10,0,238
+	.byte 192,10,184,238,192,42,183,238,194,11,183,238,12,10,138,237,32,0,155,229,16,10,0,238,192,10,184,238,192,42,183,238
+	.byte 194,11,183,238,13,10,138,237,44,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
 
-Lme_5c:
+Lme_58:
 	.align 2
-Lm_5d:
+Lm_59:
 NativeXiOS_ToString:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,52,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 188
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 200
 	.byte 0,0,159,231,8,16,160,227
-bl p_9
+bl p_2
 
 	.byte 0,16,160,225,44,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 192
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 204
 	.byte 2,32,159,231,0,16,160,227
-bl p_10
+bl p_3
 
 	.byte 44,0,155,229,36,0,139,229,32,0,139,229,24,0,154,229,40,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 196
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 208
 	.byte 0,0,159,231
-bl p_42
+bl p_39
 
 	.byte 0,32,160,225,36,0,155,229,40,16,155,229,8,16,130,229,1,16,160,227
-bl p_10
+bl p_3
 
 	.byte 32,0,155,229,0,16,160,225,28,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 200
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 212
 	.byte 2,32,159,231,2,16,160,227
-bl p_10
+bl p_3
 
 	.byte 28,0,155,229,0,16,160,225,24,16,139,229,20,32,154,229,3,16,160,227
-bl p_10
+bl p_3
 
 	.byte 24,0,155,229,0,16,160,225,20,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 204
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
 	.byte 2,32,159,231,4,16,160,227
-bl p_10
+bl p_3
 
 	.byte 20,0,155,229,0,16,160,225,16,16,139,229,16,32,154,229,5,16,160,227
-bl p_10
+bl p_3
 
 	.byte 16,0,155,229,0,16,160,225,12,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 208
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 220
 	.byte 2,32,159,231,6,16,160,227
-bl p_10
+bl p_3
 
 	.byte 12,0,155,229,4,0,139,229,0,0,139,229,28,0,154,229,8,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 196
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 208
 	.byte 0,0,159,231
-bl p_42
+bl p_39
 
 	.byte 0,32,160,225,4,0,155,229,8,16,155,229,8,16,130,229,7,16,160,227
-bl p_10
+bl p_3
 
 	.byte 0,0,155,229
-bl p_43
+bl p_40
 
 	.byte 52,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
 
-Lme_5d:
+Lme_59:
 	.align 2
-Lm_5e:
+Lm_5a:
 TestUI__ctor:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,0,0,155,229
@@ -1517,456 +1486,446 @@ bl p_1
 
 	.byte 8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_5e:
+Lme_5a:
 	.align 2
-Lm_5f:
+Lm_5b:
 TestUI__cctor:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,13,176,160,225,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 212
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 224
 	.byte 1,16,159,231,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,0,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_5f:
+Lme_5b:
 	.align 2
-Lm_60:
+Lm_5c:
 TestUI_Start:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,72,208,77,226,13,176,160,225,24,0,139,229,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 220
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 232
 	.byte 0,0,159,231,60,0,139,229
-bl p_37
+bl p_34
 
 	.byte 20,16,160,227
-bl p_44
+bl p_41
 
 	.byte 56,0,139,229
-bl p_36
+bl p_33
 
 	.byte 2,16,160,227
-bl p_44
+bl p_41
 
 	.byte 64,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 224
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 236
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 60,32,155,229,64,192,155,229,48,0,139,229,52,0,139,229,166,16,160,227,47,28,129,226,0,48,160,227,200,0,160,227
 	.byte 0,0,141,229,75,15,160,227,4,0,141,229,56,0,155,229,8,0,141,229,52,0,155,229,12,192,141,229,100,192,160,227
 	.byte 16,192,141,229,200,192,160,227,20,192,141,229
-bl Lm_5c
+bl Lm_58
 
 	.byte 48,16,155,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
-	.byte 0,0,159,231,0,16,128,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 232
-	.byte 0,0,159,231,36,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 220
-	.byte 0,0,159,231,40,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 236
-	.byte 0,0,159,231,44,0,139,229,0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 240
+	.byte 0,0,159,231,0,16,128,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 244
+	.byte 0,0,159,231,36,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 232
+	.byte 0,0,159,231,40,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 248
+	.byte 0,0,159,231,44,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 252
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 36,32,155,229,40,48,155,229,44,192,155,229,32,0,139,229,213,16,160,227,19,28,129,226,0,192,141,229
 bl Lm_0
 
 	.byte 32,16,155,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 244
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 256
 	.byte 0,0,159,231,0,16,128,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 240
 	.byte 0,0,159,231,0,0,144,229,17,16,160,227,28,16,128,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 244
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 256
 	.byte 0,0,159,231,0,0,144,229,16,16,160,227,32,16,128,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 240
 	.byte 0,0,159,231,0,16,144,229,1,0,160,225,0,16,145,229,15,224,160,225,36,240,145,229
-bl p_3
+bl p_7
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 248
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 260
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 244
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 256
 	.byte 0,0,159,231,0,0,144,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 240
 	.byte 1,16,159,231,0,16,145,229
-bl p_45
+bl p_42
 
 	.byte 72,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_60:
+Lme_5c:
 	.align 2
-Lm_61:
+Lm_5d:
 TestUI_OnEnable:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,93,45,233,4,208,77,226,13,176,160,225,0,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 252
-	.byte 0,0,159,231
-bl p_5
-
-	.byte 16,160,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 256
-	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 260
-	.byte 1,16,159,231,12,16,128,229
-bl p_46
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 252
-	.byte 0,0,159,231
-bl p_5
-
-	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 264
-	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 260
-	.byte 1,16,159,231,12,16,128,229
-bl p_47
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 252
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 268
 	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 260
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
 	.byte 1,16,159,231,12,16,128,229
-bl p_48
+bl p_43
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 264
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 276
 	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 280
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
 	.byte 1,16,159,231,12,16,128,229
-bl p_49
+bl p_44
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 252
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 280
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 284
 	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 260
-	.byte 1,16,159,231,12,16,128,229
-bl p_50
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
-	.byte 0,0,159,231
-bl p_5
-
-	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 288
-	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 280
 	.byte 1,16,159,231,12,16,128,229
-bl p_51
+bl p_45
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 264
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 292
 	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 280
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
 	.byte 1,16,159,231,12,16,128,229
-bl p_52
+bl p_46
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 252
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 280
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 296
 	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 260
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 288
 	.byte 1,16,159,231,12,16,128,229
-bl p_53
+bl p_47
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 300
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 280
 	.byte 0,0,159,231
-bl p_5
+bl p_9
+
+	.byte 16,160,128,229,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 300
+	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 288
+	.byte 1,16,159,231,12,16,128,229
+bl p_48
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 264
+	.byte 0,0,159,231
+bl p_9
 
 	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 304
 	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 308
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
 	.byte 1,16,159,231,12,16,128,229
-bl p_54
+bl p_49
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 308
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 16,160,128,229,0,16,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 312
 	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 280
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 316
 	.byte 1,16,159,231,12,16,128,229
-bl p_55
+bl p_50
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 252
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 280
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 16,160,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 316
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 320
 	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 260
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 288
 	.byte 1,16,159,231,12,16,128,229
-bl p_56
+bl p_51
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 264
+	.byte 0,0,159,231
+bl p_9
+
+	.byte 16,160,128,229,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 324
+	.byte 1,16,159,231,20,16,128,229,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 272
+	.byte 1,16,159,231,12,16,128,229
+bl p_52
 
 	.byte 4,208,139,226,0,13,189,232,8,112,157,229,0,160,157,232
 
-Lme_61:
+Lme_5d:
 	.align 2
-Lm_62:
+Lm_5e:
 TestUI_OnGUI:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,156,223,77,226,13,176,160,225,100,2,139,229,0,42,159,237
 	.byte 0,0,0,234,0,0,160,64,194,42,183,238,194,11,183,238,4,10,139,237,0,42,159,237,0,0,0,234,0,0,160,64
 	.byte 194,42,183,238,194,11,183,238,5,10,139,237
-bl p_36
+bl p_33
 
 	.byte 2,16,160,227
-bl p_44
+bl p_41
 
 	.byte 104,2,139,229
-bl p_36
+bl p_33
 
 	.byte 15,16,160,227
-bl p_44
+bl p_41
 
 	.byte 0,16,160,225,104,2,155,229,1,0,64,224,16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,6,10,139,237
-bl p_37
+bl p_34
 
 	.byte 10,16,160,227
-bl p_44
+bl p_41
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,194,11,183,238,7,10,139,237,7,10,155,237,192,42,183,238,0,58,159,237
 	.byte 0,0,0,234,0,0,32,65,195,58,183,238,3,43,50,238,194,11,183,238,8,10,139,237
-bl p_57
+bl p_53
 
 	.byte 0,16,160,225,0,224,145,229,24,32,144,229,2,0,160,225,30,16,160,227,0,224,146,229
-bl p_58
-bl p_57
+bl p_54
+bl p_53
 
 	.byte 0,16,160,225,0,224,145,229,24,32,144,229,2,0,160,225,1,16,160,227,0,224,146,229
-bl p_59
+bl p_55
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,74,183,238,6,10,155,237,192,58,183,238,7,10,155,237,192,42,183,238
 	.byte 0,0,160,227,36,0,139,229,0,0,160,227,40,0,139,229,0,0,160,227,44,0,139,229,0,0,160,227,48,0,139,229
 	.byte 36,0,139,226,197,11,183,238,2,10,13,237,8,16,29,229,196,11,183,238,2,10,13,237,8,32,29,229,195,11,183,238
 	.byte 2,10,13,237,8,48,29,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 36,0,155,229,68,1,139,229,40,0,155,229,72,1,139,229,44,0,155,229,76,1,139,229,48,0,155,229,80,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 320
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 328
 	.byte 12,192,159,231,68,1,155,229,72,17,155,229,76,33,155,229,80,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_60
+bl p_56
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 324
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 332
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,52,0,139,229,0,0,160,227,56,0,139,229,0,0,160,227,60,0,139,229,0,0,160,227
 	.byte 64,0,139,229,52,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 52,0,155,229,84,1,139,229,56,0,155,229,88,1,139,229,60,0,155,229,92,1,139,229,64,0,155,229,96,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 328
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 336
 	.byte 12,192,159,231,84,1,155,229,88,17,155,229,92,33,155,229,96,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_61
+bl p_57
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 332
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 340
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,68,0,139,229,0,0,160,227,72,0,139,229,0,0,160,227,76,0,139,229,0,0,160,227
 	.byte 80,0,139,229,68,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 68,0,155,229,100,1,139,229,72,0,155,229,104,1,139,229,76,0,155,229,108,1,139,229,80,0,155,229,112,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 336
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 344
 	.byte 12,192,159,231,100,1,155,229,104,17,155,229,108,33,155,229,112,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_62
+bl p_58
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 340
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 348
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,84,0,139,229,0,0,160,227,88,0,139,229,0,0,160,227,92,0,139,229,0,0,160,227
 	.byte 96,0,139,229,84,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 84,0,155,229,116,1,139,229,88,0,155,229,120,1,139,229,92,0,155,229,124,1,139,229,96,0,155,229,128,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 344
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 352
 	.byte 12,192,159,231,116,1,155,229,120,17,155,229,124,33,155,229,128,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_63
+bl p_59
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 348
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 356
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,100,0,139,229,0,0,160,227,104,0,139,229,0,0,160,227,108,0,139,229,0,0,160,227
 	.byte 112,0,139,229,100,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 100,0,155,229,132,1,139,229,104,0,155,229,136,1,139,229,108,0,155,229,140,1,139,229,112,0,155,229,144,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 352
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 360
 	.byte 12,192,159,231,132,1,155,229,136,17,155,229,140,33,155,229,144,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_64
+bl p_60
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 356
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 364
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,116,0,139,229,0,0,160,227,120,0,139,229,0,0,160,227,124,0,139,229,0,0,160,227
 	.byte 128,0,139,229,116,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 116,0,155,229,148,1,139,229,120,0,155,229,152,1,139,229,124,0,155,229,156,1,139,229,128,0,155,229,160,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 360
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 368
 	.byte 12,192,159,231,148,1,155,229,152,17,155,229,156,33,155,229,160,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_65
+bl p_61
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 364
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 372
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,132,0,139,229,0,0,160,227,136,0,139,229,0,0,160,227,140,0,139,229,0,0,160,227
 	.byte 144,0,139,229,132,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 132,0,155,229,164,1,139,229,136,0,155,229,168,1,139,229,140,0,155,229,172,1,139,229,144,0,155,229,176,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 368
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 376
 	.byte 12,192,159,231,164,1,155,229,168,17,155,229,172,33,155,229,176,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 372
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 380
 	.byte 0,0,159,231
-bl p_66
+bl p_62
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 376
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 384
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,148,0,139,229,0,0,160,227,152,0,139,229,0,0,160,227,156,0,139,229,0,0,160,227
 	.byte 160,0,139,229,148,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 148,0,155,229,180,1,139,229,152,0,155,229,184,1,139,229,156,0,155,229,188,1,139,229,160,0,155,229,192,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 380
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 388
 	.byte 12,192,159,231,180,1,155,229,184,17,155,229,188,33,155,229,192,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 372
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 380
 	.byte 0,0,159,231
-bl p_67
+bl p_63
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 384
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 392
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,164,0,139,229,0,0,160,227,168,0,139,229,0,0,160,227,172,0,139,229,0,0,160,227
 	.byte 176,0,139,229,164,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 164,0,155,229,196,1,139,229,168,0,155,229,200,1,139,229,172,0,155,229,204,1,139,229,176,0,155,229,208,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 388
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 396
 	.byte 12,192,159,231,196,1,155,229,200,17,155,229,204,33,155,229,208,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
-	.byte 0,0,80,227,6,0,0,10,0,0,160,227
-bl p_68
+	.byte 0,0,80,227,9,0,0,10,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 380
+	.byte 0,0,159,231
+bl p_64
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 392
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 400
 	.byte 0,0,159,231
-bl p_3
-bl p_36
+bl p_7
+bl p_33
 
 	.byte 16,10,0,238,192,10,184,238,192,42,183,238,6,10,155,237,192,58,183,238,67,43,50,238,0,58,159,237,0,0,0,234
 	.byte 0,0,160,64,195,58,183,238,67,43,50,238,194,11,183,238,5,10,139,237,0,42,159,237,0,0,0,234,0,0,160,64
@@ -1974,1415 +1933,1300 @@ bl p_36
 	.byte 192,58,183,238,7,10,155,237,192,42,183,238,0,0,160,227,180,0,139,229,0,0,160,227,184,0,139,229,0,0,160,227
 	.byte 188,0,139,229,0,0,160,227,192,0,139,229,180,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238
 	.byte 0,10,141,237,0,32,157,229,195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 180,0,155,229,212,1,139,229,184,0,155,229,216,1,139,229,188,0,155,229,220,1,139,229,192,0,155,229,224,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 396
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 404
 	.byte 12,192,159,231,212,1,155,229,216,17,155,229,220,33,155,229,224,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_69
+bl p_65
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 400
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 408
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,196,0,139,229,0,0,160,227,200,0,139,229,0,0,160,227,204,0,139,229,0,0,160,227
 	.byte 208,0,139,229,196,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 196,0,155,229,228,1,139,229,200,0,155,229,232,1,139,229,204,0,155,229,236,1,139,229,208,0,155,229,240,1,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 404
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 412
 	.byte 12,192,159,231,228,1,155,229,232,17,155,229,236,33,155,229,240,49,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_70
+bl p_66
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 408
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 416
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,212,0,139,229,0,0,160,227,216,0,139,229,0,0,160,227,220,0,139,229,0,0,160,227
 	.byte 224,0,139,229,212,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 212,0,155,229,244,1,139,229,216,0,155,229,248,1,139,229,220,0,155,229,252,1,139,229,224,0,155,229,0,2,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 412
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 420
 	.byte 12,192,159,231,244,1,155,229,248,17,155,229,252,33,155,229,0,50,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_71
+bl p_67
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 416
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 424
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,228,0,139,229,0,0,160,227,232,0,139,229,0,0,160,227,236,0,139,229,0,0,160,227
 	.byte 240,0,139,229,228,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 228,0,155,229,4,2,139,229,232,0,155,229,8,2,139,229,236,0,155,229,12,2,139,229,240,0,155,229,16,2,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 420
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 428
 	.byte 12,192,159,231,4,2,155,229,8,18,155,229,12,34,155,229,16,50,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_72
+bl p_68
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 424
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 432
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,244,0,139,229,0,0,160,227,248,0,139,229,0,0,160,227,252,0,139,229,0,0,160,227
 	.byte 0,1,139,229,244,0,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 244,0,155,229,20,2,139,229,248,0,155,229,24,2,139,229,252,0,155,229,28,2,139,229,0,1,155,229,32,2,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 428
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 436
 	.byte 12,192,159,231,20,2,155,229,24,18,155,229,28,34,155,229,32,50,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,5,0,0,10
-bl p_73
+bl p_69
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 432
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 440
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,4,1,139,229,0,0,160,227,8,1,139,229,0,0,160,227,12,1,139,229,0,0,160,227
 	.byte 16,1,139,229,65,15,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 4,1,155,229,36,2,139,229,8,1,155,229,40,2,139,229,12,1,155,229,44,2,139,229,16,1,155,229,48,2,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 436
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 444
 	.byte 12,192,159,231,36,2,155,229,40,18,155,229,44,34,155,229,48,50,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,10,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 440
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 448
 	.byte 0,0,159,231,25,16,160,227
-bl p_74
+bl p_70
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 444
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 452
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,20,1,139,229,0,0,160,227,24,1,139,229,0,0,160,227,28,1,139,229,0,0,160,227
 	.byte 32,1,139,229,69,15,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 20,1,155,229,52,2,139,229,24,1,155,229,56,2,139,229,28,1,155,229,60,2,139,229,32,1,155,229,64,2,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 448
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 456
 	.byte 12,192,159,231,52,2,155,229,56,18,155,229,60,34,155,229,64,50,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,10,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 440
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 448
 	.byte 0,0,159,231,25,16,160,227
-bl p_75
+bl p_71
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 452
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 460
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,36,1,139,229,0,0,160,227,40,1,139,229,0,0,160,227,44,1,139,229,0,0,160,227
 	.byte 48,1,139,229,73,15,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 36,1,155,229,68,2,139,229,40,1,155,229,72,2,139,229,44,1,155,229,76,2,139,229,48,1,155,229,80,2,139,229
 	.byte 0,192,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 456
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 464
 	.byte 12,192,159,231,68,2,155,229,72,18,155,229,76,34,155,229,80,50,155,229,0,192,141,229
-bl p_39
+bl p_36
 
 	.byte 0,0,80,227,26,0,0,10,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 460
-	.byte 0,0,159,231,0,16,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 464
-	.byte 1,16,159,231,0,42,159,237,0,0,0,234,0,0,0,64,194,42,183,238,0,192,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 468
+	.byte 0,0,159,231,0,16,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 472
+	.byte 1,16,159,231,0,42,159,237,0,0,0,234,0,0,0,64,194,42,183,238,0,192,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 476
 	.byte 12,192,159,231,194,11,183,238,0,10,141,237,0,32,157,229,2,48,160,227,0,192,141,229
-bl p_76
+bl p_72
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 472
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 480
 	.byte 0,0,159,231
-bl p_3
+bl p_7
 
 	.byte 5,10,155,237,192,90,183,238,4,10,155,237,192,42,183,238,8,10,155,237,192,58,183,238,3,43,50,238,66,43,176,238
 	.byte 66,75,176,238,68,75,176,238,66,43,176,238,194,11,183,238,4,10,139,237,6,10,155,237,192,58,183,238,7,10,155,237
 	.byte 192,42,183,238,0,0,160,227,52,1,139,229,0,0,160,227,56,1,139,229,0,0,160,227,60,1,139,229,0,0,160,227
 	.byte 64,1,139,229,77,15,139,226,197,11,183,238,0,10,141,237,0,16,157,229,196,11,183,238,0,10,141,237,0,32,157,229
 	.byte 195,11,183,238,0,10,141,237,0,48,157,229,194,11,183,238,0,10,141,237
-bl p_38
+bl p_35
 
 	.byte 52,1,155,229,84,2,139,229,56,1,155,229,88,2,139,229,60,1,155,229,92,2,139,229,64,1,155,229,96,2,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,192,144,229,84,2,155,229,88,18,155,229,92,34,155,229,96,50,155,229,0,192,141,229
-bl p_77
+bl p_73
 
 	.byte 156,223,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_62:
+Lme_5e:
 	.align 2
-Lm_63:
+Lm_5f:
 TestUI_userLeavingApplication_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,16,208,77,226,13,176,160,225,0,0,139,229,4,16,203,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 476
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 484
 	.byte 0,0,159,231,8,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 480
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 488
 	.byte 0,0,159,231
-bl p_42
+bl p_39
 
 	.byte 0,16,160,225,8,0,155,229,4,32,219,229,8,32,193,229
-bl p_78
+bl p_74
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,16,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_63:
+Lme_5f:
 	.align 2
-Lm_64:
+Lm_60:
 TestUI_receiptId_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 484
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 492
 	.byte 0,0,159,231,4,16,155,229
-bl p_2
+bl p_6
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_64:
+Lme_60:
 	.align 2
-Lm_65:
+Lm_61:
 TestUI_balanceTransfered_System_Collections_Generic_List_1_NativeXBalance:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,64,93,45,233,120,208,77,226,13,176,160,225,60,0,139,229,1,160,160,225
 	.byte 0,0,160,227,0,0,139,229,0,0,160,227,4,0,139,229,0,0,160,227,8,0,139,229,0,0,160,227,12,0,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . -4
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 16
 	.byte 0,0,159,231,0,16,144,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,10,16,160,225,11,0,160,225,0,224,154,229
-bl p_79
+bl p_75
 
 	.byte 121,0,0,234,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 488
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 496
 	.byte 0,0,159,231,12,96,155,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,0,144,229,112,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 492
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 500
 	.byte 0,0,159,231,116,0,139,229,6,0,160,225,0,16,150,229,15,224,160,225,36,240,145,229,0,32,160,225,112,0,155,229
 	.byte 116,16,155,229,0,48,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 496
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 504
 	.byte 3,48,159,231
-bl p_80
+bl p_76
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 188
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 200
 	.byte 0,0,159,231,8,16,160,227
-bl p_9
+bl p_2
 
 	.byte 0,16,160,225,108,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 500
-	.byte 2,32,159,231,0,16,160,227
-bl p_10
-
-	.byte 108,0,155,229,100,0,139,229,96,0,139,229,24,0,150,229,104,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 196
-	.byte 0,0,159,231
-bl p_42
-
-	.byte 0,32,160,225,100,0,155,229,104,16,155,229,8,16,130,229,1,16,160,227
-bl p_10
-
-	.byte 96,0,155,229,0,16,160,225,92,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 504
-	.byte 2,32,159,231,2,16,160,227
-bl p_10
-
-	.byte 92,0,155,229,0,16,160,225,88,16,139,229,16,32,150,229,3,16,160,227
-bl p_10
-
-	.byte 88,0,155,229,0,16,160,225,84,16,139,229,0,32,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 508
-	.byte 2,32,159,231,4,16,160,227
-bl p_10
-
-	.byte 84,0,155,229,0,16,160,225,80,16,139,229,20,32,150,229,5,16,160,227
-bl p_10
-
-	.byte 80,0,155,229,0,16,160,225,76,16,139,229,0,32,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 512
-	.byte 2,32,159,231,6,16,160,227
-bl p_10
-
-	.byte 76,0,155,229,68,0,139,229,64,0,139,229,28,0,150,229,72,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 196
-	.byte 0,0,159,231
-bl p_42
-
-	.byte 0,32,160,225,68,0,155,229,72,16,155,229,8,16,130,229,7,16,160,227
-bl p_10
-
-	.byte 64,0,155,229
-bl p_43
+	.byte 2,32,159,231,0,16,160,227
 bl p_3
 
+	.byte 108,0,155,229,100,0,139,229,96,0,139,229,24,0,150,229,104,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 208
+	.byte 0,0,159,231
+bl p_39
+
+	.byte 0,32,160,225,100,0,155,229,104,16,155,229,8,16,130,229,1,16,160,227
+bl p_3
+
+	.byte 96,0,155,229,0,16,160,225,92,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 512
+	.byte 2,32,159,231,2,16,160,227
+bl p_3
+
+	.byte 92,0,155,229,0,16,160,225,88,16,139,229,16,32,150,229,3,16,160,227
+bl p_3
+
+	.byte 88,0,155,229,0,16,160,225,84,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 516
+	.byte 2,32,159,231,4,16,160,227
+bl p_3
+
+	.byte 84,0,155,229,0,16,160,225,80,16,139,229,20,32,150,229,5,16,160,227
+bl p_3
+
+	.byte 80,0,155,229,0,16,160,225,76,16,139,229,0,32,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 520
+	.byte 2,32,159,231,6,16,160,227
+bl p_3
+
+	.byte 76,0,155,229,68,0,139,229,64,0,139,229,28,0,150,229,72,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 208
+	.byte 0,0,159,231
+bl p_39
+
+	.byte 0,32,160,225,68,0,155,229,72,16,155,229,8,16,130,229,7,16,160,227
+bl p_3
+
+	.byte 64,0,155,229
+bl p_40
+bl p_7
+
 	.byte 0,128,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 488
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 496
 	.byte 8,128,159,231,11,0,160,225
-bl p_81
+bl p_77
 
 	.byte 0,0,80,227,125,255,255,26,0,0,0,235,34,0,0,234,40,224,139,229,0,0,155,229,44,0,139,229,4,0,155,229
 	.byte 48,0,139,229,8,0,155,229,52,0,139,229,12,0,155,229,56,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 488
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 496
 	.byte 0,0,159,231
-bl p_5
+bl p_9
 
 	.byte 0,16,160,225,8,0,129,226,44,32,155,229,0,32,128,229,48,32,155,229,4,32,128,229,52,32,155,229,8,32,128,229
 	.byte 56,32,155,229,12,32,128,229,1,0,160,225,0,16,145,229,0,128,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 516
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 524
 	.byte 8,128,159,231,4,224,143,226,32,240,17,229,0,0,0,0,40,192,155,229,12,240,160,225,120,208,139,226,64,13,189,232
 	.byte 8,112,157,229,0,160,157,232
 
-Lme_65:
+Lme_61:
 	.align 2
-Lm_66:
+Lm_62:
 TestUI_actionFailed_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 520
-	.byte 0,0,159,231,4,16,155,229
-bl p_2
-
-	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
-	.byte 0,0,159,231,0,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
-
-Lme_66:
-	.align 2
-Lm_67:
-TestUI_actionComplete_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 524
-	.byte 0,0,159,231,4,16,155,229
-bl p_2
-
-	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
-	.byte 0,0,159,231,0,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
-
-Lme_67:
-	.align 2
-Lm_68:
-TestUI_didInterstitialLoad_bool:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,16,208,77,226,13,176,160,225,0,0,139,229,4,16,203,229
-	.byte 0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 528
-	.byte 0,0,159,231,8,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 480
-	.byte 0,0,159,231
-bl p_42
-
-	.byte 0,16,160,225,8,0,155,229,4,32,219,229,8,32,193,229
-bl p_78
+	.byte 0,0,159,231,4,16,155,229
+bl p_6
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
-	.byte 0,0,159,231,0,16,128,229,16,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
+	.byte 0,0,159,231,0,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_68:
+Lme_62:
 	.align 2
-Lm_69:
-TestUI_interstitialLoaded_string:
+Lm_63:
+TestUI_actionComplete_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 532
 	.byte 0,0,159,231,4,16,155,229
-bl p_2
+bl p_6
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_69:
+Lme_63:
 	.align 2
-Lm_6a:
-TestUI_didFeaturedOfferLoad_bool:
+Lm_64:
+TestUI_didInterstitialLoad_string:
 
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,16,208,77,226,13,176,160,225,0,0,139,229,4,16,203,229
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,8,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229
 	.byte 0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 536
-	.byte 0,0,159,231,8,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 480
-	.byte 0,0,159,231
-bl p_42
-
-	.byte 0,16,160,225,8,0,155,229,4,32,219,229,8,32,193,229
-bl p_78
+	.byte 0,0,159,231,4,16,155,229
+bl p_6
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
-	.byte 0,0,159,231,0,16,128,229,16,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
+	.byte 0,0,159,231,0,16,128,229,8,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_6a:
+Lme_64:
 	.align 2
-Lm_6b:
-TestUI_didSDKInititialize_bool:
+Lm_65:
+TestUI_didFeaturedOfferLoad_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,16,208,77,226,13,176,160,225,0,0,139,229,4,16,203,229
 	.byte 0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 540
 	.byte 0,0,159,231,8,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 480
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 488
 	.byte 0,0,159,231
-bl p_42
+bl p_39
 
 	.byte 0,16,160,225,8,0,155,229,4,32,219,229,8,32,193,229
-bl p_78
+bl p_74
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,16,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_6b:
+Lme_65:
 	.align 2
-Lm_6c:
-TestUI_didBannerLoad_bool:
+Lm_66:
+TestUI_didSDKInititialize_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,16,208,77,226,13,176,160,225,0,0,139,229,4,16,203,229
 	.byte 0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 544
 	.byte 0,0,159,231,8,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 480
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 488
 	.byte 0,0,159,231
-bl p_42
+bl p_39
 
 	.byte 0,16,160,225,8,0,155,229,4,32,219,229,8,32,193,229
-bl p_78
+bl p_74
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,16,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_6c:
+Lme_66:
 	.align 2
-Lm_6d:
-TestUI_didPerformAction_bool:
+Lm_67:
+TestUI_didBannerLoad_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,16,208,77,226,13,176,160,225,0,0,139,229,4,16,203,229
 	.byte 0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 548
 	.byte 0,0,159,231,8,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 480
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 488
 	.byte 0,0,159,231
-bl p_42
+bl p_39
 
 	.byte 0,16,160,225,8,0,155,229,4,32,219,229,8,32,193,229
-bl p_78
+bl p_74
 
 	.byte 0,16,160,225,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 216
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
 	.byte 0,0,159,231,0,16,128,229,16,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
-Lme_6d:
+Lme_67:
 	.align 2
-Lm_73:
+Lm_68:
+TestUI_didPerformAction_bool:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,16,208,77,226,13,176,160,225,0,0,139,229,4,16,203,229
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.byte 0,0,159,231,8,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 488
+	.byte 0,0,159,231
+bl p_39
+
+	.byte 0,16,160,225,8,0,155,229,4,32,219,229,8,32,193,229
+bl p_74
+
+	.byte 0,16,160,225,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 228
+	.byte 0,0,159,231,0,16,128,229,16,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+
+Lme_68:
+	.align 2
+Lm_6e:
 wrapper_delegate_invoke_System_Action_1_bool_invoke_void__this___bool_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,96,93,45,233,12,208,77,226,13,176,160,225,0,160,160,225,0,16,203,229
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,28,0,0,26,44,0,138,226,0,80,144,229,5,0,160,225,0,0,80,227
 	.byte 18,0,0,26,16,0,138,226,0,96,144,229,6,0,160,225,0,0,80,227,5,0,0,10,8,0,138,226,0,32,144,229
 	.byte 6,0,160,225,0,16,219,229,50,255,47,225,3,0,0,234,8,0,138,226,0,16,144,229,0,0,219,229,49,255,47,225
 	.byte 12,208,139,226,96,13,189,232,8,112,157,229,0,160,157,232,5,0,160,225,0,16,219,229,15,224,160,225,12,240,149,229
 	.byte 231,255,255,234
-bl p_82
+bl p_78
 
 	.byte 224,255,255,234
 
-Lme_73:
+Lme_6e:
 	.align 2
-Lm_74:
+Lm_6f:
 wrapper_delegate_invoke_System_Action_1_string_invoke_void__this___string_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,112,93,45,233,13,176,160,225,0,96,160,225,1,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,28,0,0,26,44,0,134,226,0,64,144,229,4,0,160,225,0,0,80,227
 	.byte 18,0,0,26,16,0,134,226,0,80,144,229,5,0,160,225,0,0,80,227,5,0,0,10,8,0,134,226,0,32,144,229
 	.byte 5,0,160,225,10,16,160,225,50,255,47,225,3,0,0,234,8,0,134,226,0,16,144,229,10,0,160,225,49,255,47,225
 	.byte 0,208,139,226,112,13,189,232,8,112,157,229,0,160,157,232,4,0,160,225,10,16,160,225,15,224,160,225,12,240,148,229
 	.byte 231,255,255,234
-bl p_82
+bl p_78
 
 	.byte 224,255,255,234
 
-Lme_74:
+Lme_6f:
 	.align 2
-Lm_75:
+Lm_70:
 wrapper_delegate_invoke_System_Action_1_System_Collections_Generic_List_1_NativeXBalance_invoke_void__this___List_1_NativeXBalance_System_Collections_Generic_List_1_NativeXBalance:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,112,93,45,233,13,176,160,225,0,96,160,225,1,160,160,225,0,0,159,229
 	.byte 0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,28,0,0,26,44,0,134,226,0,64,144,229,4,0,160,225,0,0,80,227
 	.byte 18,0,0,26,16,0,134,226,0,80,144,229,5,0,160,225,0,0,80,227,5,0,0,10,8,0,134,226,0,32,144,229
 	.byte 5,0,160,225,10,16,160,225,50,255,47,225,3,0,0,234,8,0,134,226,0,16,144,229,10,0,160,225,49,255,47,225
 	.byte 0,208,139,226,112,13,189,232,8,112,157,229,0,160,157,232,4,0,160,225,10,16,160,225,15,224,160,225,12,240,148,229
 	.byte 231,255,255,234
-bl p_82
+bl p_78
 
 	.byte 224,255,255,234
 
-Lme_75:
+Lme_70:
 	.align 2
-Lm_76:
+Lm_71:
 wrapper_managed_to_native_System_Array_GetGenericValueImpl_int_object_:
 
 	.byte 13,192,160,225,240,95,45,233,120,208,77,226,13,176,160,225,0,0,139,229,4,16,139,229,8,32,139,229
-bl p_83
+bl p_79
 
 	.byte 16,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
 	.byte 0,0,155,229,0,0,80,227,16,0,0,10,0,0,155,229,4,16,155,229,8,32,155,229
-bl p_84
+bl p_80
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,10,0,0,26,16,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
 	.byte 104,208,130,226,240,175,157,232,148,0,160,227,6,12,128,226,2,4,128,226
-bl p_85
-bl p_86
+bl p_81
 bl p_82
+bl p_78
 
 	.byte 242,255,255,234
 
-Lme_76:
+Lme_71:
 	.align 2
-Lm_77:
+Lm_72:
 wrapper_synchronized_NativeXHandler_add_e_didSDKinitialize_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
+bl p_83
+
+	.byte 16,0,155,229
+bl p_84
+
+	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
+bl p_85
+
+	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+
+Lme_72:
+	.align 2
+Lm_73:
+wrapper_synchronized_NativeXHandler_remove_e_didSDKinitialize_System_Action_1_bool:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
+	.byte 0,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
+	.byte 0,0,159,231,0,0,139,229
+bl p_83
+
+	.byte 16,0,155,229
+bl p_86
+
+	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
+bl p_85
+
+	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+
+Lme_73:
+	.align 2
+Lm_74:
+wrapper_synchronized_NativeXHandler_add_e_didInterstitialLoad_System_Action_1_string:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
+	.byte 0,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
+	.byte 0,0,159,231,0,0,139,229
+bl p_83
+
+	.byte 16,0,155,229
 bl p_87
+
+	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
+bl p_85
+
+	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+
+Lme_74:
+	.align 2
+Lm_75:
+wrapper_synchronized_NativeXHandler_remove_e_didInterstitialLoad_System_Action_1_string:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
+	.byte 0,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
+	.byte 0,0,159,231,0,0,139,229
+bl p_83
 
 	.byte 16,0,155,229
 bl p_88
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
+bl p_85
+
+	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+
+Lme_75:
+	.align 2
+Lm_76:
+wrapper_synchronized_NativeXHandler_add_e_didFeaturedOfferLoad_System_Action_1_bool:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
+	.byte 0,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
+	.byte 0,0,159,231,0,0,139,229
+bl p_83
+
+	.byte 16,0,155,229
 bl p_89
+
+	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
+bl p_85
+
+	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+
+Lme_76:
+	.align 2
+Lm_77:
+wrapper_synchronized_NativeXHandler_remove_e_didFeaturedOfferLoad_System_Action_1_bool:
+
+	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
+	.byte 0,0,139,229,0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
+	.byte 0,0,159,231,0,0,139,229
+bl p_83
+
+	.byte 16,0,155,229
+bl p_90
+
+	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_77:
 	.align 2
 Lm_78:
-wrapper_synchronized_NativeXHandler_remove_e_didSDKinitialize_System_Action_1_bool:
+wrapper_synchronized_NativeXHandler_add_e_didBannerLoad_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_90
+bl p_91
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_78:
 	.align 2
 Lm_79:
-wrapper_synchronized_NativeXHandler_add_e_didInterstitialLoad_System_Action_1_bool:
+wrapper_synchronized_NativeXHandler_remove_e_didBannerLoad_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_91
+bl p_92
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_79:
 	.align 2
 Lm_7a:
-wrapper_synchronized_NativeXHandler_remove_e_didInterstitialLoad_System_Action_1_bool:
+wrapper_synchronized_NativeXHandler_add_e_actionCompleted_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_92
+bl p_93
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_7a:
 	.align 2
 Lm_7b:
-wrapper_synchronized_NativeXHandler_add_e_interstitialLoaded_System_Action_1_string:
+wrapper_synchronized_NativeXHandler_remove_e_actionCompleted_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_93
+bl p_94
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_7b:
 	.align 2
 Lm_7c:
-wrapper_synchronized_NativeXHandler_remove_e_interstitialLoaded_System_Action_1_string:
+wrapper_synchronized_NativeXHandler_add_e_actionFailed_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_94
+bl p_95
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_7c:
 	.align 2
 Lm_7d:
-wrapper_synchronized_NativeXHandler_add_e_didFeaturedOfferLoad_System_Action_1_bool:
+wrapper_synchronized_NativeXHandler_remove_e_actionFailed_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_95
+bl p_96
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_7d:
 	.align 2
 Lm_7e:
-wrapper_synchronized_NativeXHandler_remove_e_didFeaturedOfferLoad_System_Action_1_bool:
+wrapper_synchronized_NativeXHandler_add_e_userLeavingApplication_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_96
+bl p_97
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_7e:
 	.align 2
 Lm_7f:
-wrapper_synchronized_NativeXHandler_add_e_didBannerLoad_System_Action_1_bool:
+wrapper_synchronized_NativeXHandler_remove_e_userLeavingApplication_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_97
+bl p_98
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_7f:
 	.align 2
 Lm_80:
-wrapper_synchronized_NativeXHandler_remove_e_didBannerLoad_System_Action_1_bool:
+wrapper_synchronized_NativeXHandler_add_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_98
+bl p_99
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_80:
 	.align 2
 Lm_81:
-wrapper_synchronized_NativeXHandler_add_e_actionCompleted_System_Action_1_string:
+wrapper_synchronized_NativeXHandler_remove_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_99
+bl p_100
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_81:
 	.align 2
 Lm_82:
-wrapper_synchronized_NativeXHandler_remove_e_actionCompleted_System_Action_1_string:
+wrapper_synchronized_NativeXHandler_add_e_receiptId_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_100
+bl p_101
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_82:
 	.align 2
 Lm_83:
-wrapper_synchronized_NativeXHandler_add_e_actionFailed_System_Action_1_string:
+wrapper_synchronized_NativeXHandler_remove_e_receiptId_System_Action_1_string:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_101
+bl p_102
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_83:
 	.align 2
 Lm_84:
-wrapper_synchronized_NativeXHandler_remove_e_actionFailed_System_Action_1_string:
+wrapper_synchronized_NativeXHandler_add_e_didPerformAction_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_102
+bl p_103
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_84:
 	.align 2
 Lm_85:
-wrapper_synchronized_NativeXHandler_add_e_userLeavingApplication_System_Action_1_bool:
+wrapper_synchronized_NativeXHandler_remove_e_didPerformAction_System_Action_1_bool:
 
 	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
 	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 560
 	.byte 0,0,159,231,0,0,139,229
-bl p_87
+bl p_83
 
 	.byte 16,0,155,229
-bl p_103
+bl p_104
 
 	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+bl p_85
 
 	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
 
 Lme_85:
 	.align 2
 Lm_86:
-wrapper_synchronized_NativeXHandler_remove_e_userLeavingApplication_System_Action_1_bool:
+wrapper_managed_to_native_NativeXCore_uStartWithNameAndApplicationId_string_string_string:
 
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
-	.byte 0,0,139,229,0,0,159,229,0,0,0,234
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,80,160,225,1,96,160,225,2,160,160,225
+bl p_79
+
+	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
+	.byte 5,0,160,225
+bl p_105
+
+	.byte 0,80,160,225,6,0,160,225
+bl p_105
+
+	.byte 0,96,160,225,10,0,160,225
+bl p_105
+
+	.byte 0,160,160,225,5,0,160,225,6,16,160,225,10,32,160,225
+bl p_106
+
+	.byte 0,0,159,229,0,0,0,234
 	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
-	.byte 0,0,159,231,0,0,139,229
-bl p_87
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,11,0,0,26,5,0,160,225
+bl p_107
 
-	.byte 16,0,155,229
-bl p_104
+	.byte 6,0,160,225
+bl p_107
 
-	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
+	.byte 10,0,160,225
+bl p_107
 
-	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
+	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 241,255,255,234
 
 Lme_86:
 	.align 2
 Lm_87:
-wrapper_synchronized_NativeXHandler_add_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
-	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
-	.byte 0,0,159,231,0,0,139,229
-bl p_87
-
-	.byte 16,0,155,229
-bl p_105
-
-	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
-
-	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
-
-Lme_87:
-	.align 2
-Lm_88:
-wrapper_synchronized_NativeXHandler_remove_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
-	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
-	.byte 0,0,159,231,0,0,139,229
-bl p_87
-
-	.byte 16,0,155,229
-bl p_106
-
-	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
-
-	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
-
-Lme_88:
-	.align 2
-Lm_89:
-wrapper_synchronized_NativeXHandler_add_e_receiptId_System_Action_1_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
-	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
-	.byte 0,0,159,231,0,0,139,229
-bl p_87
-
-	.byte 16,0,155,229
-bl p_107
-
-	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
-
-	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
-
-Lme_89:
-	.align 2
-Lm_8a:
-wrapper_synchronized_NativeXHandler_remove_e_receiptId_System_Action_1_string:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
-	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
-	.byte 0,0,159,231,0,0,139,229
-bl p_87
-
-	.byte 16,0,155,229
-bl p_108
-
-	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
-
-	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
-
-Lme_8a:
-	.align 2
-Lm_8b:
-wrapper_synchronized_NativeXHandler_add_e_didPerformAction_System_Action_1_bool:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
-	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
-	.byte 0,0,159,231,0,0,139,229
-bl p_87
-
-	.byte 16,0,155,229
-bl p_109
-
-	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
-
-	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
-
-Lme_8b:
-	.align 2
-Lm_8c:
-wrapper_synchronized_NativeXHandler_remove_e_didPerformAction_System_Action_1_bool:
-
-	.byte 13,192,160,225,128,64,45,233,13,112,160,225,0,89,45,233,24,208,77,226,13,176,160,225,16,0,139,229,0,0,160,227
-	.byte 0,0,139,229,0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
-	.byte 0,0,159,231,0,0,139,229
-bl p_87
-
-	.byte 16,0,155,229
-bl p_110
-
-	.byte 0,0,0,235,4,0,0,234,12,224,139,229,0,0,155,229
-bl p_89
-
-	.byte 12,192,155,229,12,240,160,225,24,208,139,226,0,9,189,232,8,112,157,229,0,160,157,232
-
-Lme_8c:
-	.align 2
-Lm_8d:
-wrapper_managed_to_native_NativeXCore_uStartWithNameAndApplicationId_string_string_string:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,80,160,225,1,96,160,225,2,160,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-	.byte 5,0,160,225
-bl p_111
-
-	.byte 0,80,160,225,6,0,160,225
-bl p_111
-
-	.byte 0,96,160,225,10,0,160,225
-bl p_111
-
-	.byte 0,160,160,225,5,0,160,225,6,16,160,225,10,32,160,225
-bl p_112
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,11,0,0,26,5,0,160,225
-bl p_113
-
-	.byte 6,0,160,225
-bl p_113
-
-	.byte 10,0,160,225
-bl p_113
-
-	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 241,255,255,234
-
-Lme_8d:
-	.align 2
-Lm_8e:
 wrapper_managed_to_native_NativeXCore_uSetCoordinates_single_single_single_single_single_single:
 
 	.byte 13,192,160,225,240,95,45,233,144,208,77,226,13,176,160,225,16,0,139,229,20,16,139,229,24,32,139,229,28,48,139,229
 	.byte 184,224,157,229,32,224,139,229,188,224,157,229,36,224,139,229
-bl p_83
+bl p_79
 
 	.byte 40,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
 	.byte 4,10,155,237,192,122,183,238,5,10,155,237,192,106,183,238,6,10,155,237,192,90,183,238,7,10,155,237,192,74,183,238
 	.byte 8,10,155,237,192,58,183,238,9,10,155,237,192,42,183,238,199,11,183,238,2,10,13,237,8,0,29,229,198,11,183,238
 	.byte 2,10,13,237,8,16,29,229,197,11,183,238,2,10,13,237,8,32,29,229,196,11,183,238,2,10,13,237,8,48,29,229
 	.byte 195,11,183,238,0,10,141,237,194,11,183,238,1,10,141,237
+bl p_108
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,40,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
+	.byte 104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 247,255,255,234
+
+Lme_87:
+	.align 2
+Lm_88:
+wrapper_managed_to_native_NativeXCore_uShowOfferWall:
+
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
+bl p_79
+
+	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
+bl p_109
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
+	.byte 104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 247,255,255,234
+
+Lme_88:
+	.align 2
+Lm_89:
+wrapper_managed_to_native_NativeXCore_uShowIncentOfferWall:
+
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
+bl p_79
+
+	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
+bl p_110
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
+	.byte 104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 247,255,255,234
+
+Lme_89:
+	.align 2
+Lm_8a:
+wrapper_managed_to_native_NativeXCore_uShowNonIncentOfferWall:
+
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
+bl p_79
+
+	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
+bl p_111
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
+	.byte 104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 247,255,255,234
+
+Lme_8a:
+	.align 2
+Lm_8b:
+wrapper_managed_to_native_NativeXCore_uGetAndCacheFeaturedOffer:
+
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
+bl p_79
+
+	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
+bl p_112
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
+	.byte 104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 247,255,255,234
+
+Lme_8b:
+	.align 2
+Lm_8c:
+wrapper_managed_to_native_NativeXCore_uShowCachedFeaturedOffer:
+
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
+bl p_79
+
+	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
+bl p_113
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
+	.byte 104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 247,255,255,234
+
+Lme_8c:
+	.align 2
+Lm_8d:
+wrapper_managed_to_native_NativeXCore_uShowFeaturedOffer:
+
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
+bl p_79
+
+	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
 bl p_114
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,40,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
 	.byte 104,208,130,226,240,175,157,232
-bl p_82
+bl p_78
 
 	.byte 247,255,255,234
+
+Lme_8d:
+	.align 2
+Lm_8e:
+wrapper_managed_to_native_NativeXCore_uGetAndCacheInterstitial_string:
+
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
+bl p_79
+
+	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
+	.byte 10,0,160,225
+bl p_105
+
+	.byte 0,160,160,225
+bl p_115
+
+	.byte 0,0,159,229,0,0,0,234
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
+bl p_107
+
+	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 245,255,255,234
 
 Lme_8e:
 	.align 2
 Lm_8f:
-wrapper_managed_to_native_NativeXCore_uShowOfferWall:
+wrapper_managed_to_native_NativeXCore_uShowCachedInterstitial_string:
 
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
+bl p_79
 
 	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_115
+	.byte 10,0,160,225
+bl p_105
+
+	.byte 0,160,160,225
+bl p_116
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
+bl p_107
 
-	.byte 247,255,255,234
+	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 245,255,255,234
 
 Lme_8f:
 	.align 2
 Lm_90:
-wrapper_managed_to_native_NativeXCore_uShowIncentOfferWall:
+wrapper_managed_to_native_NativeXCore_uShowInterstitial_string:
 
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
+bl p_79
 
 	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_116
+	.byte 10,0,160,225
+bl p_105
+
+	.byte 0,160,160,225
+bl p_117
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
+bl p_107
 
-	.byte 247,255,255,234
+	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 245,255,255,234
 
 Lme_90:
 	.align 2
 Lm_91:
-wrapper_managed_to_native_NativeXCore_uShowNonIncentOfferWall:
+wrapper_managed_to_native_NativeXCore_uShowBanner:
 
 	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
+bl p_79
 
 	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_117
+bl p_118
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
 	.byte 104,208,130,226,240,175,157,232
-bl p_82
+bl p_78
 
 	.byte 247,255,255,234
 
 Lme_91:
 	.align 2
 Lm_92:
-wrapper_managed_to_native_NativeXCore_uGetAndCacheFeaturedOffer:
+wrapper_managed_to_native_NativeXCore_uRemoveBanner:
 
 	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
+bl p_79
 
 	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_118
+bl p_119
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
 	.byte 104,208,130,226,240,175,157,232
-bl p_82
+bl p_78
 
 	.byte 247,255,255,234
 
 Lme_92:
 	.align 2
 Lm_93:
-wrapper_managed_to_native_NativeXCore_uShowCachedFeaturedOffer:
+wrapper_managed_to_native_NativeXCore_uRedeemCurrency:
 
 	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
+bl p_79
 
 	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_119
+bl p_120
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
 	.byte 104,208,130,226,240,175,157,232
-bl p_82
+bl p_78
 
 	.byte 247,255,255,234
 
 Lme_93:
 	.align 2
 Lm_94:
-wrapper_managed_to_native_NativeXCore_uShowFeaturedOffer:
+wrapper_managed_to_native_NativeXCore_uConnectWithAppId_string:
 
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
+	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
+bl p_79
 
 	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_120
+	.byte 10,0,160,225
+bl p_105
+
+	.byte 0,160,160,225
+bl p_121
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
+	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
+bl p_107
 
-	.byte 247,255,255,234
+	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
+bl p_78
+
+	.byte 245,255,255,234
 
 Lme_94:
 	.align 2
 Lm_95:
-wrapper_managed_to_native_NativeXCore_uGetAndCacheInterstitial:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_121
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 247,255,255,234
-
-Lme_95:
-	.align 2
-Lm_96:
-wrapper_managed_to_native_NativeXCore_uGetAndCacheEnhancedInterstitial_string:
+wrapper_managed_to_native_NativeXCore_uActionTakenWithActionId_string:
 
 	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
-bl p_83
+bl p_79
 
 	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
 	.byte 10,0,160,225
-bl p_111
+bl p_105
 
 	.byte 0,160,160,225
 bl p_122
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
-bl p_113
+bl p_107
 
 	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
-bl p_82
+bl p_78
 
 	.byte 245,255,255,234
 
-Lme_96:
+Lme_95:
 	.align 2
-Lm_97:
-wrapper_managed_to_native_NativeXCore_uShowCachedInterstitial:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_123
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 247,255,255,234
-
-Lme_97:
-	.align 2
-Lm_98:
-wrapper_managed_to_native_NativeXCore_uShowCachedEnhancedInterstitial_string:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-	.byte 10,0,160,225
-bl p_111
-
-	.byte 0,160,160,225
-bl p_124
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
-bl p_113
-
-	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 245,255,255,234
-
-Lme_98:
-	.align 2
-Lm_99:
-wrapper_managed_to_native_NativeXCore_uShowInterstitial:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_125
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 247,255,255,234
-
-Lme_99:
-	.align 2
-Lm_9a:
-wrapper_managed_to_native_NativeXCore_uShowEnhancedInterstitial_string:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-	.byte 10,0,160,225
-bl p_111
-
-	.byte 0,160,160,225
-bl p_126
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
-bl p_113
-
-	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 245,255,255,234
-
-Lme_9a:
-	.align 2
-Lm_9b:
-wrapper_managed_to_native_NativeXCore_uShowBanner:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_127
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 247,255,255,234
-
-Lme_9b:
-	.align 2
-Lm_9c:
-wrapper_managed_to_native_NativeXCore_uRemoveBanner:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_128
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 247,255,255,234
-
-Lme_9c:
-	.align 2
-Lm_9d:
-wrapper_managed_to_native_NativeXCore_uRedeemCurrency:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-bl p_129
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,5,0,0,26,0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229
-	.byte 104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 247,255,255,234
-
-Lme_9d:
-	.align 2
-Lm_9e:
-wrapper_managed_to_native_NativeXCore_uConnectWithAppId_string:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-	.byte 10,0,160,225
-bl p_111
-
-	.byte 0,160,160,225
-bl p_130
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
-bl p_113
-
-	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 245,255,255,234
-
-Lme_9e:
-	.align 2
-Lm_9f:
-wrapper_managed_to_native_NativeXCore_uActionTakenWithActionId_string:
-
-	.byte 13,192,160,225,240,95,45,233,104,208,77,226,13,176,160,225,0,160,160,225
-bl p_83
-
-	.byte 0,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
-	.byte 10,0,160,225
-bl p_111
-
-	.byte 0,160,160,225
-bl p_131
-
-	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
-	.byte 0,0,159,231,0,0,144,229,0,0,80,227,7,0,0,26,10,0,160,225
-bl p_113
-
-	.byte 0,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
-bl p_82
-
-	.byte 245,255,255,234
-
-Lme_9f:
-	.align 2
-Lm_a0:
+Lm_96:
 wrapper_managed_to_native_NativeXCore_uTrackInAppPurchase_string_string_single_int_string:
 
 	.byte 13,192,160,225,240,95,45,233,128,208,77,226,13,176,160,225,0,64,160,225,1,80,160,225,16,32,139,229,20,48,139,229
 	.byte 168,160,157,229
-bl p_83
+bl p_79
 
 	.byte 24,16,141,226,4,0,129,229,0,32,144,229,0,32,129,229,0,16,128,229,16,208,129,229,15,32,160,225,20,32,129,229
 	.byte 4,0,160,225
-bl p_111
+bl p_105
 
 	.byte 0,64,160,225,5,0,160,225
-bl p_111
+bl p_105
 
 	.byte 0,80,160,225,10,0,160,225
-bl p_111
+bl p_105
 
 	.byte 0,160,160,225,4,10,155,237,192,42,183,238,4,0,160,225,5,16,160,225,194,11,183,238,2,10,13,237,8,32,29,229
 	.byte 20,48,155,229,0,160,141,229
-bl p_132
+bl p_123
 
 	.byte 0,0,159,229,0,0,0,234
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 552
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 556
 	.byte 0,0,159,231,0,0,144,229,0,0,80,227,11,0,0,26,4,0,160,225
-bl p_113
+bl p_107
 
 	.byte 5,0,160,225
-bl p_113
+bl p_107
 
 	.byte 10,0,160,225
-bl p_113
+bl p_107
 
 	.byte 24,32,139,226,0,192,146,229,4,224,146,229,0,192,142,229,104,208,130,226,240,175,157,232
-bl p_82
+bl p_78
 
 	.byte 241,255,255,234
 
-Lme_a0:
+Lme_96:
 .text
 	.align 3
 methods_end:
@@ -3392,25 +3236,23 @@ method_offsets:
 
 	.long Lm_0 - methods,Lm_1 - methods,Lm_2 - methods,Lm_3 - methods,Lm_4 - methods,Lm_5 - methods,Lm_6 - methods,Lm_7 - methods
 	.long Lm_8 - methods,Lm_9 - methods,Lm_a - methods,Lm_b - methods,Lm_c - methods,Lm_d - methods,Lm_e - methods,Lm_f - methods
-	.long -1,-1,Lm_12 - methods,-1,Lm_14 - methods,-1,Lm_16 - methods,-1
-	.long Lm_18 - methods,-1,Lm_1a - methods,-1,Lm_1c - methods,-1,Lm_1e - methods,-1
-	.long -1,Lm_21 - methods,-1,-1,Lm_24 - methods,-1,-1,Lm_27 - methods
+	.long Lm_10 - methods,-1,-1,Lm_13 - methods,-1,Lm_15 - methods,-1,Lm_17 - methods
+	.long -1,Lm_19 - methods,-1,Lm_1b - methods,-1,Lm_1d - methods,-1,Lm_1f - methods
+	.long -1,Lm_21 - methods,-1,Lm_23 - methods,-1,Lm_25 - methods,-1,Lm_27 - methods
 	.long -1,Lm_29 - methods,-1,Lm_2b - methods,-1,Lm_2d - methods,-1,Lm_2f - methods
-	.long -1,Lm_31 - methods,Lm_32 - methods,Lm_33 - methods,-1,Lm_35 - methods,Lm_36 - methods,Lm_37 - methods
+	.long Lm_30 - methods,Lm_31 - methods,-1,Lm_33 - methods,Lm_34 - methods,Lm_35 - methods,Lm_36 - methods,Lm_37 - methods
 	.long Lm_38 - methods,Lm_39 - methods,Lm_3a - methods,Lm_3b - methods,Lm_3c - methods,Lm_3d - methods,Lm_3e - methods,Lm_3f - methods
 	.long Lm_40 - methods,Lm_41 - methods,Lm_42 - methods,Lm_43 - methods,Lm_44 - methods,Lm_45 - methods,Lm_46 - methods,Lm_47 - methods
 	.long Lm_48 - methods,Lm_49 - methods,Lm_4a - methods,Lm_4b - methods,Lm_4c - methods,Lm_4d - methods,Lm_4e - methods,Lm_4f - methods
 	.long Lm_50 - methods,Lm_51 - methods,Lm_52 - methods,Lm_53 - methods,Lm_54 - methods,Lm_55 - methods,Lm_56 - methods,Lm_57 - methods
 	.long Lm_58 - methods,Lm_59 - methods,Lm_5a - methods,Lm_5b - methods,Lm_5c - methods,Lm_5d - methods,Lm_5e - methods,Lm_5f - methods
 	.long Lm_60 - methods,Lm_61 - methods,Lm_62 - methods,Lm_63 - methods,Lm_64 - methods,Lm_65 - methods,Lm_66 - methods,Lm_67 - methods
-	.long Lm_68 - methods,Lm_69 - methods,Lm_6a - methods,Lm_6b - methods,Lm_6c - methods,Lm_6d - methods,-1,-1
-	.long -1,-1,-1,Lm_73 - methods,Lm_74 - methods,Lm_75 - methods,Lm_76 - methods,Lm_77 - methods
+	.long Lm_68 - methods,-1,-1,-1,-1,-1,Lm_6e - methods,Lm_6f - methods
+	.long Lm_70 - methods,Lm_71 - methods,Lm_72 - methods,Lm_73 - methods,Lm_74 - methods,Lm_75 - methods,Lm_76 - methods,Lm_77 - methods
 	.long Lm_78 - methods,Lm_79 - methods,Lm_7a - methods,Lm_7b - methods,Lm_7c - methods,Lm_7d - methods,Lm_7e - methods,Lm_7f - methods
 	.long Lm_80 - methods,Lm_81 - methods,Lm_82 - methods,Lm_83 - methods,Lm_84 - methods,Lm_85 - methods,Lm_86 - methods,Lm_87 - methods
 	.long Lm_88 - methods,Lm_89 - methods,Lm_8a - methods,Lm_8b - methods,Lm_8c - methods,Lm_8d - methods,Lm_8e - methods,Lm_8f - methods
-	.long Lm_90 - methods,Lm_91 - methods,Lm_92 - methods,Lm_93 - methods,Lm_94 - methods,Lm_95 - methods,Lm_96 - methods,Lm_97 - methods
-	.long Lm_98 - methods,Lm_99 - methods,Lm_9a - methods,Lm_9b - methods,Lm_9c - methods,Lm_9d - methods,Lm_9e - methods,Lm_9f - methods
-	.long Lm_a0 - methods
+	.long Lm_90 - methods,Lm_91 - methods,Lm_92 - methods,Lm_93 - methods,Lm_94 - methods,Lm_95 - methods,Lm_96 - methods
 
 .text
 	.align 3
@@ -3421,16 +3263,16 @@ Lm_0_p:
 	.byte 0,0
 Lm_1_p:
 
-	.byte 0,2,2,2
+	.byte 0,5,2,3,4,5,6
 Lm_2_p:
 
-	.byte 0,0
+	.byte 0,2,7,7
 Lm_3_p:
 
-	.byte 0,4,3,4,5,6
+	.byte 0,0
 Lm_4_p:
 
-	.byte 0,0
+	.byte 0,4,8,9,10,11
 Lm_5_p:
 
 	.byte 0,0
@@ -3454,403 +3296,380 @@ Lm_b_p:
 	.byte 0,0
 Lm_c_p:
 
-	.byte 0,2,2,2
+	.byte 0,0
 Lm_d_p:
 
-	.byte 0,5,7,8,9,10,11
+	.byte 0,2,7,7
 Lm_e_p:
 
-	.byte 4,0,0
+	.byte 0,5,2,12,13,14,15
 Lm_f_p:
 
-	.byte 4,0,1,12
-Lm_12_p:
+	.byte 4,0,0
+Lm_10_p:
 
-	.byte 4,0,3,13,12,14
-Lm_14_p:
+	.byte 4,0,1,16
+Lm_13_p:
 
-	.byte 4,0,2,12,15
-Lm_16_p:
+	.byte 4,0,3,17,16,18
+Lm_15_p:
 
-	.byte 4,0,2,12,16
-Lm_18_p:
+	.byte 4,0,2,16,19
+Lm_17_p:
 
-	.byte 4,0,2,12,17
-Lm_1a_p:
+	.byte 4,0,2,16,20
+Lm_19_p:
 
-	.byte 4,0,2,12,18
-Lm_1c_p:
+	.byte 4,0,2,16,21
+Lm_1b_p:
 
-	.byte 4,0,2,12,19
-Lm_1e_p:
+	.byte 4,0,2,16,22
+Lm_1d_p:
 
-	.byte 4,0,2,12,20
+	.byte 4,0,2,16,23
+Lm_1f_p:
+
+	.byte 4,0,2,16,24
 Lm_21_p:
 
-	.byte 4,0,3,13,12,21
-Lm_24_p:
+	.byte 4,0,2,16,25
+Lm_23_p:
 
-	.byte 4,0,3,13,12,21
+	.byte 4,0,2,16,26
+Lm_25_p:
+
+	.byte 4,0,2,16,27
 Lm_27_p:
 
-	.byte 4,0,3,13,12,21
+	.byte 4,0,2,16,28
 Lm_29_p:
 
-	.byte 4,0,2,12,22
+	.byte 4,0,2,16,29
 Lm_2b_p:
 
-	.byte 4,0,2,12,23
+	.byte 4,0,2,16,30
 Lm_2d_p:
 
-	.byte 4,0,2,12,24
+	.byte 4,0,3,17,16,31
 Lm_2f_p:
 
-	.byte 4,0,3,13,12,25
-Lm_31_p:
+	.byte 4,0,3,17,16,32
+Lm_30_p:
 
-	.byte 4,0,3,13,12,26
-Lm_32_p:
+	.byte 4,0,0
+Lm_31_p:
 
 	.byte 4,0,0
 Lm_33_p:
 
 	.byte 4,0,0
+Lm_34_p:
+
+	.byte 5,0,0
 Lm_35_p:
 
-	.byte 4,0,0
+	.byte 5,0,0
 Lm_36_p:
 
-	.byte 5,0,0
+	.byte 5,0,3,33,34,33
 Lm_37_p:
 
-	.byte 5,0,0
+	.byte 5,0,3,33,34,33
 Lm_38_p:
 
-	.byte 5,0,3,27,28,27
+	.byte 5,0,3,35,36,35
 Lm_39_p:
 
-	.byte 5,0,3,27,28,27
+	.byte 5,0,3,35,36,35
 Lm_3a_p:
 
-	.byte 5,0,3,29,28,29
+	.byte 5,0,3,37,34,37
 Lm_3b_p:
 
-	.byte 5,0,3,29,28,29
+	.byte 5,0,3,37,34,37
 Lm_3c_p:
 
-	.byte 5,0,3,30,31,30
+	.byte 5,0,3,38,34,38
 Lm_3d_p:
 
-	.byte 5,0,3,30,31,30
+	.byte 5,0,3,38,34,38
 Lm_3e_p:
 
-	.byte 5,0,3,32,28,32
+	.byte 5,0,3,39,36,39
 Lm_3f_p:
 
-	.byte 5,0,3,32,28,32
+	.byte 5,0,3,39,36,39
 Lm_40_p:
 
-	.byte 5,0,3,33,28,33
+	.byte 5,0,3,40,36,40
 Lm_41_p:
 
-	.byte 5,0,3,33,28,33
+	.byte 5,0,3,40,36,40
 Lm_42_p:
 
-	.byte 5,0,3,34,31,34
+	.byte 5,0,3,41,34,41
 Lm_43_p:
 
-	.byte 5,0,3,34,31,34
+	.byte 5,0,3,41,34,41
 Lm_44_p:
 
-	.byte 5,0,3,35,31,35
+	.byte 5,0,3,42,43,42
 Lm_45_p:
 
-	.byte 5,0,3,35,31,35
+	.byte 5,0,3,42,43,42
 Lm_46_p:
 
-	.byte 5,0,3,36,28,36
+	.byte 5,0,3,44,36,44
 Lm_47_p:
 
-	.byte 5,0,3,36,28,36
+	.byte 5,0,3,44,36,44
 Lm_48_p:
 
-	.byte 5,0,3,37,38,37
+	.byte 5,0,3,45,34,45
 Lm_49_p:
 
-	.byte 5,0,3,37,38,37
+	.byte 5,0,3,45,34,45
 Lm_4a_p:
 
-	.byte 5,0,3,39,31,39
+	.byte 5,0,3,46,7,47
 Lm_4b_p:
 
-	.byte 5,0,3,39,31,39
+	.byte 5,0,4,33,48,33,33
 Lm_4c_p:
 
-	.byte 5,0,3,40,28,40
+	.byte 5,0,2,35,35
 Lm_4d_p:
 
-	.byte 5,0,3,40,28,40
+	.byte 5,0,4,37,48,37,37
 Lm_4e_p:
 
-	.byte 5,0,3,41,2,42
+	.byte 5,0,4,38,48,38,38
 Lm_4f_p:
 
-	.byte 5,0,4,27,43,27,27
+	.byte 5,0,4,39,39,49,46
 Lm_50_p:
 
-	.byte 5,0,6,29,44,29,45,29,30
+	.byte 5,0,2,40,40
 Lm_51_p:
 
-	.byte 5,0,4,32,43,32,32
+	.byte 5,0,4,41,50,41,41
 Lm_52_p:
 
-	.byte 5,0,4,33,43,33,33
+	.byte 5,0,7,42,51,52,42,42,10,11
 Lm_53_p:
 
-	.byte 5,0,4,34,34,46,41
+	.byte 5,0,2,44,44
 Lm_54_p:
 
-	.byte 5,0,2,35,35
+	.byte 5,0,4,45,48,45,45
 Lm_55_p:
 
-	.byte 5,0,4,36,47,36,36
+	.byte 0,0
 Lm_56_p:
 
-	.byte 5,0,7,37,48,49,37,37,5,6
+	.byte 0,0
 Lm_57_p:
 
-	.byte 5,0,2,39,39
+	.byte 0,0
 Lm_58_p:
 
-	.byte 5,0,4,40,43,40,40
+	.byte 0,0
 Lm_59_p:
 
-	.byte 0,0
+	.byte 0,7,53,54,55,56,57,58,55
 Lm_5a_p:
 
-	.byte 0,0
+	.byte 7,0,0
 Lm_5b_p:
 
-	.byte 0,0
+	.byte 7,0,2,59,60
 Lm_5c_p:
 
-	.byte 0,0
+	.byte 7,0,14,61,62,63,64,61,65,66,67,63,67,63,68,67,63
 Lm_5d_p:
 
-	.byte 0,7,50,51,52,53,54,55,52
+	.byte 7,0,30,69,70,71,69,72,71,73,74,75,69,76,71,73,77,75,73,78,75,69,79,71,80,81,82,73,83,75,69,84
+	.byte 71
 Lm_5e_p:
 
-	.byte 7,0,0
+	.byte 7,0,43,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,98,101,102,98,103,104,105,106,107,108,109,110,111
+	.byte 112,113,114,115,116,117,115,118,119,120,121,122,123,60
 Lm_5f_p:
 
-	.byte 7,0,2,56,57
+	.byte 7,0,3,124,125,60
 Lm_60_p:
 
-	.byte 7,0,14,58,59,60,61,58,62,63,64,60,64,60,65,64,60
+	.byte 7,0,2,126,60
 Lm_61_p:
 
-	.byte 7,0,33,66,67,68,66,69,68,66,70,68,71,72,73,66,74,68,71,75,73,71,76,73,66,77,68,78,79,80,71,81
-	.byte 73,66,82,68
+	.byte 7,0,17,7,60,127,60,128,128,128,129,60,53,128,130,55,128,131,128,132,128,133,55,127,127,128,134
 Lm_62_p:
 
-	.byte 7,0,42,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,96,99,100,101,102,103,104,105,106,107,108,109,110
-	.byte 111,112,113,114,115,113,116,117,118,119,120,121,57
+	.byte 7,0,2,128,135,60
 Lm_63_p:
 
-	.byte 7,0,3,122,123,57
+	.byte 7,0,2,128,136,60
 Lm_64_p:
 
-	.byte 7,0,2,124,57
+	.byte 7,0,2,128,137,60
 Lm_65_p:
 
-	.byte 7,0,17,2,57,125,57,126,127,57,50,128,128,52,128,129,128,130,128,131,52,125,125,128,132
+	.byte 7,0,3,128,138,125,60
 Lm_66_p:
 
-	.byte 7,0,2,128,133,57
+	.byte 7,0,3,128,139,125,60
 Lm_67_p:
 
-	.byte 7,0,2,128,134,57
+	.byte 7,0,3,128,140,125,60
 Lm_68_p:
 
-	.byte 7,0,3,128,135,123,57
-Lm_69_p:
+	.byte 7,0,3,128,141,125,60
+Lm_6e_p:
 
-	.byte 7,0,2,128,136,57
-Lm_6a_p:
+	.byte 0,1,128,142
+Lm_6f_p:
 
-	.byte 7,0,3,128,137,123,57
-Lm_6b_p:
+	.byte 0,1,128,142
+Lm_70_p:
 
-	.byte 7,0,3,128,138,123,57
-Lm_6c_p:
+	.byte 0,1,128,142
+Lm_71_p:
 
-	.byte 7,0,3,128,139,123,57
-Lm_6d_p:
+	.byte 0,1,128,142
+Lm_72_p:
 
-	.byte 7,0,3,128,140,123,57
+	.byte 5,0,1,128,143
 Lm_73_p:
 
-	.byte 0,1,128,141
+	.byte 5,0,1,128,143
 Lm_74_p:
 
-	.byte 0,1,128,141
+	.byte 5,0,1,128,143
 Lm_75_p:
 
-	.byte 0,1,128,141
+	.byte 5,0,1,128,143
 Lm_76_p:
 
-	.byte 0,1,128,141
+	.byte 5,0,1,128,143
 Lm_77_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_78_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_79_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_7a_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_7b_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_7c_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_7d_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_7e_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_7f_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_80_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_81_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_82_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_83_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_84_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_85_p:
 
-	.byte 5,0,1,128,142
+	.byte 5,0,1,128,143
 Lm_86_p:
 
-	.byte 5,0,1,128,142
+	.byte 4,0,1,128,142
 Lm_87_p:
 
-	.byte 5,0,1,128,142
+	.byte 4,0,1,128,142
 Lm_88_p:
 
-	.byte 5,0,1,128,142
+	.byte 4,0,1,128,142
 Lm_89_p:
 
-	.byte 5,0,1,128,142
+	.byte 4,0,1,128,142
 Lm_8a_p:
 
-	.byte 5,0,1,128,142
+	.byte 4,0,1,128,142
 Lm_8b_p:
 
-	.byte 5,0,1,128,142
+	.byte 4,0,1,128,142
 Lm_8c_p:
 
-	.byte 5,0,1,128,142
+	.byte 4,0,1,128,142
 Lm_8d_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_8e_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_8f_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_90_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_91_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_92_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_93_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_94_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_95_p:
 
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 Lm_96_p:
 
-	.byte 4,0,1,128,141
-Lm_97_p:
-
-	.byte 4,0,1,128,141
-Lm_98_p:
-
-	.byte 4,0,1,128,141
-Lm_99_p:
-
-	.byte 4,0,1,128,141
-Lm_9a_p:
-
-	.byte 4,0,1,128,141
-Lm_9b_p:
-
-	.byte 4,0,1,128,141
-Lm_9c_p:
-
-	.byte 4,0,1,128,141
-Lm_9d_p:
-
-	.byte 4,0,1,128,141
-Lm_9e_p:
-
-	.byte 4,0,1,128,141
-Lm_9f_p:
-
-	.byte 4,0,1,128,141
-Lm_a0_p:
-
-	.byte 4,0,1,128,141
+	.byte 4,0,1,128,142
 .text
 	.align 3
 method_info_offsets:
 
 	.long Lm_0_p - mi,Lm_1_p - mi,Lm_2_p - mi,Lm_3_p - mi,Lm_4_p - mi,Lm_5_p - mi,Lm_6_p - mi,Lm_7_p - mi
 	.long Lm_8_p - mi,Lm_9_p - mi,Lm_a_p - mi,Lm_b_p - mi,Lm_c_p - mi,Lm_d_p - mi,Lm_e_p - mi,Lm_f_p - mi
-	.long 0,0,Lm_12_p - mi,0,Lm_14_p - mi,0,Lm_16_p - mi,0
-	.long Lm_18_p - mi,0,Lm_1a_p - mi,0,Lm_1c_p - mi,0,Lm_1e_p - mi,0
-	.long 0,Lm_21_p - mi,0,0,Lm_24_p - mi,0,0,Lm_27_p - mi
+	.long Lm_10_p - mi,0,0,Lm_13_p - mi,0,Lm_15_p - mi,0,Lm_17_p - mi
+	.long 0,Lm_19_p - mi,0,Lm_1b_p - mi,0,Lm_1d_p - mi,0,Lm_1f_p - mi
+	.long 0,Lm_21_p - mi,0,Lm_23_p - mi,0,Lm_25_p - mi,0,Lm_27_p - mi
 	.long 0,Lm_29_p - mi,0,Lm_2b_p - mi,0,Lm_2d_p - mi,0,Lm_2f_p - mi
-	.long 0,Lm_31_p - mi,Lm_32_p - mi,Lm_33_p - mi,0,Lm_35_p - mi,Lm_36_p - mi,Lm_37_p - mi
+	.long Lm_30_p - mi,Lm_31_p - mi,0,Lm_33_p - mi,Lm_34_p - mi,Lm_35_p - mi,Lm_36_p - mi,Lm_37_p - mi
 	.long Lm_38_p - mi,Lm_39_p - mi,Lm_3a_p - mi,Lm_3b_p - mi,Lm_3c_p - mi,Lm_3d_p - mi,Lm_3e_p - mi,Lm_3f_p - mi
 	.long Lm_40_p - mi,Lm_41_p - mi,Lm_42_p - mi,Lm_43_p - mi,Lm_44_p - mi,Lm_45_p - mi,Lm_46_p - mi,Lm_47_p - mi
 	.long Lm_48_p - mi,Lm_49_p - mi,Lm_4a_p - mi,Lm_4b_p - mi,Lm_4c_p - mi,Lm_4d_p - mi,Lm_4e_p - mi,Lm_4f_p - mi
 	.long Lm_50_p - mi,Lm_51_p - mi,Lm_52_p - mi,Lm_53_p - mi,Lm_54_p - mi,Lm_55_p - mi,Lm_56_p - mi,Lm_57_p - mi
 	.long Lm_58_p - mi,Lm_59_p - mi,Lm_5a_p - mi,Lm_5b_p - mi,Lm_5c_p - mi,Lm_5d_p - mi,Lm_5e_p - mi,Lm_5f_p - mi
 	.long Lm_60_p - mi,Lm_61_p - mi,Lm_62_p - mi,Lm_63_p - mi,Lm_64_p - mi,Lm_65_p - mi,Lm_66_p - mi,Lm_67_p - mi
-	.long Lm_68_p - mi,Lm_69_p - mi,Lm_6a_p - mi,Lm_6b_p - mi,Lm_6c_p - mi,Lm_6d_p - mi,0,0
-	.long 0,0,0,Lm_73_p - mi,Lm_74_p - mi,Lm_75_p - mi,Lm_76_p - mi,Lm_77_p - mi
+	.long Lm_68_p - mi,0,0,0,0,0,Lm_6e_p - mi,Lm_6f_p - mi
+	.long Lm_70_p - mi,Lm_71_p - mi,Lm_72_p - mi,Lm_73_p - mi,Lm_74_p - mi,Lm_75_p - mi,Lm_76_p - mi,Lm_77_p - mi
 	.long Lm_78_p - mi,Lm_79_p - mi,Lm_7a_p - mi,Lm_7b_p - mi,Lm_7c_p - mi,Lm_7d_p - mi,Lm_7e_p - mi,Lm_7f_p - mi
 	.long Lm_80_p - mi,Lm_81_p - mi,Lm_82_p - mi,Lm_83_p - mi,Lm_84_p - mi,Lm_85_p - mi,Lm_86_p - mi,Lm_87_p - mi
 	.long Lm_88_p - mi,Lm_89_p - mi,Lm_8a_p - mi,Lm_8b_p - mi,Lm_8c_p - mi,Lm_8d_p - mi,Lm_8e_p - mi,Lm_8f_p - mi
-	.long Lm_90_p - mi,Lm_91_p - mi,Lm_92_p - mi,Lm_93_p - mi,Lm_94_p - mi,Lm_95_p - mi,Lm_96_p - mi,Lm_97_p - mi
-	.long Lm_98_p - mi,Lm_99_p - mi,Lm_9a_p - mi,Lm_9b_p - mi,Lm_9c_p - mi,Lm_9d_p - mi,Lm_9e_p - mi,Lm_9f_p - mi
-	.long Lm_a0_p - mi
+	.long Lm_90_p - mi,Lm_91_p - mi,Lm_92_p - mi,Lm_93_p - mi,Lm_94_p - mi,Lm_95_p - mi,Lm_96_p - mi
 
 .text
 	.align 3
@@ -3863,119 +3682,112 @@ extra_method_info:
 	.byte 108,108,101,99,116,105,111,110,115,46,71,101,110,101,114,105,99,46,76,105,115,116,96,49,60,78,97,116,105,118,101,88
 	.byte 66,97,108,97,110,99,101,62,41,0,1,6,83,121,115,116,101,109,46,65,114,114,97,121,58,71,101,116,71,101,110,101
 	.byte 114,105,99,86,97,108,117,101,73,109,112,108,32,40,105,110,116,44,111,98,106,101,99,116,38,41,0,0,255,253,0,0
-	.byte 0,16,255,252,0,0,0,57,0,255,253,0,0,0,16,255,252,0,0,0,58,0,255,253,0,0,0,16,255,252,0,0
-	.byte 0,59,0,255,253,0,0,0,16,255,252,0,0,0,60,0,255,253,0,0,0,16,255,252,0,0,0,61,0,255,253,0
-	.byte 0,0,16,255,252,0,0,0,62,0,255,253,0,0,0,16,255,252,0,0,0,63,0,255,253,0,0,0,16,255,252,0
-	.byte 0,0,64,0,255,253,0,0,0,16,255,252,0,0,0,65,0,255,253,0,0,0,16,255,252,0,0,0,66,0,255,253
-	.byte 0,0,0,16,255,252,0,0,0,67,0,255,253,0,0,0,16,255,252,0,0,0,68,0,255,253,0,0,0,16,255,252
-	.byte 0,0,0,69,0,255,253,0,0,0,16,255,252,0,0,0,70,0,255,253,0,0,0,16,255,252,0,0,0,71,0,255
-	.byte 253,0,0,0,16,255,252,0,0,0,72,0,255,253,0,0,0,16,255,252,0,0,0,73,0,255,253,0,0,0,16,255
-	.byte 252,0,0,0,74,0,255,253,0,0,0,16,255,252,0,0,0,75,0,255,253,0,0,0,16,255,252,0,0,0,76,0
-	.byte 255,253,0,0,0,16,255,252,0,0,0,77,0,255,253,0,0,0,16,255,252,0,0,0,78,1,6,78,97,116,105,118
-	.byte 101,88,67,111,114,101,58,117,83,116,97,114,116,87,105,116,104,78,97,109,101,65,110,100,65,112,112,108,105,99,97,116
-	.byte 105,111,110,73,100,32,40,115,116,114,105,110,103,44,115,116,114,105,110,103,44,115,116,114,105,110,103,41,0,1,6,78
-	.byte 97,116,105,118,101,88,67,111,114,101,58,117,83,101,116,67,111,111,114,100,105,110,97,116,101,115,32,40,115,105,110,103
-	.byte 108,101,44,115,105,110,103,108,101,44,115,105,110,103,108,101,44,115,105,110,103,108,101,44,115,105,110,103,108,101,44,115
-	.byte 105,110,103,108,101,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119,79,102,102,101,114,87
-	.byte 97,108,108,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119,73,110,99,101,110,116
+	.byte 0,16,255,252,0,0,0,55,0,255,253,0,0,0,16,255,252,0,0,0,56,0,255,253,0,0,0,16,255,252,0,0
+	.byte 0,57,0,255,253,0,0,0,16,255,252,0,0,0,58,0,255,253,0,0,0,16,255,252,0,0,0,59,0,255,253,0
+	.byte 0,0,16,255,252,0,0,0,60,0,255,253,0,0,0,16,255,252,0,0,0,61,0,255,253,0,0,0,16,255,252,0
+	.byte 0,0,62,0,255,253,0,0,0,16,255,252,0,0,0,63,0,255,253,0,0,0,16,255,252,0,0,0,64,0,255,253
+	.byte 0,0,0,16,255,252,0,0,0,65,0,255,253,0,0,0,16,255,252,0,0,0,66,0,255,253,0,0,0,16,255,252
+	.byte 0,0,0,67,0,255,253,0,0,0,16,255,252,0,0,0,68,0,255,253,0,0,0,16,255,252,0,0,0,69,0,255
+	.byte 253,0,0,0,16,255,252,0,0,0,70,0,255,253,0,0,0,16,255,252,0,0,0,71,0,255,253,0,0,0,16,255
+	.byte 252,0,0,0,72,0,255,253,0,0,0,16,255,252,0,0,0,73,0,255,253,0,0,0,16,255,252,0,0,0,74,1
+	.byte 6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,116,97,114,116,87,105,116,104,78,97,109,101,65,110,100,65,112
+	.byte 112,108,105,99,97,116,105,111,110,73,100,32,40,115,116,114,105,110,103,44,115,116,114,105,110,103,44,115,116,114,105,110
+	.byte 103,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,101,116,67,111,111,114,100,105,110,97,116,101,115
+	.byte 32,40,115,105,110,103,108,101,44,115,105,110,103,108,101,44,115,105,110,103,108,101,44,115,105,110,103,108,101,44,115,105
+	.byte 110,103,108,101,44,115,105,110,103,108,101,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119
 	.byte 79,102,102,101,114,87,97,108,108,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119
-	.byte 78,111,110,73,110,99,101,110,116,79,102,102,101,114,87,97,108,108,32,40,41,0,1,6,78,97,116,105,118,101,88,67
-	.byte 111,114,101,58,117,71,101,116,65,110,100,67,97,99,104,101,70,101,97,116,117,114,101,100,79,102,102,101,114,32,40,41
-	.byte 0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119,67,97,99,104,101,100,70,101,97,116,117,114
-	.byte 101,100,79,102,102,101,114,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119,70,101
-	.byte 97,116,117,114,101,100,79,102,102,101,114,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,71,101
-	.byte 116,65,110,100,67,97,99,104,101,73,110,116,101,114,115,116,105,116,105,97,108,32,40,41,0,1,6,78,97,116,105,118
-	.byte 101,88,67,111,114,101,58,117,71,101,116,65,110,100,67,97,99,104,101,69,110,104,97,110,99,101,100,73,110,116,101,114
-	.byte 115,116,105,116,105,97,108,32,40,115,116,114,105,110,103,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117
-	.byte 83,104,111,119,67,97,99,104,101,100,73,110,116,101,114,115,116,105,116,105,97,108,32,40,41,0,1,6,78,97,116,105
-	.byte 118,101,88,67,111,114,101,58,117,83,104,111,119,67,97,99,104,101,100,69,110,104,97,110,99,101,100,73,110,116,101,114
-	.byte 115,116,105,116,105,97,108,32,40,115,116,114,105,110,103,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117
-	.byte 83,104,111,119,73,110,116,101,114,115,116,105,116,105,97,108,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111,114
-	.byte 101,58,117,83,104,111,119,69,110,104,97,110,99,101,100,73,110,116,101,114,115,116,105,116,105,97,108,32,40,115,116,114
-	.byte 105,110,103,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119,66,97,110,110,101,114,32,40
-	.byte 41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,82,101,109,111,118,101,66,97,110,110,101,114,32,40,41
-	.byte 0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,82,101,100,101,101,109,67,117,114,114,101,110,99,121,32,40
-	.byte 41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,67,111,110,110,101,99,116,87,105,116,104,65,112,112,73
-	.byte 100,32,40,115,116,114,105,110,103,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,65,99,116,105,111,110
-	.byte 84,97,107,101,110,87,105,116,104,65,99,116,105,111,110,73,100,32,40,115,116,114,105,110,103,41,0,1,6,78,97,116
-	.byte 105,118,101,88,67,111,114,101,58,117,84,114,97,99,107,73,110,65,112,112,80,117,114,99,104,97,115,101,32,40,115,116
-	.byte 114,105,110,103,44,115,116,114,105,110,103,44,115,105,110,103,108,101,44,105,110,116,44,115,116,114,105,110,103,41,0
+	.byte 73,110,99,101,110,116,79,102,102,101,114,87,97,108,108,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101
+	.byte 58,117,83,104,111,119,78,111,110,73,110,99,101,110,116,79,102,102,101,114,87,97,108,108,32,40,41,0,1,6,78,97
+	.byte 116,105,118,101,88,67,111,114,101,58,117,71,101,116,65,110,100,67,97,99,104,101,70,101,97,116,117,114,101,100,79,102
+	.byte 102,101,114,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119,67,97,99,104,101,100
+	.byte 70,101,97,116,117,114,101,100,79,102,102,101,114,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117
+	.byte 83,104,111,119,70,101,97,116,117,114,101,100,79,102,102,101,114,32,40,41,0,1,6,78,97,116,105,118,101,88,67,111
+	.byte 114,101,58,117,71,101,116,65,110,100,67,97,99,104,101,73,110,116,101,114,115,116,105,116,105,97,108,32,40,115,116,114
+	.byte 105,110,103,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119,67,97,99,104,101,100,73,110
+	.byte 116,101,114,115,116,105,116,105,97,108,32,40,115,116,114,105,110,103,41,0,1,6,78,97,116,105,118,101,88,67,111,114
+	.byte 101,58,117,83,104,111,119,73,110,116,101,114,115,116,105,116,105,97,108,32,40,115,116,114,105,110,103,41,0,1,6,78
+	.byte 97,116,105,118,101,88,67,111,114,101,58,117,83,104,111,119,66,97,110,110,101,114,32,40,41,0,1,6,78,97,116,105
+	.byte 118,101,88,67,111,114,101,58,117,82,101,109,111,118,101,66,97,110,110,101,114,32,40,41,0,1,6,78,97,116,105,118
+	.byte 101,88,67,111,114,101,58,117,82,101,100,101,101,109,67,117,114,114,101,110,99,121,32,40,41,0,1,6,78,97,116,105
+	.byte 118,101,88,67,111,114,101,58,117,67,111,110,110,101,99,116,87,105,116,104,65,112,112,73,100,32,40,115,116,114,105,110
+	.byte 103,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101,58,117,65,99,116,105,111,110,84,97,107,101,110,87,105,116
+	.byte 104,65,99,116,105,111,110,73,100,32,40,115,116,114,105,110,103,41,0,1,6,78,97,116,105,118,101,88,67,111,114,101
+	.byte 58,117,84,114,97,99,107,73,110,65,112,112,80,117,114,99,104,97,115,101,32,40,115,116,114,105,110,103,44,115,116,114
+	.byte 105,110,103,44,115,105,110,103,108,101,44,105,110,116,44,115,116,114,105,110,103,41,0
 
 .text
 	.align 3
 extra_method_table:
 
-	.long 73,440,136,0,0,0,0,219
-	.long 119,75,1217,157,0,977,151,0
-	.long 505,141,0,0,0,0,0,0
+	.long 73,414,129,0,0,0,0,219
+	.long 114,75,1049,147,0,0,0,0
+	.long 479,134,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.long 0,0,0,0,0,388,132,0
-	.long 258,122,0,284,124,0,0,0
-	.long 0,0,0,0,0,0,0,323
-	.long 127,0,1250,158,0,35,116,0
-	.long 647,143,0,427,135,78,0,0
-	.long 0,0,0,0,0,0,0,1186
-	.long 156,0,0,0,0,0,0,0
-	.long 0,0,0,362,130,76,1073,153
+	.long 0,0,0,0,0,362,125,0
+	.long 258,117,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,297
+	.long 120,0,1082,148,0,35,111,0
+	.long 621,136,0,401,128,78,948,144
+	.long 0,0,0,0,0,0,0,1018
+	.long 146,0,0,0,0,0,0,0
+	.long 0,0,0,336,123,76,853,142
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,232
-	.long 120,74,0,0,0,375,131,82
-	.long 0,0,0,401,133,0,679,144
-	.long 0,0,0,0,0,0,0,170
-	.long 118,0,879,149,81,310,126,0
-	.long 1018,152,0,0,0,0,0,0
-	.long 0,1108,154,0,336,128,0,573
-	.long 142,79,0,0,0,717,145,0
-	.long 0,0,0,271,123,0,0,0
-	.long 0,0,0,0,0,0,0,758
-	.long 146,0,479,139,0,245,121,0
-	.long 1,115,73,0,0,0,349,129
-	.long 0,0,0,0,73,117,0,297
-	.long 125,77,414,134,0,453,137,0
-	.long 466,138,80,492,140,84,801,147
-	.long 83,843,148,0,921,150,0,1157
-	.long 155,0,1291,159,0,1339,160,0
+	.long 115,74,0,0,0,349,124,81
+	.long 0,0,0,375,126,0,653,137
+	.long 0,0,0,0,901,143,0,170
+	.long 113,0,0,0,0,284,119,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,310,121,0,547
+	.long 135,79,0,0,0,691,138,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,732
+	.long 139,0,453,132,0,245,116,0
+	.long 1,110,73,0,0,0,323,122
+	.long 0,0,0,0,73,112,0,271
+	.long 118,77,388,127,0,427,130,0
+	.long 440,131,80,466,133,83,775,140
+	.long 82,817,141,0,989,145,0,1123
+	.long 149,0,1171,150,0
 .text
 	.align 3
 extra_method_info_offsets:
 
-	.long 50,111,0,112,0,113,0,114
-	.long 0,115,1,116,35,117,73,118
-	.long 170,119,219,120,232,121,245,122
-	.long 258,123,271,124,284,125,297,126
-	.long 310,127,323,128,336,129,349,130
-	.long 362,131,375,132,388,133,401,134
-	.long 414,135,427,136,440,137,453,138
-	.long 466,139,479,140,492,141,505,142
-	.long 573,143,647,144,679,145,717,146
-	.long 758,147,801,148,843,149,879,150
-	.long 921,151,977,152,1018,153,1073,154
-	.long 1108,155,1157,156,1186,157,1217,158
-	.long 1250,159,1291,160,1339
+	.long 45,106,0,107,0,108,0,109
+	.long 0,110,1,111,35,112,73,113
+	.long 170,114,219,115,232,116,245,117
+	.long 258,118,271,119,284,120,297,121
+	.long 310,122,323,123,336,124,349,125
+	.long 362,126,375,127,388,128,401,129
+	.long 414,130,427,131,440,132,453,133
+	.long 466,134,479,135,547,136,621,137
+	.long 653,138,691,139,732,140,775,141
+	.long 817,142,853,143,901,144,948,145
+	.long 989,146,1018,147,1049,148,1082,149
+	.long 1123,150,1171
 .text
 	.align 3
 method_order:
 
 	.long 0,16777215,0,1,2,3,4,5
 	.long 6,7,8,9,10,11,12,13
-	.long 14,15,18,20,22,24,26,28
-	.long 30,33,36,39,41,43,45,47
-	.long 49,50,51,53,54,55,56,57
-	.long 58,59,60,61,62,63,64,65
-	.long 66,67,68,69,70,71,72,73
-	.long 74,75,76,77,78,79,80,81
-	.long 82,83,84,85,86,87,88,89
-	.long 90,91,92,93,94,95,96,97
-	.long 98,99,100,101,102,103,104,105
-	.long 106,107,108,109,115,116,117,118
-	.long 119,120,121,122,123,124,125,126
-	.long 127,128,129,130,131,132,133,134
-	.long 135,136,137,138,139,140,141,142
-	.long 143,144,145,146,147,148,149,150
-	.long 151,152,153,154,155,156,157,158
-	.long 159,160
+	.long 14,15,16,19,21,23,25,27
+	.long 29,31,33,35,37,39,41,43
+	.long 45,47,48,49,51,52,53,54
+	.long 55,56,57,58,59,60,61,62
+	.long 63,64,65,66,67,68,69,70
+	.long 71,72,73,74,75,76,77,78
+	.long 79,80,81,82,83,84,85,86
+	.long 87,88,89,90,91,92,93,94
+	.long 95,96,97,98,99,100,101,102
+	.long 103,104,110,111,112,113,114,115
+	.long 116,117,118,119,120,121,122,123
+	.long 124,125,126,127,128,129,130,131
+	.long 132,133,134,135,136,137,138,139
+	.long 140,141,142,143,144,145,146,147
+	.long 148,149,150
 
 .text
 method_order_end:
@@ -3991,72 +3803,72 @@ class_name_table:
 	.align 3
 got_info:
 
-	.byte 12,0,39,16,28,1,42,17,0,1,34,255,255,0,0,0,0,255,43,0,0,1,14,219,0,0,1,0,16,219,0,0
-	.byte 1,0,131,128,14,194,0,0,0,1,1,28,1,17,0,27,17,0,35,17,0,63,17,0,105,16,4,0,11,16,4,0
-	.byte 12,17,0,123,17,0,128,179,17,0,128,233,17,0,129,37,17,0,129,115,17,0,129,191,17,0,130,21,17,0,130,83
-	.byte 17,0,130,143,17,0,130,191,17,0,130,243,17,0,131,43,17,0,131,89,16,5,0,15,11,219,0,0,2,0,16,5
-	.byte 0,16,16,5,0,17,11,219,0,0,3,0,16,5,0,18,16,5,0,19,16,5,0,20,16,5,0,21,16,5,0,22
-	.byte 16,5,0,23,11,219,0,0,4,0,16,5,0,24,16,5,0,25,16,5,0,14,17,0,131,139,17,0,131,183,17,0
-	.byte 131,187,17,0,131,227,17,0,132,17,17,0,132,21,17,0,132,25,17,0,132,97,14,194,0,0,0,1,1,2,1,17
-	.byte 0,132,129,14,6,1,17,0,132,143,17,0,132,179,17,0,132,215,17,0,132,237,16,7,0,37,17,0,132,253,14,6
-	.byte 0,16,7,0,39,17,0,133,13,17,0,133,47,14,2,0,16,7,0,38,17,0,133,65,14,219,0,0,2,0,6,108
-	.byte 30,219,0,0,2,0,6,107,6,105,14,219,0,0,3,0,6,106,30,219,0,0,3,0,6,109,6,104,6,103,6,100
-	.byte 14,219,0,0,4,0,6,102,30,219,0,0,4,0,6,101,6,110,17,0,133,121,17,0,133,153,17,0,133,219,17,0
-	.byte 134,17,17,0,134,105,17,0,134,167,17,0,135,7,17,0,135,65,17,0,135,157,17,0,135,211,17,0,136,43,17,0
-	.byte 136,83,17,0,136,157,17,0,136,211,17,0,136,221,17,0,137,53,17,0,137,103,17,0,137,187,17,0,137,223,17,0
-	.byte 138,39,17,0,138,63,17,0,138,121,17,0,138,149,17,0,138,211,17,0,138,243,17,0,139,53,17,0,139,77,17,0
-	.byte 139,135,17,0,139,161,17,0,139,221,17,0,139,245,17,0,140,17,17,0,140,75,17,0,140,93,17,0,140,145,17,0
-	.byte 140,189,17,0,140,203,17,0,140,219,17,0,140,239,17,0,141,61,14,34,1,17,0,141,109,14,219,0,0,5,0,17
-	.byte 0,141,131,17,0,141,169,17,0,141,173,17,0,141,189,17,0,141,225,17,0,141,255,6,193,0,1,115,17,0,142,17
-	.byte 17,0,142,45,17,0,142,77,17,0,142,119,17,0,142,161,17,0,142,205,17,0,142,245,17,0,143,19,33,19,0,194
-	.byte 0,0,5,0,3,195,0,18,194,3,193,0,2,79,3,195,0,18,181,3,255,255,0,0,0,0,255,43,0,0,1,7
-	.byte 20,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,102,97,115,116,0,3,255,255,0,0,0,0,202,0,0
-	.byte 7,7,32,109,111,110,111,95,97,114,99,104,95,116,104,114,111,119,95,99,111,114,108,105,98,95,101,120,99,101,112,116
-	.byte 105,111,110,0,3,193,0,0,106,7,23,109,111,110,111,95,97,114,114,97,121,95,110,101,119,95,115,112,101,99,105,102
-	.byte 105,99,0,3,255,253,0,0,0,21,3,193,0,2,83,15,4,0,3,195,0,18,5,3,17,3,18,3,20,3,22,3
-	.byte 24,3,26,3,28,3,30,3,32,3,33,3,35,3,36,3,38,3,39,3,41,3,43,3,45,3,47,3,49,3,53,3
-	.byte 193,0,3,175,3,193,0,3,178,3,195,0,6,144,3,195,0,6,145,3,195,0,11,235,3,195,0,7,115,3,193,0
-	.byte 2,121,3,4,7,27,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,112,116,114,102,114,101,101,95,98,111
-	.byte 120,0,3,193,0,2,82,7,14,95,95,101,109,117,108,95,111,112,95,105,100,105,118,0,3,19,3,255,252,0,0,0
-	.byte 57,3,255,252,0,0,0,63,3,255,252,0,0,0,59,3,255,252,0,0,0,61,3,255,252,0,0,0,65,3,255,252
-	.byte 0,0,0,67,3,255,252,0,0,0,69,3,255,252,0,0,0,71,3,255,252,0,0,0,73,3,255,252,0,0,0,75
-	.byte 3,255,252,0,0,0,77,3,195,0,7,69,3,195,0,9,93,3,195,0,9,95,3,21,3,23,3,25,3,27,3,29
-	.byte 3,31,3,34,3,37,3,40,3,42,3,44,3,46,3,48,3,50,3,51,3,52,3,54,3,195,0,7,94,3,193,0
-	.byte 2,76,3,255,255,0,0,0,0,202,0,0,32,3,193,0,2,81,3,255,255,0,0,0,0,202,0,0,35,7,35,109
-	.byte 111,110,111,95,116,104,114,101,97,100,95,105,110,116,101,114,114,117,112,116,105,111,110,95,99,104,101,99,107,112,111,105
-	.byte 110,116,0,7,17,109,111,110,111,95,103,101,116,95,108,109,102,95,97,100,100,114,0,31,255,254,0,0,0,41,1,1
-	.byte 198,0,4,3,0,1,1,2,1,7,30,109,111,110,111,95,99,114,101,97,116,101,95,99,111,114,108,105,98,95,101,120
-	.byte 99,101,112,116,105,111,110,95,48,0,7,25,109,111,110,111,95,97,114,99,104,95,116,104,114,111,119,95,101,120,99,101
-	.byte 112,116,105,111,110,0,3,193,0,56,211,3,255,252,0,0,0,57,3,193,0,56,212,3,255,252,0,0,0,58,3,255
-	.byte 252,0,0,0,59,3,255,252,0,0,0,60,3,255,252,0,0,0,61,3,255,252,0,0,0,62,3,255,252,0,0,0
-	.byte 63,3,255,252,0,0,0,64,3,255,252,0,0,0,65,3,255,252,0,0,0,66,3,255,252,0,0,0,67,3,255,252
-	.byte 0,0,0,68,3,255,252,0,0,0,69,3,255,252,0,0,0,70,3,255,252,0,0,0,71,3,255,252,0,0,0,72
-	.byte 3,255,252,0,0,0,73,3,255,252,0,0,0,74,3,255,252,0,0,0,75,3,255,252,0,0,0,76,3,255,252,0
-	.byte 0,0,77,3,255,252,0,0,0,78,7,20,109,111,110,111,95,115,116,114,105,110,103,95,116,111,95,108,112,115,116,114
-	.byte 0,31,17,7,17,109,111,110,111,95,109,97,114,115,104,97,108,95,102,114,101,101,0,31,18,31,20,31,22,31,24,31
-	.byte 26,31,28,31,30,31,32,31,33,31,35,31,36,31,38,31,39,31,41,31,43,31,45,31,47,31,49,31,53
+	.byte 12,0,39,14,194,0,0,0,1,1,28,1,17,0,1,17,0,17,17,0,51,17,0,85,16,28,1,42,17,0,125,34
+	.byte 255,255,0,0,0,0,255,43,0,0,1,14,219,0,0,1,0,16,219,0,0,1,0,131,128,17,0,128,151,17,0,128
+	.byte 159,17,0,128,187,17,0,128,229,16,4,0,10,16,4,0,11,17,0,128,247,17,0,129,47,17,0,129,101,17,0,129
+	.byte 161,17,0,129,239,17,0,130,59,17,0,130,145,17,0,130,207,17,0,131,25,17,0,131,97,17,0,131,157,17,0,131
+	.byte 205,17,0,132,1,17,0,132,57,17,0,132,103,16,5,0,14,11,219,0,0,2,0,16,5,0,15,11,219,0,0,3
+	.byte 0,16,5,0,16,16,5,0,17,16,5,0,18,16,5,0,19,16,5,0,20,16,5,0,21,11,219,0,0,4,0,16
+	.byte 5,0,22,16,5,0,23,16,5,0,13,17,0,132,153,17,0,132,197,17,0,132,201,17,0,132,205,17,0,132,209,17
+	.byte 0,133,25,14,194,0,0,0,1,1,2,1,17,0,133,57,14,6,1,17,0,133,71,17,0,133,107,17,0,133,143,17
+	.byte 0,133,165,16,7,0,34,17,0,133,181,14,6,0,16,7,0,36,17,0,133,197,17,0,133,231,14,2,0,16,7,0
+	.byte 35,17,0,133,249,14,219,0,0,2,0,6,103,30,219,0,0,2,0,6,102,14,219,0,0,3,0,6,101,30,219,0
+	.byte 0,3,0,6,104,6,100,6,99,6,96,14,219,0,0,4,0,6,98,30,219,0,0,4,0,6,97,6,105,17,0,134
+	.byte 49,17,0,134,81,17,0,134,147,17,0,134,201,17,0,135,33,17,0,135,95,17,0,135,191,17,0,135,249,17,0,136
+	.byte 85,17,0,136,139,17,0,136,227,17,0,137,11,17,0,137,85,17,0,137,139,17,0,137,149,17,0,137,237,17,0,138
+	.byte 31,17,0,138,115,17,0,138,151,17,0,138,223,17,0,138,247,17,0,139,49,17,0,139,77,17,0,139,139,17,0,139
+	.byte 171,17,0,139,237,17,0,140,5,17,0,140,63,17,0,140,89,17,0,140,149,17,0,140,173,17,0,140,201,17,0,141
+	.byte 3,17,0,141,21,17,0,141,73,17,0,141,117,17,0,141,131,17,0,141,147,17,0,141,167,17,0,141,245,14,34,1
+	.byte 17,0,142,37,14,219,0,0,5,0,17,0,142,59,17,0,142,97,17,0,142,101,17,0,142,117,17,0,142,153,17,0
+	.byte 142,183,6,193,0,1,115,17,0,142,201,17,0,142,229,17,0,143,5,17,0,143,47,17,0,143,91,17,0,143,131,17
+	.byte 0,143,161,33,19,0,194,0,0,5,0,3,195,0,18,194,7,23,109,111,110,111,95,97,114,114,97,121,95,110,101,119
+	.byte 95,115,112,101,99,105,102,105,99,0,3,255,253,0,0,0,21,3,193,0,0,106,3,193,0,2,83,3,193,0,2,79
+	.byte 3,195,0,18,181,3,255,255,0,0,0,0,255,43,0,0,1,7,20,109,111,110,111,95,111,98,106,101,99,116,95,110
+	.byte 101,119,95,102,97,115,116,0,3,255,255,0,0,0,0,202,0,0,9,7,32,109,111,110,111,95,97,114,99,104,95,116
+	.byte 104,114,111,119,95,99,111,114,108,105,98,95,101,120,99,101,112,116,105,111,110,0,15,4,0,3,195,0,18,5,3,18
+	.byte 3,19,3,21,3,23,3,25,3,27,3,29,3,31,3,33,3,35,3,37,3,39,3,41,3,43,3,45,3,47,3,51
+	.byte 3,193,0,3,175,3,193,0,3,178,3,195,0,6,144,3,195,0,6,145,3,195,0,11,235,3,195,0,7,115,3,193
+	.byte 0,2,121,3,5,7,27,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,112,116,114,102,114,101,101,95,98
+	.byte 111,120,0,3,193,0,2,82,7,14,95,95,101,109,117,108,95,111,112,95,105,100,105,118,0,3,20,3,255,252,0,0
+	.byte 0,55,3,255,252,0,0,0,59,3,255,252,0,0,0,57,3,255,252,0,0,0,61,3,255,252,0,0,0,63,3,255
+	.byte 252,0,0,0,65,3,255,252,0,0,0,67,3,255,252,0,0,0,69,3,255,252,0,0,0,71,3,255,252,0,0,0
+	.byte 73,3,195,0,7,69,3,195,0,9,93,3,195,0,9,95,3,22,3,24,3,26,3,28,3,30,3,32,3,34,3,36
+	.byte 3,38,3,40,3,42,3,44,3,46,3,48,3,49,3,50,3,52,3,195,0,7,94,3,193,0,2,76,3,255,255,0
+	.byte 0,0,0,202,0,0,32,3,193,0,2,81,3,255,255,0,0,0,0,202,0,0,35,7,35,109,111,110,111,95,116,104
+	.byte 114,101,97,100,95,105,110,116,101,114,114,117,112,116,105,111,110,95,99,104,101,99,107,112,111,105,110,116,0,7,17,109
+	.byte 111,110,111,95,103,101,116,95,108,109,102,95,97,100,100,114,0,31,255,254,0,0,0,41,1,1,198,0,4,3,0,1
+	.byte 1,2,1,7,30,109,111,110,111,95,99,114,101,97,116,101,95,99,111,114,108,105,98,95,101,120,99,101,112,116,105,111
+	.byte 110,95,48,0,7,25,109,111,110,111,95,97,114,99,104,95,116,104,114,111,119,95,101,120,99,101,112,116,105,111,110,0
+	.byte 3,193,0,56,211,3,255,252,0,0,0,55,3,193,0,56,212,3,255,252,0,0,0,56,3,255,252,0,0,0,57,3
+	.byte 255,252,0,0,0,58,3,255,252,0,0,0,59,3,255,252,0,0,0,60,3,255,252,0,0,0,61,3,255,252,0,0
+	.byte 0,62,3,255,252,0,0,0,63,3,255,252,0,0,0,64,3,255,252,0,0,0,65,3,255,252,0,0,0,66,3,255
+	.byte 252,0,0,0,67,3,255,252,0,0,0,68,3,255,252,0,0,0,69,3,255,252,0,0,0,70,3,255,252,0,0,0
+	.byte 71,3,255,252,0,0,0,72,3,255,252,0,0,0,73,3,255,252,0,0,0,74,7,20,109,111,110,111,95,115,116,114
+	.byte 105,110,103,95,116,111,95,108,112,115,116,114,0,31,18,7,17,109,111,110,111,95,109,97,114,115,104,97,108,95,102,114
+	.byte 101,101,0,31,19,31,21,31,23,31,25,31,27,31,29,31,31,31,33,31,35,31,37,31,39,31,41,31,43,31,45,31
+	.byte 47,31,51
 .text
 	.align 3
 got_info_offsets:
 
-	.long 0,2,3,7,10,22,28,36
-	.long 45,48,51,54,57,61,65,68
-	.long 72,76,80,84,88,92,96,100
-	.long 104,108,112,116,120,126,130,134
-	.long 140,144,148,152,156,160,164,170
-	.long 174,178,182,186,190,194,198,202
-	.long 206,210,214,223,227,230,234,238
-	.long 242,246,250,254,257,261,265,269
-	.long 272,276,280,286,288,294,296,298
-	.long 304,306,312,314,316,318,320,326
-	.long 328,334,336,338,342,346,350,354
-	.long 358,362,366,370,374,378,382,386
-	.long 390,394,398,402,406,410,414,418
-	.long 422,426,430,434,438,442,446,450
-	.long 454,458,462,466,470,474,478,482
-	.long 486,490,494,498,501,505,511,515
-	.long 519,523,527,531,535,540,544,548
-	.long 552,556,560,564,568,572,573
+	.long 0,2,3,12,15,18,21,24
+	.long 28,31,43,49,57,61,65,69
+	.long 73,77,81,85,89,93,97,101
+	.long 105,109,113,117,121,125,129,133
+	.long 137,141,145,151,155,161,165,169
+	.long 173,177,181,185,191,195,199,203
+	.long 207,211,215,219,223,227,236,240
+	.long 243,247,251,255,259,263,267,270
+	.long 274,278,282,285,289,293,299,301
+	.long 307,309,315,317,323,325,327,329
+	.long 331,337,339,345,347,349,353,357
+	.long 361,365,369,373,377,381,385,389
+	.long 393,397,401,405,409,413,417,421
+	.long 425,429,433,437,441,445,449,453
+	.long 457,461,465,469,473,477,481,485
+	.long 489,493,497,501,505,509,512,516
+	.long 522,526,530,534,538,542,546,551
+	.long 555,559,563,567,571,575,579,580
 .text
 	.align 3
 ex_info:
@@ -4066,79 +3878,85 @@ Le_0_p:
 	.byte 104,2,0,0
 Le_1_p:
 
-	.byte 116,2,28,0
+	.byte 129,68,2,28,0
 Le_2_p:
 
-	.byte 104,2,0,0
+	.byte 116,2,56,0
 Le_3_p:
 
-	.byte 128,248,2,56,0
+	.byte 104,2,0,0
 Le_4_p:
 
-	.byte 56,2,90,0
+	.byte 128,248,2,84,0
 Le_5_p:
 
-	.byte 60,2,90,0
+	.byte 56,2,118,0
 Le_6_p:
 
-	.byte 52,2,90,0
+	.byte 60,2,118,0
 Le_7_p:
 
-	.byte 60,2,90,0
+	.byte 52,2,118,0
 Le_8_p:
 
-	.byte 52,2,90,0
+	.byte 60,2,118,0
 Le_9_p:
 
-	.byte 60,2,90,0
+	.byte 52,2,118,0
 Le_a_p:
 
-	.byte 56,2,90,0
+	.byte 60,2,118,0
 Le_b_p:
 
-	.byte 60,2,90,0
+	.byte 56,2,118,0
 Le_c_p:
 
-	.byte 108,2,28,0
+	.byte 60,2,118,0
 Le_d_p:
 
-	.byte 129,80,2,116,0
+	.byte 108,2,56,0
 Le_e_p:
 
-	.byte 52,2,90,0
+	.byte 129,80,2,28,0
 Le_f_p:
 
+	.byte 52,2,118,0
+Le_10_p:
+
 	.byte 60,2,128,144,0
-Le_12_p:
+Le_13_p:
 
 	.byte 129,28,2,128,167,0
-Le_14_p:
+Le_15_p:
 
 	.byte 104,2,128,144,0
-Le_16_p:
+Le_17_p:
 
 	.byte 104,2,128,144,0
-Le_18_p:
+Le_19_p:
 
 	.byte 104,2,128,144,0
-Le_1a_p:
+Le_1b_p:
 
 	.byte 104,2,128,144,0
-Le_1c_p:
+Le_1d_p:
 
 	.byte 104,2,128,144,0
-Le_1e_p:
+Le_1f_p:
 
 	.byte 104,2,128,144,0
 Le_21_p:
 
-	.byte 128,160,2,90,0
-Le_24_p:
+	.byte 116,2,118,0
+Le_23_p:
 
-	.byte 128,160,2,90,0
+	.byte 116,2,118,0
+Le_25_p:
+
+	.byte 116,2,118,0
 Le_27_p:
 
-	.byte 128,160,2,90,0
+	.byte 104,2,128,144,0
 Le_29_p:
 
 	.byte 104,2,128,144,0
@@ -4147,202 +3965,205 @@ Le_2b_p:
 	.byte 104,2,128,144,0
 Le_2d_p:
 
-	.byte 104,2,128,144,0
+	.byte 128,132,2,128,144,0
 Le_2f_p:
 
 	.byte 128,132,2,128,144,0
+Le_30_p:
+
+	.byte 48,2,118,0
 Le_31_p:
 
-	.byte 128,132,2,128,144,0
-Le_32_p:
-
-	.byte 48,2,90,0
+	.byte 48,2,118,0
 Le_33_p:
 
-	.byte 48,2,90,0
+	.byte 120,2,128,195,0
+Le_34_p:
+
+	.byte 52,2,118,0
 Le_35_p:
 
-	.byte 120,2,128,195,0
+	.byte 36,2,128,144,0
 Le_36_p:
 
-	.byte 52,2,90,0
+	.byte 128,160,2,56,0
 Le_37_p:
 
-	.byte 36,2,128,144,0
+	.byte 128,160,2,56,0
 Le_38_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_39_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_3a_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_3b_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_3c_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_3d_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_3e_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_3f_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_40_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_41_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_42_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_43_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_44_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_45_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_46_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_47_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_48_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_49_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,160,2,56,0
 Le_4a_p:
 
-	.byte 128,160,2,28,0
+	.byte 129,92,2,128,221,0
 Le_4b_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,184,2,118,0
 Le_4c_p:
 
-	.byte 128,160,2,28,0
+	.byte 112,2,118,0
 Le_4d_p:
 
-	.byte 128,160,2,28,0
+	.byte 128,184,2,118,0
 Le_4e_p:
 
-	.byte 129,92,2,128,221,0
+	.byte 128,184,2,118,0
 Le_4f_p:
 
-	.byte 128,184,2,90,0
+	.byte 128,176,2,128,247,0
 Le_50_p:
 
-	.byte 129,0,2,128,247,0
+	.byte 124,2,118,0
 Le_51_p:
 
-	.byte 128,184,2,90,0
+	.byte 128,184,2,118,0
 Le_52_p:
 
-	.byte 128,184,2,90,0
+	.byte 129,32,2,0,0
 Le_53_p:
 
-	.byte 128,176,2,128,247,0
+	.byte 124,2,118,0
 Le_54_p:
 
-	.byte 124,2,90,0
+	.byte 128,184,2,118,0
 Le_55_p:
 
-	.byte 128,184,2,90,0
+	.byte 128,176,2,129,19,0
 Le_56_p:
 
-	.byte 129,32,2,0,0
+	.byte 129,48,2,128,167,0
 Le_57_p:
 
-	.byte 124,2,90,0
+	.byte 128,248,2,129,47,0
 Le_58_p:
 
-	.byte 128,184,2,90,0
+	.byte 129,112,2,28,0
 Le_59_p:
 
-	.byte 128,176,2,129,19,0
+	.byte 129,136,2,129,75,0
 Le_5a_p:
 
-	.byte 129,48,2,128,167,0
+	.byte 52,2,118,0
 Le_5b_p:
 
-	.byte 128,248,2,129,47,0
+	.byte 72,2,128,144,0
 Le_5c_p:
 
-	.byte 129,112,2,116,0
+	.byte 130,4,2,129,103,0
 Le_5d_p:
 
-	.byte 129,136,2,129,75,0
+	.byte 130,212,2,56,0
 Le_5e_p:
 
-	.byte 52,2,90,0
+	.byte 147,180,2,129,129,0
 Le_5f_p:
 
-	.byte 72,2,128,144,0
+	.byte 128,132,2,129,156,0
 Le_60_p:
 
-	.byte 130,4,2,129,103,0
+	.byte 96,2,118,0
 Le_61_p:
 
-	.byte 131,24,2,28,0
+	.byte 131,40,6,129,182,1,2,0,0,120,130,140,130,140,0
 Le_62_p:
 
-	.byte 147,168,2,129,129,0
+	.byte 96,2,118,0
 Le_63_p:
 
-	.byte 128,132,2,129,156,0
+	.byte 96,2,118,0
 Le_64_p:
 
-	.byte 96,2,90,0
+	.byte 96,2,118,0
 Le_65_p:
 
-	.byte 131,40,6,129,182,1,2,0,0,120,130,140,130,140,0
+	.byte 128,132,2,129,156,0
 Le_66_p:
 
-	.byte 96,2,90,0
+	.byte 128,132,2,129,156,0
 Le_67_p:
 
-	.byte 96,2,90,0
+	.byte 128,132,2,129,156,0
 Le_68_p:
 
 	.byte 128,132,2,129,156,0
-Le_69_p:
-
-	.byte 96,2,90,0
-Le_6a_p:
-
-	.byte 128,132,2,129,156,0
-Le_6b_p:
-
-	.byte 128,132,2,129,156,0
-Le_6c_p:
-
-	.byte 128,132,2,129,156,0
-Le_6d_p:
-
-	.byte 128,132,2,129,156,0
-Le_73_p:
+Le_6e_p:
 
 	.byte 128,184,2,129,213,0
-Le_74_p:
+Le_6f_p:
 
 	.byte 128,180,2,129,245,0
-Le_75_p:
+Le_70_p:
 
 	.byte 128,180,2,129,245,0
-Le_76_p:
+Le_71_p:
 
 	.byte 128,172,2,130,20,0
+Le_72_p:
+
+	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+Le_73_p:
+
+	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+Le_74_p:
+
+	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+Le_75_p:
+
+	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+Le_76_p:
+
+	.byte 112,6,130,54,1,2,0,0,60,76,76,0
 Le_77_p:
 
 	.byte 112,6,130,54,1,2,0,0,60,76,76,0
@@ -4390,37 +4211,37 @@ Le_85_p:
 	.byte 112,6,130,54,1,2,0,0,60,76,76,0
 Le_86_p:
 
-	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+	.byte 128,200,2,130,80,0
 Le_87_p:
 
-	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+	.byte 129,4,2,130,114,0
 Le_88_p:
 
-	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+	.byte 116,2,130,80,0
 Le_89_p:
 
-	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+	.byte 116,2,130,80,0
 Le_8a_p:
 
-	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+	.byte 116,2,130,80,0
 Le_8b_p:
 
-	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+	.byte 116,2,130,80,0
 Le_8c_p:
 
-	.byte 112,6,130,54,1,2,0,0,60,76,76,0
+	.byte 116,2,130,80,0
 Le_8d_p:
 
-	.byte 128,200,2,130,80,0
+	.byte 116,2,130,80,0
 Le_8e_p:
 
-	.byte 129,4,2,130,114,0
+	.byte 128,140,2,130,80,0
 Le_8f_p:
 
-	.byte 116,2,130,80,0
+	.byte 128,140,2,130,80,0
 Le_90_p:
 
-	.byte 116,2,130,80,0
+	.byte 128,140,2,130,80,0
 Le_91_p:
 
 	.byte 116,2,130,80,0
@@ -4432,41 +4253,11 @@ Le_93_p:
 	.byte 116,2,130,80,0
 Le_94_p:
 
-	.byte 116,2,130,80,0
+	.byte 128,140,2,130,80,0
 Le_95_p:
 
-	.byte 116,2,130,80,0
+	.byte 128,140,2,130,80,0
 Le_96_p:
-
-	.byte 128,140,2,130,80,0
-Le_97_p:
-
-	.byte 116,2,130,80,0
-Le_98_p:
-
-	.byte 128,140,2,130,80,0
-Le_99_p:
-
-	.byte 116,2,130,80,0
-Le_9a_p:
-
-	.byte 128,140,2,130,80,0
-Le_9b_p:
-
-	.byte 116,2,130,80,0
-Le_9c_p:
-
-	.byte 116,2,130,80,0
-Le_9d_p:
-
-	.byte 116,2,130,80,0
-Le_9e_p:
-
-	.byte 128,140,2,130,80,0
-Le_9f_p:
-
-	.byte 128,140,2,130,80,0
-Le_a0_p:
 
 	.byte 128,232,2,130,148,0
 .text
@@ -4475,35 +4266,33 @@ ex_info_offsets:
 
 	.long Le_0_p - ex,Le_1_p - ex,Le_2_p - ex,Le_3_p - ex,Le_4_p - ex,Le_5_p - ex,Le_6_p - ex,Le_7_p - ex
 	.long Le_8_p - ex,Le_9_p - ex,Le_a_p - ex,Le_b_p - ex,Le_c_p - ex,Le_d_p - ex,Le_e_p - ex,Le_f_p - ex
-	.long 0,0,Le_12_p - ex,0,Le_14_p - ex,0,Le_16_p - ex,0
-	.long Le_18_p - ex,0,Le_1a_p - ex,0,Le_1c_p - ex,0,Le_1e_p - ex,0
-	.long 0,Le_21_p - ex,0,0,Le_24_p - ex,0,0,Le_27_p - ex
+	.long Le_10_p - ex,0,0,Le_13_p - ex,0,Le_15_p - ex,0,Le_17_p - ex
+	.long 0,Le_19_p - ex,0,Le_1b_p - ex,0,Le_1d_p - ex,0,Le_1f_p - ex
+	.long 0,Le_21_p - ex,0,Le_23_p - ex,0,Le_25_p - ex,0,Le_27_p - ex
 	.long 0,Le_29_p - ex,0,Le_2b_p - ex,0,Le_2d_p - ex,0,Le_2f_p - ex
-	.long 0,Le_31_p - ex,Le_32_p - ex,Le_33_p - ex,0,Le_35_p - ex,Le_36_p - ex,Le_37_p - ex
+	.long Le_30_p - ex,Le_31_p - ex,0,Le_33_p - ex,Le_34_p - ex,Le_35_p - ex,Le_36_p - ex,Le_37_p - ex
 	.long Le_38_p - ex,Le_39_p - ex,Le_3a_p - ex,Le_3b_p - ex,Le_3c_p - ex,Le_3d_p - ex,Le_3e_p - ex,Le_3f_p - ex
 	.long Le_40_p - ex,Le_41_p - ex,Le_42_p - ex,Le_43_p - ex,Le_44_p - ex,Le_45_p - ex,Le_46_p - ex,Le_47_p - ex
 	.long Le_48_p - ex,Le_49_p - ex,Le_4a_p - ex,Le_4b_p - ex,Le_4c_p - ex,Le_4d_p - ex,Le_4e_p - ex,Le_4f_p - ex
 	.long Le_50_p - ex,Le_51_p - ex,Le_52_p - ex,Le_53_p - ex,Le_54_p - ex,Le_55_p - ex,Le_56_p - ex,Le_57_p - ex
 	.long Le_58_p - ex,Le_59_p - ex,Le_5a_p - ex,Le_5b_p - ex,Le_5c_p - ex,Le_5d_p - ex,Le_5e_p - ex,Le_5f_p - ex
 	.long Le_60_p - ex,Le_61_p - ex,Le_62_p - ex,Le_63_p - ex,Le_64_p - ex,Le_65_p - ex,Le_66_p - ex,Le_67_p - ex
-	.long Le_68_p - ex,Le_69_p - ex,Le_6a_p - ex,Le_6b_p - ex,Le_6c_p - ex,Le_6d_p - ex,0,0
-	.long 0,0,0,Le_73_p - ex,Le_74_p - ex,Le_75_p - ex,Le_76_p - ex,Le_77_p - ex
+	.long Le_68_p - ex,0,0,0,0,0,Le_6e_p - ex,Le_6f_p - ex
+	.long Le_70_p - ex,Le_71_p - ex,Le_72_p - ex,Le_73_p - ex,Le_74_p - ex,Le_75_p - ex,Le_76_p - ex,Le_77_p - ex
 	.long Le_78_p - ex,Le_79_p - ex,Le_7a_p - ex,Le_7b_p - ex,Le_7c_p - ex,Le_7d_p - ex,Le_7e_p - ex,Le_7f_p - ex
 	.long Le_80_p - ex,Le_81_p - ex,Le_82_p - ex,Le_83_p - ex,Le_84_p - ex,Le_85_p - ex,Le_86_p - ex,Le_87_p - ex
 	.long Le_88_p - ex,Le_89_p - ex,Le_8a_p - ex,Le_8b_p - ex,Le_8c_p - ex,Le_8d_p - ex,Le_8e_p - ex,Le_8f_p - ex
-	.long Le_90_p - ex,Le_91_p - ex,Le_92_p - ex,Le_93_p - ex,Le_94_p - ex,Le_95_p - ex,Le_96_p - ex,Le_97_p - ex
-	.long Le_98_p - ex,Le_99_p - ex,Le_9a_p - ex,Le_9b_p - ex,Le_9c_p - ex,Le_9d_p - ex,Le_9e_p - ex,Le_9f_p - ex
-	.long Le_a0_p - ex
+	.long Le_90_p - ex,Le_91_p - ex,Le_92_p - ex,Le_93_p - ex,Le_94_p - ex,Le_95_p - ex,Le_96_p - ex
 
 .text
 	.align 3
 unwind_info:
 
 	.byte 27,12,13,0,76,14,8,135,2,68,14,28,136,7,138,6,139,5,140,4,142,3,68,14,48,68,13,11,27,12,13,0
-	.byte 76,14,8,135,2,68,14,28,136,7,138,6,139,5,140,4,142,3,68,14,32,68,13,11,33,12,13,0,76,14,8,135
-	.byte 2,68,14,40,132,10,133,9,134,8,136,7,138,6,139,5,140,4,142,3,68,14,48,68,13,11,25,12,13,0,76,14
-	.byte 8,135,2,68,14,24,136,6,139,5,140,4,142,3,68,14,32,68,13,11,27,12,13,0,76,14,8,135,2,68,14,28
-	.byte 136,7,138,6,139,5,140,4,142,3,68,14,72,68,13,11,22,12,13,0,76,14,8,135,2,68,14,24,136,6,139,5
+	.byte 76,14,8,135,2,68,14,28,136,7,138,6,139,5,140,4,142,3,68,14,72,68,13,11,27,12,13,0,76,14,8,135
+	.byte 2,68,14,28,136,7,138,6,139,5,140,4,142,3,68,14,32,68,13,11,33,12,13,0,76,14,8,135,2,68,14,40
+	.byte 132,10,133,9,134,8,136,7,138,6,139,5,140,4,142,3,68,14,48,68,13,11,25,12,13,0,76,14,8,135,2,68
+	.byte 14,24,136,6,139,5,140,4,142,3,68,14,32,68,13,11,22,12,13,0,76,14,8,135,2,68,14,24,136,6,139,5
 	.byte 140,4,142,3,68,13,11,27,12,13,0,76,14,8,135,2,68,14,28,136,7,138,6,139,5,140,4,142,3,68,14,64
 	.byte 68,13,11,25,12,13,0,76,14,8,135,2,68,14,24,136,6,139,5,140,4,142,3,68,14,64,68,13,11,25,12,13
 	.byte 0,76,14,8,135,2,68,14,24,136,6,139,5,140,4,142,3,68,14,104,68,13,11,27,12,13,0,76,14,8,135,2
@@ -4529,22 +4318,22 @@ LK_I_0:
 	.byte 0,128,144,8,0,0,1
 LK_I_1:
 
-	.byte 4,128,160,40,0,0,4,195,0,19,86,195,0,19,61,193,0,0,4,195,0,19,60
+	.byte 4,128,160,36,0,0,4,195,0,19,86,195,0,19,61,193,0,0,4,195,0,19,60
 LK_I_2:
 
-	.byte 4,128,160,32,0,0,4,14,195,0,19,61,193,0,0,4,195,0,19,60
+	.byte 4,128,160,32,0,0,4,15,195,0,19,61,193,0,0,4,195,0,19,60
 LK_I_3:
 
-	.byte 4,128,196,16,16,12,0,4,195,0,19,86,195,0,19,61,193,0,0,4,195,0,19,60
+	.byte 4,128,196,17,16,12,0,4,195,0,19,86,195,0,19,61,193,0,0,4,195,0,19,60
 LK_I_4:
 
-	.byte 4,128,196,56,16,48,0,4,195,0,19,86,195,0,19,61,193,0,0,4,195,0,19,60
+	.byte 4,128,196,54,16,44,0,4,195,0,19,86,195,0,19,61,193,0,0,4,195,0,19,60
 LK_I_5:
 
-	.byte 4,128,160,60,0,0,4,94,195,0,19,61,193,0,0,4,195,0,19,60
+	.byte 4,128,160,56,0,0,4,90,195,0,19,61,193,0,0,4,195,0,19,60
 LK_I_6:
 
-	.byte 4,128,196,96,16,12,0,4,195,0,19,86,195,0,19,61,193,0,0,4,195,0,19,60
+	.byte 4,128,196,92,16,12,0,4,195,0,19,86,195,0,19,61,193,0,0,4,195,0,19,60
 .text
 	.align 3
 class_info_offsets:
@@ -4558,667 +4347,622 @@ plt:
 mono_aot_Assembly_CSharp_firstpass_plt:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 568,0
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 572,0
 p_1:
 plt_UnityEngine_MonoBehaviour__ctor:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 572,580
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 576,587
 p_2:
-plt_string_Concat_string_string:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 576,585
-p_3:
-plt_UnityEngine_Debug_Log_object:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 580,590
-p_4:
-plt_JsonFx_Json_JsonReader_Deserialize_NativeXBalance___string:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 584,595
-p_5:
-plt__jit_icall_mono_object_new_fast:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 588,607
-p_6:
-plt_System_Collections_Generic_List_1_NativeXBalance_Add_NativeXBalance:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 592,630
-p_7:
-plt__jit_icall_mono_arch_throw_corlib_exception:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 596,641
-p_8:
-plt_int_ToString:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 600,676
-p_9:
 plt__jit_icall_mono_array_new_specific:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 604,681
-p_10:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 580,592
+p_3:
 plt_wrapper_stelemref_object_stelemref_object_intptr_object:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 608,707
-p_11:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 584,618
+p_4:
+plt_int_ToString:
+
+	.byte 0,192,159,229,12,240,159,231
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 588,625
+p_5:
 plt_string_Concat_string__:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 612,714
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 592,630
+p_6:
+plt_string_Concat_string_string:
+
+	.byte 0,192,159,229,12,240,159,231
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 596,635
+p_7:
+plt_UnityEngine_Debug_Log_object:
+
+	.byte 0,192,159,229,12,240,159,231
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 600,640
+p_8:
+plt_JsonFx_Json_JsonReader_Deserialize_NativeXBalance___string:
+
+	.byte 0,192,159,229,12,240,159,231
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 604,645
+p_9:
+plt__jit_icall_mono_object_new_fast:
+
+	.byte 0,192,159,229,12,240,159,231
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 608,657
+p_10:
+plt_System_Collections_Generic_List_1_NativeXBalance_Add_NativeXBalance:
+
+	.byte 0,192,159,229,12,240,159,231
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 612,680
+p_11:
+plt__jit_icall_mono_arch_throw_corlib_exception:
+
+	.byte 0,192,159,229,12,240,159,231
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 616,691
 p_12:
 plt__class_init_NativeXCore:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 616,719
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 620,726
 p_13:
 plt_UnityEngine_Application_get_platform:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 620,722
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 624,729
 p_14:
 plt_NativeXCore_uStartWithNameAndApplicationId_string_string_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 624,727
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 628,734
 p_15:
 plt_NativeXCore_uSetCoordinates_single_single_single_single_single_single:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 628,729
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 632,736
 p_16:
 plt_NativeXCore_uShowOfferWall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 632,731
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 636,738
 p_17:
 plt_NativeXCore_uShowIncentOfferWall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 636,733
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 640,740
 p_18:
 plt_NativeXCore_uShowNonIncentOfferWall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 640,735
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 644,742
 p_19:
 plt_NativeXCore_uGetAndCacheFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 644,737
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 648,744
 p_20:
 plt_NativeXCore_uShowCachedFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 648,739
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 652,746
 p_21:
 plt_NativeXCore_uShowFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 652,741
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 656,748
 p_22:
-plt_NativeXCore_uGetAndCacheInterstitial:
+plt_NativeXCore_uGetAndCacheInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 656,743
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 660,750
 p_23:
-plt_NativeXCore_uGetAndCacheEnhancedInterstitial_string:
+plt_NativeXCore_uShowCachedInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 660,745
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 664,752
 p_24:
-plt_NativeXCore_uShowCachedInterstitial:
+plt_NativeXCore_uShowInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 664,747
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 668,754
 p_25:
-plt_NativeXCore_uShowCachedEnhancedInterstitial_string:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 668,749
-p_26:
-plt_NativeXCore_uShowInterstitial:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 672,751
-p_27:
-plt_NativeXCore_uShowEnhancedInterstitial_string:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 676,753
-p_28:
 plt_NativeXCore_uShowBanner:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 680,755
-p_29:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 672,756
+p_26:
 plt_NativeXCore_uRemoveBanner:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 684,757
-p_30:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 676,758
+p_27:
 plt_NativeXCore_uRedeemCurrency:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 688,759
-p_31:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 680,760
+p_28:
 plt_NativeXCore_uConnectWithAppId_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 692,761
-p_32:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 684,762
+p_29:
 plt_NativeXCore_uActionTakenWithActionId_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 696,763
-p_33:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 688,764
+p_30:
 plt_NativeXCore_uTrackInAppPurchase_string_string_single_int_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 700,765
-p_34:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 692,766
+p_31:
 plt_System_Delegate_Combine_System_Delegate_System_Delegate:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 704,767
-p_35:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 696,768
+p_32:
 plt_System_Delegate_Remove_System_Delegate_System_Delegate:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 708,772
-p_36:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 700,773
+p_33:
 plt_UnityEngine_Screen_get_width:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 712,777
-p_37:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 704,778
+p_34:
 plt_UnityEngine_Screen_get_height:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 716,782
-p_38:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 708,783
+p_35:
 plt_UnityEngine_Rect__ctor_single_single_single_single:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 720,787
-p_39:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 712,788
+p_36:
 plt_UnityEngine_GUI_Button_UnityEngine_Rect_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 724,792
-p_40:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 716,793
+p_37:
 plt_string_op_Equality_string_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 728,797
-p_41:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 720,798
+p_38:
 plt_NativeXBalance_convertJson_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 732,802
-p_42:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 724,803
+p_39:
 plt__jit_icall_mono_object_new_ptrfree_box:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 736,804
-p_43:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 728,805
+p_40:
 plt_string_Concat_object__:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 740,834
-p_44:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 732,835
+p_41:
 plt__jit_icall___emul_op_idiv:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 744,839
-p_45:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 736,840
+p_42:
 plt_NativeXCore_intitialization_NativeXAndroid_NativeXiOS:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 748,856
-p_46:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 740,857
+p_43:
 plt_NativeXHandler_add_e_didSDKinitialize_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 752,858
-p_47:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 744,859
+p_44:
 plt_NativeXHandler_add_e_didFeaturedOfferLoad_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 756,865
-p_48:
-plt_NativeXHandler_add_e_didInterstitialLoad_System_Action_1_bool:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 748,866
+p_45:
+plt_NativeXHandler_add_e_didInterstitialLoad_System_Action_1_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 760,872
-p_49:
-plt_NativeXHandler_add_e_interstitialLoaded_System_Action_1_string:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 764,879
-p_50:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 752,873
+p_46:
 plt_NativeXHandler_add_e_didBannerLoad_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 768,886
-p_51:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 756,880
+p_47:
 plt_NativeXHandler_add_e_actionCompleted_System_Action_1_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 772,893
-p_52:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 760,887
+p_48:
 plt_NativeXHandler_add_e_actionFailed_System_Action_1_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 776,900
-p_53:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 764,894
+p_49:
 plt_NativeXHandler_add_e_userLeavingApplication_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 780,907
-p_54:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 768,901
+p_50:
 plt_NativeXHandler_add_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 784,914
-p_55:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 772,908
+p_51:
 plt_NativeXHandler_add_e_receiptId_System_Action_1_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 788,921
-p_56:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 776,915
+p_52:
 plt_NativeXHandler_add_e_didPerformAction_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 792,928
-p_57:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 780,922
+p_53:
 plt_UnityEngine_GUI_get_skin:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 796,935
-p_58:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 784,929
+p_54:
 plt_UnityEngine_GUIStyle_set_fontSize_int:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 800,940
-p_59:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 788,934
+p_55:
 plt_UnityEngine_GUIStyle_set_fontStyle_UnityEngine_FontStyle:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 804,945
-p_60:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 792,939
+p_56:
 plt_NativeXCore_showRewardOfferWall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 808,950
-p_61:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 796,944
+p_57:
 plt_NativeXCore_showRewardWebOfferwall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 812,952
-p_62:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 800,946
+p_58:
 plt_NativeXCore_showNonRewardWebOfferwall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 816,954
-p_63:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 804,948
+p_59:
 plt_NativeXCore_getAndCacheFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 820,956
-p_64:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 808,950
+p_60:
 plt_NativeXCore_showCachedFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 824,958
-p_65:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 812,952
+p_61:
 plt_NativeXCore_showFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 828,960
-p_66:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 816,954
+p_62:
 plt_NativeXCore_getAndCacheInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 832,962
-p_67:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 820,956
+p_63:
 plt_NativeXCore_showCachedInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 836,964
-p_68:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 824,958
+p_64:
 plt_NativeXCore_showInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 840,966
-p_69:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 828,960
+p_65:
 plt_NativeXCore_showBanner:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 844,968
-p_70:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 832,962
+p_66:
 plt_NativeXCore_removeBanner:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 848,970
-p_71:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 836,964
+p_67:
 plt_NativeXCore_redeemCurrency:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 852,972
-p_72:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 840,966
+p_68:
 plt_NativeXCore_appWasRun:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 856,974
-p_73:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 844,968
+p_69:
 plt_NativeXCore_actionTaken:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 860,976
-p_74:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 848,970
+p_70:
 plt_NativeXCore_upgradeAndroidApp_string_int:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 864,978
-p_75:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 852,972
+p_71:
 plt_NativeXCore_rateAndroidApp_string_int:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 868,980
-p_76:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 856,974
+p_72:
 plt_NativeXCore_trackInAppPurchase_string_string_single_int_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 872,982
-p_77:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 860,976
+p_73:
 plt_UnityEngine_GUI_Label_UnityEngine_Rect_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 876,984
-p_78:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 864,978
+p_74:
 plt_string_Concat_object_object:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 880,989
-p_79:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 868,983
+p_75:
 plt_System_Collections_Generic_List_1_NativeXBalance_GetEnumerator:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 884,994
-p_80:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 872,988
+p_76:
 plt_string_Concat_string_string_string_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 888,1005
-p_81:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 876,999
+p_77:
 plt_System_Collections_Generic_List_1_Enumerator_NativeXBalance_MoveNext:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 892,1010
-p_82:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 880,1004
+p_78:
 plt__jit_icall_mono_thread_interruption_checkpoint:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 896,1021
-p_83:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 884,1015
+p_79:
 plt__jit_icall_mono_get_lmf_addr:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 900,1059
-p_84:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 888,1053
+p_80:
 plt__icall_native_System_Array_GetGenericValueImpl_object_int_object_:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 904,1079
-p_85:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 892,1073
+p_81:
 plt__jit_icall_mono_create_corlib_exception_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 908,1097
-p_86:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 896,1091
+p_82:
 plt__jit_icall_mono_arch_throw_exception:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 912,1130
-p_87:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 900,1124
+p_83:
 plt_System_Threading_Monitor_Enter_object:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 916,1158
-p_88:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 904,1152
+p_84:
 plt_NativeXHandler_add_e_didSDKinitialize_System_Action_1_bool_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 920,1163
-p_89:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 908,1157
+p_85:
 plt_System_Threading_Monitor_Exit_object:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 924,1170
-p_90:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 912,1164
+p_86:
 plt_NativeXHandler_remove_e_didSDKinitialize_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 928,1175
-p_91:
-plt_NativeXHandler_add_e_didInterstitialLoad_System_Action_1_bool_0:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 916,1169
+p_87:
+plt_NativeXHandler_add_e_didInterstitialLoad_System_Action_1_string_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 932,1182
-p_92:
-plt_NativeXHandler_remove_e_didInterstitialLoad_System_Action_1_bool:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 920,1176
+p_88:
+plt_NativeXHandler_remove_e_didInterstitialLoad_System_Action_1_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 936,1189
-p_93:
-plt_NativeXHandler_add_e_interstitialLoaded_System_Action_1_string_0:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 940,1196
-p_94:
-plt_NativeXHandler_remove_e_interstitialLoaded_System_Action_1_string:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 944,1203
-p_95:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 924,1183
+p_89:
 plt_NativeXHandler_add_e_didFeaturedOfferLoad_System_Action_1_bool_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 948,1210
-p_96:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 928,1190
+p_90:
 plt_NativeXHandler_remove_e_didFeaturedOfferLoad_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 952,1217
-p_97:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 932,1197
+p_91:
 plt_NativeXHandler_add_e_didBannerLoad_System_Action_1_bool_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 956,1224
-p_98:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 936,1204
+p_92:
 plt_NativeXHandler_remove_e_didBannerLoad_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 960,1231
-p_99:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 940,1211
+p_93:
 plt_NativeXHandler_add_e_actionCompleted_System_Action_1_string_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 964,1238
-p_100:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 944,1218
+p_94:
 plt_NativeXHandler_remove_e_actionCompleted_System_Action_1_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 968,1245
-p_101:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 948,1225
+p_95:
 plt_NativeXHandler_add_e_actionFailed_System_Action_1_string_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 972,1252
-p_102:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 952,1232
+p_96:
 plt_NativeXHandler_remove_e_actionFailed_System_Action_1_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 976,1259
-p_103:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 956,1239
+p_97:
 plt_NativeXHandler_add_e_userLeavingApplication_System_Action_1_bool_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 980,1266
-p_104:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 960,1246
+p_98:
 plt_NativeXHandler_remove_e_userLeavingApplication_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 984,1273
-p_105:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 964,1253
+p_99:
 plt_NativeXHandler_add_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 988,1280
-p_106:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 968,1260
+p_100:
 plt_NativeXHandler_remove_e_balanceTransfered_System_Action_1_System_Collections_Generic_List_1_NativeXBalance:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 992,1287
-p_107:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 972,1267
+p_101:
 plt_NativeXHandler_add_e_receiptId_System_Action_1_string_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 996,1294
-p_108:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 976,1274
+p_102:
 plt_NativeXHandler_remove_e_receiptId_System_Action_1_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1000,1301
-p_109:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 980,1281
+p_103:
 plt_NativeXHandler_add_e_didPerformAction_System_Action_1_bool_0:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1004,1308
-p_110:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 984,1288
+p_104:
 plt_NativeXHandler_remove_e_didPerformAction_System_Action_1_bool:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1008,1315
-p_111:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 988,1295
+p_105:
 plt__jit_icall_mono_string_to_lpstr:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1012,1322
-p_112:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 992,1302
+p_106:
 plt__icall_native_NativeXCore_uStartWithNameAndApplicationId_string_string_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1016,1345
-p_113:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 996,1325
+p_107:
 plt__jit_icall_mono_marshal_free:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1020,1347
-p_114:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1000,1327
+p_108:
 plt__icall_native_NativeXCore_uSetCoordinates_single_single_single_single_single_single:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1024,1367
-p_115:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1004,1347
+p_109:
 plt__icall_native_NativeXCore_uShowOfferWall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1028,1369
-p_116:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1008,1349
+p_110:
 plt__icall_native_NativeXCore_uShowIncentOfferWall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1032,1371
-p_117:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1012,1351
+p_111:
 plt__icall_native_NativeXCore_uShowNonIncentOfferWall:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1036,1373
-p_118:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1016,1353
+p_112:
 plt__icall_native_NativeXCore_uGetAndCacheFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1040,1375
-p_119:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1020,1355
+p_113:
 plt__icall_native_NativeXCore_uShowCachedFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1044,1377
-p_120:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1024,1357
+p_114:
 plt__icall_native_NativeXCore_uShowFeaturedOffer:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1048,1379
-p_121:
-plt__icall_native_NativeXCore_uGetAndCacheInterstitial:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1028,1359
+p_115:
+plt__icall_native_NativeXCore_uGetAndCacheInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1052,1381
-p_122:
-plt__icall_native_NativeXCore_uGetAndCacheEnhancedInterstitial_string:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1032,1361
+p_116:
+plt__icall_native_NativeXCore_uShowCachedInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1056,1383
-p_123:
-plt__icall_native_NativeXCore_uShowCachedInterstitial:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1036,1363
+p_117:
+plt__icall_native_NativeXCore_uShowInterstitial_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1060,1385
-p_124:
-plt__icall_native_NativeXCore_uShowCachedEnhancedInterstitial_string:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1064,1387
-p_125:
-plt__icall_native_NativeXCore_uShowInterstitial:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1068,1389
-p_126:
-plt__icall_native_NativeXCore_uShowEnhancedInterstitial_string:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1072,1391
-p_127:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1040,1365
+p_118:
 plt__icall_native_NativeXCore_uShowBanner:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1076,1393
-p_128:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1044,1367
+p_119:
 plt__icall_native_NativeXCore_uRemoveBanner:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1080,1395
-p_129:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1048,1369
+p_120:
 plt__icall_native_NativeXCore_uRedeemCurrency:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1084,1397
-p_130:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1052,1371
+p_121:
 plt__icall_native_NativeXCore_uConnectWithAppId_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1088,1399
-p_131:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1056,1373
+p_122:
 plt__icall_native_NativeXCore_uActionTakenWithActionId_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1092,1401
-p_132:
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1060,1375
+p_123:
 plt__icall_native_NativeXCore_uTrackInAppPurchase_string_string_single_int_string:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1096,1403
+	.long mono_aot_Assembly_CSharp_firstpass_got - . + 1064,1377
 plt_end:
 .text
 	.align 3
@@ -5226,7 +4970,7 @@ mono_image_table:
 
 	.long 4
 	.asciz "Assembly-CSharp-firstpass"
-	.asciz "8F1437FC-A9C8-48B7-82DC-F0D3B6E7E578"
+	.asciz "A0002D26-A681-4E61-8DAA-2ED2E83FFAC2"
 	.asciz ""
 	.asciz ""
 	.align 3
@@ -5256,7 +5000,7 @@ mono_image_table:
 .data
 	.align 3
 mono_aot_Assembly_CSharp_firstpass_got:
-	.space 1104
+	.space 1072
 got_end:
 .data
 	.align 3
@@ -5267,12 +5011,12 @@ mono_aot_got_addr:
 	.align 3
 mono_aot_file_info:
 
-	.long 143,1104,133,161,1024,1024,128,0
+	.long 144,1072,124,151,1024,1024,128,0
 	.long 0,0,0,0,0
 .text
 	.align 2
 mono_assembly_guid:
-	.asciz "8F1437FC-A9C8-48B7-82DC-F0D3B6E7E578"
+	.asciz "A0002D26-A681-4E61-8DAA-2ED2E83FFAC2"
 .text
 	.align 2
 mono_aot_version:
