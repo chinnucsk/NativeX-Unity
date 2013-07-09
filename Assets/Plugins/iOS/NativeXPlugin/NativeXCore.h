@@ -38,7 +38,7 @@
 -(void)showCachedInterstitial;
 -(void)showCachedEnhancedInterstitial:(NSString*)name;
 -(void)showInterstitial;
--(void)showEnhancedInsterstitial:(NSString*)name;
+-(void)showEnhancedInterstitial:(NSString*)name;
 -(void)showBanner;
 -(void)removeBanner;
 -(void)actionTaken:(NSString*)actionId;

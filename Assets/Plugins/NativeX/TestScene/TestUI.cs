@@ -24,6 +24,7 @@ public class TestUI: MonoBehaviour
 		NativeXHandler.e_didSDKinitialize += didSDKInititialize;
 		NativeXHandler.e_didFeaturedOfferLoad += didFeaturedOfferLoad;
 		NativeXHandler.e_didInterstitialLoad += didInterstitialLoad;
+		NativeXHandler.e_interstitialLoaded += interstitialLoaded;
 		NativeXHandler.e_didBannerLoad += didBannerLoad;
 		NativeXHandler.e_actionCompleted += actionComplete;
 		NativeXHandler.e_actionFailed += actionFailed;
@@ -42,6 +43,9 @@ public class TestUI: MonoBehaviour
 		float width = ((Screen.width/2) - (Screen.width/15));
 		float height = Screen.height/10;
 		float heightPlus = height + 10.0f;
+		
+		GUI.skin.button.fontSize = 30;
+		GUI.skin.button.fontStyle = FontStyle.Bold;
 	
 		
 		if( GUI.Button( new Rect( xPos, yPos, width, height ), "Show Offer Wall" ) )
@@ -187,6 +191,11 @@ public class TestUI: MonoBehaviour
 	void didInterstitialLoad (bool obj)
 	{
 		resultText = "didInterstitialLoad:" +obj;
+	}
+	
+	void interstitialLoaded(string obj)
+	{
+		resultText = "interstitialLoaded: " +obj;	
 	}
 	
 	void didFeaturedOfferLoad (bool obj)

@@ -1,6 +1,6 @@
 //
-//NativeX.h
-//NativeX
+//  NativeXMonetizationSDK.h
+//  NativeXMonetizationSdk
 //
 //  This file is subject to the SDK Source Code License Agreement defined in file
 //  "SDK_SourceCode_LicenseAgreement", which is part of this source code package.
@@ -125,9 +125,9 @@
 /**
  Initialize an instance of Banner Ad
  
- @param themeId
+ @param themeId optional ID for publisher theme
  @param delegate
- @param frame
+ @param frame set size of banner ad
  
  @return NativeXBannerAdView 
  */
@@ -138,7 +138,7 @@
 /**
  Initialize an instance of Interstitial Ad
  
- @param themeId
+ @param themeId optional ID for publisher theme
  @param delegate
  
  @return NativeXInterstitialAdView
@@ -207,7 +207,7 @@
 
 /** Called when the currency redemption is successfull. 
  @param balances -- an array
- @param recieptId 
+ @param recieptId unique identifier for currency redeption
  */
 - (void)didRedeemWithBalances:(NSArray *)balances
                  andReceiptId:(NSString *)receiptId;
@@ -219,38 +219,39 @@
 
 /** Called when publisher is about to display modally fullscreen instruction view for a chosen featured offer 
  @param interstitialInstructionVC   This VCs view will be added at the child to the Vc that is returned in this method.
- @return UIViewController VC used to present modal interstitial screens
+ @return UIViewController -- View Controller used to present modal interstitial screens
  */
 - (UIViewController *)parentViewControllerForModallyPresentingInterstitialInstructionView:(UIViewController *)interstitialInstructionVC;
 
 @optional
-/* Called when offerwall is about to display */
+/** Called when offerwall is about to display */
 - (void)offerWallWillDisplay;
 
-/* Called after offerwall did display*/
+/** Called after offerwall did display*/
 - (void)offerWallDidDisplay;
 
-/* Called when offerwall is about to dismiss */
+/** Called when offerwall is about to dismiss */
 - (void)offerWallWillDismiss;
 
-/* Called after offerwall did dismiss */
+/** Called after offerwall did dismiss */
 - (void)offerWallDidDismiss;
 
-/* Called when offerwall or ad offers are about to redirect 
- * DEPRECATED - please use "SDKWillRedirectUser" 
+/** Called when offerwall or ad offers are about to redirect
+ *
+ * @deprecated please use "SDKWillRedirectUser"
  */
 - (void)offerWallWillRedirectUserToAppStore __deprecated;
 
-/* Called when redirecting user away from application (safari or app store) */
+/** Called when redirecting user away from application (safari or app store) */
 - (void)SDKWillRedirectUser;
 
-/* Called when a freatured offer alert is not available */
+/** Called when a freatured offer alert is not available */
 - (void)featuredOfferNotAvailable;
 
-/* Called when a featured offer alert is available */
+/** Called when a featured offer alert is available */
 - (void)featuredOfferIsAvailable;
 
-/* Called after featured offer alert did dismiss */
+/** Called after featured offer alert did dismiss */
 - (void)featuredOfferDidDismiss;
 
 //TODO: add enhanceAd delegate AdWillShow method so devs can pause game play

@@ -1,0 +1,14 @@
+window.initNativeXSizeScript = function () {
+ var nativeXSizeScript = window.nativeXSizeScript = {};
+ nativeXSizeScript.getPageSize = function () {
+  if (document && document.body) {
+   mraidSDK.setPageSize('width=' + document.body.clientWidth + '&height=' + document.body.clientHeight);
+  } else {
+   console.log('body is missing');
+  }
+ }
+}
+
+if (!window.nativeXSizeScript) {
+ window.initNativeXSizeScript();
+}

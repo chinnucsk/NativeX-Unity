@@ -8,7 +8,6 @@ public class NativeXAndroid : MonoBehaviour {
 	public string displayName;
 	public string publisherUserId;
 	public int actionId;
-	public bool useOldAds = false;
 	
 	public NativeXAndroid(int applicationId, string packName, string disName, string pubName)
 	{
@@ -16,5 +15,10 @@ public class NativeXAndroid : MonoBehaviour {
 		packageName = packName;
 		displayName = disName;
 		publisherUserId = pubName;
+	}
+	
+	public string ToString()
+	{
+		return "appId: "+appId.ToString()+" - packageName: "+packageName+" - displayName: "+displayName+" - publisherUserId:"+publisherUserId;	
 	}
 }

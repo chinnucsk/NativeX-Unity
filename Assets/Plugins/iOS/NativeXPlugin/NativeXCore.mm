@@ -111,6 +111,7 @@ static NativeXCore *sharedInstance;
 
 -(void)getAndCacheEnhancedInterstitial:(NSString*)name
 {
+    showInterstitial = NO;
     [[NativeXMonetizationSDK sharedInstance] cacheInterstitialAdWithName:name delegate:self];
 }
 
@@ -140,7 +141,7 @@ static NativeXCore *sharedInstance;
 -(void)showEnhancedInterstitial:(NSString *)name
 {
     showInterstitial = YES;
-    [[NativeXMonetizationSDK sharedInstance] showInterstitialAdWithName:name];
+    [[NativeXMonetizationSDK sharedInstance] cacheInterstitialAdWithName:name delegate:self];
 }
 
 -(void)showBanner
@@ -318,6 +319,10 @@ static NativeXCore *sharedInstance;
 //_________________________________________________________________________________________________
 -(void) didLoadEnhancedAdView:(NativeXEnhancedAdView *)adView withName:(NSString *)name
 {
+    if(showInterstitial == YES)
+    {
+        [[NativeXMonetizationSDK sharedInstance] showInterstitialAdWithName:name];
+    }
     if(name){
         UnitySendMessage("NativeXHandler", "didInterstitialLoad", [name UTF8String]);
     }else{
@@ -339,12 +344,21 @@ static NativeXCore *sharedInstance;
 
 -(void) enhancedAdViewWillDisplay:(NativeXEnhancedAdView *)adView
 {
-    UnitySendMessage("NativeXHandler", "didInterstitialLoad", [adView.name UTF8String]);
+    if(adView.name)
+    {
+        UnitySendMessage("NativeXHandler", "didInterstitialLoad", [adView.name UTF8String]);
+    }else{
+        UnitySendMessage("NativeXHandler", "didInterstitialLoad", "INTERSTITIAL_LOADED");
+    }
 }
 
 -(void) enhancedAdViewDidDismiss:(NativeXEnhancedAdView *)adView
 {
-    UnitySendMessage("NativeXHandler", "actionComplete", [adView.name UTF8String]);
+//    if(adView.name){
+//        UnitySendMessage("NativeXHandler", "actionComplete", [adView.name UTF8String]);
+//    }else{
+        UnitySendMessage("NativeXHandler", "actionComplete", "6");
+//    }
     adView = nil;
 }
 

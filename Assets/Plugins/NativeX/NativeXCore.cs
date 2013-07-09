@@ -48,6 +48,7 @@ public class NativeXCore : MonoBehaviour {
 			androidDevice = android;
 			if(Application.platform == RuntimePlatform.Android){
 				Debug.Log("W3i - Initialization called");
+				Debug.Log("Android Device: "+androidDevice.ToString());
 				instance.Call("init", currentAct, android.appId, android.displayName, android.packageName, android.publisherUserId);	
 			}
 		//}else{
@@ -195,11 +196,11 @@ public class NativeXCore : MonoBehaviour {
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			uShowFeaturedOffer();
-			if(isDebugLogEnabled){
-				Debug.Log("showFeaturedOffer has been hit");
-			}
 		}
 #endif
+		if(isDebugLogEnabled){
+				Debug.Log("showFeaturedOffer has been hit");
+		}
 	}
 
 #if UNITY_IPHONE
@@ -213,20 +214,19 @@ public class NativeXCore : MonoBehaviour {
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
-			instance.Call("getAndCacheInterstitial", currentAct);
+			if(name == null){
+				name = "";
+			}
+			instance.Call("fetchInterstitial", currentAct, name);
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			if(iOSDevice.useOldAds){
-				uGetAndCacheInterstitial();
-			}else{
-				uGetAndCacheEnhancedInterstitial(name);	
-			}
-			if(isDebugLogEnabled){
-				Debug.Log("showInterstitial has been hit");
-			}
+			uGetAndCacheEnhancedInterstitial(name);	
 		}
 #endif
+		if(isDebugLogEnabled){
+				Debug.Log("getandCacheInterstitial has been hit");
+		}
 	}
 
 #if UNITY_IPHONE
@@ -241,22 +241,19 @@ public class NativeXCore : MonoBehaviour {
 				
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
-			NativeXHandler.buttonEnabled = true;
-			instance.Call("showCachedInterstitial", currentAct);
+			if(name == null){
+				name = "";
+			}
+			instance.Call("showCachedInterstitial", currentAct, name);
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			if(iOSDevice.useOldAds){
-				uShowCachedInterstitial();
-			}else{
-				uShowCachedEnhancedInterstitial(name);	
-			}
-			
-			if(isDebugLogEnabled){
-				Debug.Log("showInterstitial has been hit");
-			}
+			uShowCachedEnhancedInterstitial(name);		
 		}
 #endif
+		if(isDebugLogEnabled){
+				Debug.Log("showCachedInterstitial has been hit");
+			}
 	}
 
 #if UNITY_IPHONE
@@ -270,22 +267,19 @@ public class NativeXCore : MonoBehaviour {
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
-			NativeXHandler.buttonEnabled = true;
-			instance.Call("showNonRewardInterstitial", currentAct);
+			if(name == null){
+				name = "";
+			}
+			instance.Call("showInterstitial",currentAct, name);	
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			if(iOSDevice.useOldAds){
-				uShowInterstitial();
-			}else{
-				uShowEnhancedInterstitial(name);
-			}
-			
-			if(isDebugLogEnabled){
-				Debug.Log("showInterstitial has been hit");
-			}
+			uShowEnhancedInterstitial(name);
 		}
 #endif
+		if(isDebugLogEnabled){
+				Debug.Log("showInterstitial has been hit");
+		}
 	}
 
 #if UNITY_IPHONE

@@ -2,14 +2,16 @@
 //  NativeXEnhancedAdView.h
 //  NativeXMonetizationSdk
 //
-//  Created by Ash Lindquist on 6/4/13.
+//  This file is subject to the SDK Source Code License Agreement defined in file
+//  "SDK_SourceCode_LicenseAgreement", which is part of this source code package.
 //
+//  Created by Ash Lindquist on 6/4/13.
+//  Copyright (c) 2013 NativeX. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-/** Ad placement type.
- */
+/** Ad placement type. */
 typedef enum
 {
     /// Ad is placed in application content.
@@ -24,61 +26,93 @@ typedef enum
 
 @protocol NativeXEnhancedAdViewDelegate;
 
-//TODO: we should consolidate the NativeXAdView into this class
 @interface NativeXEnhancedAdView : UIView
 
+/** delegate file for ad view. */
 @property (nonatomic, weak) id<NativeXEnhancedAdViewDelegate> delegate;
 
+/** default close button */
 @property (nonatomic, readonly) UIButton *closeButton;
+
+/** Placement Type = Interstitial or Inline */
 @property (nonatomic, readonly) nativeXAdViewPlacementType placementType;
 
-// TODO: add comments about what "name" means
+/** give your ad a placement name to recall it */
 @property (nonatomic, strong) NSString *name;
+
+/** View Controller that will be used to present view */
 @property (nonatomic, strong) UIViewController *presentingViewController;
 
+/** 
+ * Advanced: call to initialize an intence of an interstitial ad
+ *
+ * @param name optional for setting per placement
+ * @param aDelegate the delegate file to use for this interstitial instance
+ *
+ * @return NativeXEnhancedAdView -- Ad view with placementType = interstitial
+ */
 - (id)initInterstitialAdWithName:(NSString *)name
                         delegate:(id<NativeXEnhancedAdViewDelegate>)aDelegate;
 
-//called to display the Interstitial once the content has been loaded
+/** call to display the Interstitial once the content has been loaded */
 - (void)displayInterstitial;
 
+/** call to display the Interstitial once the content has been loaded */
 - (void)displayInterstitial:(UIViewController *) presentingVC;
 
-//called do
+/** call to dismiss interstitial */
 - (void)dismissInterstitial;
-
-- (BOOL) isVisible;
 
 @end
 
 @protocol NativeXEnhancedAdViewDelegate <NSObject>
 
 @optional
-//use this method to override when adView is displayed
+/** Called when adView is loaded and ready to be displayed
+ * use this method to override when adView is displayed
+ * If this delegate does not exist when caching an ad it will be shown immediately
+ * @param adView adView that has been loaded
+ * @param name placement name for ad, use for showing cached ad
+ */
 - (void)didLoadEnhancedAdView:(NativeXEnhancedAdView *)adView withName:(NSString *)name;
 
-//notification that no ad was available at this time
+/** called if no ad is available at this time
+ *
+ * @param adView
+ */
 - (void)noAdContentForEnhancedAdView:(NativeXEnhancedAdView *)adView;
 
-//error loading an ad (was the SDK initialized correctly?)
+/** Called when error loading an ad (was the SDK initialized correctly?)
+ *
+ * @param adView
+ * @param error 
+ */
 - (void)enhancedAdView:(NativeXEnhancedAdView *)adView didFailWithError:(NSError *)error;
 
-//notification the ad content has expired
+/** Called when ad content has expired for specific adView
+ *
+ * @param adView 
+ */
 - (void)adContentExpiredForEnhancedAdView:(NativeXEnhancedAdView *)adView;
 
 
-//adview defaults to using the keyWindow's rootviewcontroller, but this method can be used to set a specific parent view controller for the AdView
+/** Called when SDK needs to get presentingVC for displaying the adView
+ * presentingViewController defaults to the keyWindow's rootviewcontroller, but this method can be used to set a specific parent view controller for the AdView
+ *
+ * @param adView
+ * @return -- UIViewController the view controller that will be used as parent to adView
+ */
 - (UIViewController *)presentingViewControllerForAdView:(NativeXEnhancedAdView *) adView;
 
-//adview lifecycle events
+//TODO: ended editing comments here
+// adview lifecycle events
 - (void)enhancedAdViewWillDisplay:(NativeXEnhancedAdView *)adView;
 - (void)enhancedAdViewDidDisplay:(NativeXEnhancedAdView *)adView;
 - (void)enhancedAdViewWillDismiss:(NativeXEnhancedAdView *)adView;
 - (void)enhancedAdViewDidDismiss:(NativeXEnhancedAdView *)adView;
 
 
-//for overriding MRAID events
-//TODO: do we need this?
+// for overriding or capturing MRAID events
 - (void)enhancedAdView:(NativeXEnhancedAdView *)adView didProcessRichmediaRequest:(NSURLRequest*)event;
 
 @end
