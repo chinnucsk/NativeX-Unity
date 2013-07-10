@@ -1,5 +1,5 @@
 //
-//  NativeXEnhancedAdView.h
+//  NativeXAdView.h
 //  NativeXMonetizationSdk
 //
 //  This file is subject to the SDK Source Code License Agreement defined in file
@@ -24,12 +24,12 @@ typedef enum
     
 } nativeXAdViewPlacementType;
 
-@protocol NativeXEnhancedAdViewDelegate;
+@protocol NativeXAdViewDelegate;
 
-@interface NativeXEnhancedAdView : UIView
+@interface NativeXAdView : UIView <UIWebViewDelegate>
 
 /** delegate file for ad view. */
-@property (nonatomic, weak) id<NativeXEnhancedAdViewDelegate> delegate;
+@property (nonatomic, weak) id<NativeXAdViewDelegate> delegate;
 
 /** default close button */
 @property (nonatomic, readonly) UIButton *closeButton;
@@ -43,16 +43,16 @@ typedef enum
 /** View Controller that will be used to present view */
 @property (nonatomic, strong) UIViewController *presentingViewController;
 
-/** 
+/**
  * Advanced: call to initialize an intence of an interstitial ad
  *
  * @param name optional for setting per placement
  * @param aDelegate the delegate file to use for this interstitial instance
  *
- * @return NativeXEnhancedAdView -- Ad view with placementType = interstitial
+ * @return NativeXAdView -- Ad view with placementType = interstitial
  */
-- (id)initInterstitialAdWithName:(NSString *)name
-                        delegate:(id<NativeXEnhancedAdViewDelegate>)aDelegate;
+- (id)initInterstitialWithName:(NSString *)name
+                        delegate:(id<NativeXAdViewDelegate>)aDelegate;
 
 /** call to display the Interstitial once the content has been loaded */
 - (void)displayInterstitial;
@@ -65,7 +65,7 @@ typedef enum
 
 @end
 
-@protocol NativeXEnhancedAdViewDelegate <NSObject>
+@protocol NativeXAdViewDelegate <NSObject>
 
 @optional
 /** Called when adView is loaded and ready to be displayed
@@ -74,26 +74,27 @@ typedef enum
  * @param adView adView that has been loaded
  * @param name placement name for ad, use for showing cached ad
  */
-- (void)didLoadEnhancedAdView:(NativeXEnhancedAdView *)adView withName:(NSString *)name;
+- (void)didLoadAdView:(NativeXAdView *)adView withName:(NSString *)name;
 
 /** called if no ad is available at this time
  *
  * @param adView
  */
-- (void)noAdContentForEnhancedAdView:(NativeXEnhancedAdView *)adView;
+- (void)noAdContentForAdView:(NativeXAdView *)adView;
 
+- (void)dismissActionForAdView:(NativeXAdView *)adView completionBlock:(void (^)(void))completion;
 /** Called when error loading an ad (was the SDK initialized correctly?)
  *
  * @param adView
- * @param error 
+ * @param error
  */
-- (void)enhancedAdView:(NativeXEnhancedAdView *)adView didFailWithError:(NSError *)error;
+- (void)nativeXAdView:(NativeXAdView *)adView didFailWithError:(NSError *)error;
 
 /** Called when ad content has expired for specific adView
  *
- * @param adView 
+ * @param adView
  */
-- (void)adContentExpiredForEnhancedAdView:(NativeXEnhancedAdView *)adView;
+- (void)adContentExpiredForAdView:(NativeXAdView *)adView;
 
 
 /** Called when SDK needs to get presentingVC for displaying the adView
@@ -102,18 +103,18 @@ typedef enum
  * @param adView
  * @return -- UIViewController the view controller that will be used as parent to adView
  */
-- (UIViewController *)presentingViewControllerForAdView:(NativeXEnhancedAdView *) adView;
+- (UIViewController *)presentingViewControllerForAdView:(NativeXAdView *) adView;
 
 //TODO: ended editing comments here
 // adview lifecycle events
-- (void)enhancedAdViewWillDisplay:(NativeXEnhancedAdView *)adView;
-- (void)enhancedAdViewDidDisplay:(NativeXEnhancedAdView *)adView;
-- (void)enhancedAdViewWillDismiss:(NativeXEnhancedAdView *)adView;
-- (void)enhancedAdViewDidDismiss:(NativeXEnhancedAdView *)adView;
+- (void)nativeXAdViewWillDisplay:(NativeXAdView *)adView;
+- (void)nativeXAdViewDidDisplay:(NativeXAdView *)adView;
+- (void)nativeXAdViewWillDismiss:(NativeXAdView *)adView;
+- (void)nativeXAdViewDidDismiss:(NativeXAdView *)adView;
 
 
 // for overriding or capturing MRAID events
-- (void)enhancedAdView:(NativeXEnhancedAdView *)adView didProcessRichmediaRequest:(NSURLRequest*)event;
+- (void)nativeXAdView:(NativeXAdView *)adView didProcessRichmediaRequest:(NSURLRequest*)event;
 
 @end
 

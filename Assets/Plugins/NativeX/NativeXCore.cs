@@ -205,10 +205,10 @@ public class NativeXCore : MonoBehaviour {
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
-	public static extern void uGetAndCacheInterstitial(string name);
+	public static extern void uFetchInterstitial(string name);
 #endif
 
-	public static void getAndCacheInterstitial(string name)
+	public static void fetchInterstitial(string name)
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
@@ -219,7 +219,7 @@ public class NativeXCore : MonoBehaviour {
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uGetAndCacheInterstitial(name);	
+			uFetchInterstitial(name);	
 		}
 #endif
 		if(isDebugLogEnabled){
@@ -227,30 +227,30 @@ public class NativeXCore : MonoBehaviour {
 		}
 	}
 
-#if UNITY_IPHONE
-	[DllImport ("__Internal")]
-	public static extern void uShowCachedInterstitial(string name);
-#endif
-
-	public static void showCachedInterstitial(string name)
-	{
-				
-#if UNITY_ANDROID
-		if(Application.platform == RuntimePlatform.Android){
-			if(name == null){
-				name = "";
-			}
-			instance.Call("showCachedInterstitial", currentAct, name);
-		}
-#elif UNITY_IPHONE
-		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uShowCachedInterstitial(name);		
-		}
-#endif
-		if(isDebugLogEnabled){
-				Debug.Log("showCachedInterstitial has been hit");
-			}
-	}
+//#if UNITY_IPHONE
+//	[DllImport ("__Internal")]
+//	public static extern void uShowCachedInterstitial(string name);
+//#endif
+//
+//	public static void showCachedInterstitial(string name)
+//	{
+//				
+//#if UNITY_ANDROID
+//		if(Application.platform == RuntimePlatform.Android){
+//			if(name == null){
+//				name = "";
+//			}
+//			instance.Call("showCachedInterstitial", currentAct, name);
+//		}
+//#elif UNITY_IPHONE
+//		if(Application.platform == RuntimePlatform.IPhonePlayer){
+//			uShowCachedInterstitial(name);		
+//		}
+//#endif
+//		if(isDebugLogEnabled){
+//				Debug.Log("showCachedInterstitial has been hit");
+//			}
+//	}
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]

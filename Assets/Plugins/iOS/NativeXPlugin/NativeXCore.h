@@ -8,18 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "NativeXMonetizationSDK.h"
-#import "NativeXInterstitialAdViewController.h"
-#import "NativeXBannerAdView.h"
-#import "NativeXEnhancedAdView.h"
+#import "NativeXAdView.h"
 //
 //extern UIView * UnityGetGLView();
 //extern UIViewController * UnityGetGLViewController();
 
-@interface NativeXCore : NSObject <NativeXMonetizationDelegate, NativeXInterstitialAdViewControllerDelegate, NativeXBannerAdViewDelegate, NativeXInAppPurchaseTrackDelegate, NativeXEnhancedAdViewDelegate >
+@interface NativeXCore : NSObject <NativeXMonetizationDelegate, NativeXInAppPurchaseTrackDelegate, NativeXAdViewDelegate >
 {
 @private
     BOOL showInterstitial;
-    NativeXBannerAdView *bannerView;
     CGPoint myPoint;
 }
 
@@ -33,8 +30,7 @@
 -(void)getAndCacheFeaturedOffer;
 -(void)showCachedFeaturedOffer;
 -(void)showFeaturedOffer;
--(void)getAndCacheInterstitial:(NSString*)name;
--(void)showCachedInterstitial:(NSString*)name;
+-(void)fetchInterstitial:(NSString*)name;
 -(void)showInterstitial:(NSString*)name;
 -(void)showBanner;
 -(void)removeBanner;
@@ -44,9 +40,7 @@
 -(void)trackInAppPurchase:(NativeXInAppPurchaseTrackRecord*)record;
 -(void)close;
 
-@property (nonatomic, retain) NativeXBannerAdView *bannerView;
-@property (nonatomic, retain) NativeXInterstitialAdViewController *myInterstitial;
-@property (nonatomic, retain) NativeXEnhancedAdView *myAdView;
+@property (nonatomic, retain) NativeXAdView *myAdView;
 @property (nonatomic, retain) UIView *pointView;
 @property (nonatomic) CGPoint bannerPoint;
 @property (nonatomic) CGPoint offerWallPoint;

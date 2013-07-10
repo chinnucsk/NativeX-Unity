@@ -58,7 +58,8 @@
         SET_ORIENTATION_PROPERTIES: 'mraid://setOrientationProperties/',
         USE_CUSTOM_CLOSE: 'mraid://useCustomClose/',
         CREATE_CALENDAR_EVENT: 'mraid://createCalendarEvent/',
-        LOG: 'mraid://log/'
+        LOG: 'mraid://log/',
+        TRACK_VIDEO: 'mraid://trackVideo/'
     };
     //#endregion
 
@@ -538,6 +539,32 @@
             height: currentPosition.height
         };
     }
+
+    // Video tracking
+    function initVideoTracking() {
+        // Check for videos and attach event listeners
+        var videoTags = document.getElementsByTagName('video');
+        for (var i = 0; i < videoTags.length; i++) {
+            videoTags[i].addEventListener('timeupdate', videoTimeUpdate, false);
+        }
+        document.removeEventListener('DOMContentLoaded', initVideoTracking, false);
+    }
+
+    function videoTimeUpdate(event) {
+        var video = event.target || event.srcElement;
+        if (video) {
+            var progress = video.currentTime / video.duration * 100;
+            if (progress > 0) {
+                // Track video every 2%
+                if (progress >= 95 || Math.round(progress) % 2 == 0) {
+                    var call = SDK_CALLS.TRACK_VIDEO + '?url=' + video.currentSrc + '&progress=' + progress
+                    mraid.callSdk(call);
+                }
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', initVideoTracking, false);
     //#endregion
 
     // Tell SDK that the MRAID object is available

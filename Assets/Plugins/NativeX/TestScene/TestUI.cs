@@ -83,17 +83,17 @@ public class TestUI: MonoBehaviour
 			Debug.Log("Show Featured Offer has been clicked");
 		}
 
-		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Get And Cache Interstitial" ) )
+		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Fetch Interstitial" ) )
 		{
-			NativeXCore.getAndCacheInterstitial("Blah");
+			NativeXCore.fetchInterstitial("Blah");
 			Debug.Log("Get And Cache Interstitial has been clicked");
 		}
 
-		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Cached Interstitial" ) )
-		{
-			NativeXCore.showCachedInterstitial("Blah");
-			Debug.Log("Show Cached Interstitial has been clicked");
-		}
+//		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Cached Interstitial" ) )
+//		{
+//			NativeXCore.showCachedInterstitial("Blah");
+//			Debug.Log("Show Cached Interstitial has been clicked");
+//		}
 
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Interstitial" ) )
 		{
@@ -190,6 +190,7 @@ public class TestUI: MonoBehaviour
 	void didInterstitialLoad (string obj)
 	{
 		resultText = "didInterstitialLoad:" +obj;
+		Debug.Log(resultText);
 	}
 	
 	void didFeaturedOfferLoad (bool obj)

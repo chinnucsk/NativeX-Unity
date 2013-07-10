@@ -61,14 +61,9 @@ void uShowFeaturedOffer()
     [[NativeXCore instance] showFeaturedOffer];
 }
 
-void uGetAndCacheInterstitial(const char* name)
+void uFetchInterstitial(const char* name)
 {
-    [[NativeXCore instance] getAndCacheInterstitial:GetStringParamOrNil(name)];
-}
-
-void uShowCachedInterstitial(const char* name)
-{
-    [[NativeXCore instance] showCachedInterstitial:GetStringParamOrNil(name)];
+    [[NativeXCore instance] fetchInterstitial:GetStringParamOrNil(name)];
 }
 
 void uShowInterstitial(const char* name)

@@ -20,7 +20,6 @@ static NativeXCore *sharedInstance;
 
 @implementation NativeXCore
 
-@synthesize bannerView;
 @synthesize bannerHeight;
 @synthesize bannerWidth;
 @synthesize bannerPoint;
@@ -33,8 +32,6 @@ static NativeXCore *sharedInstance;
 
 - (void)dealloc
 {
-    [_myInterstitial release];
-    _myInterstitial = nil;
     [super dealloc];
 }
 
@@ -100,37 +97,15 @@ static NativeXCore *sharedInstance;
 }
 
 
--(void)getAndCacheInterstitial:(NSString*)name
+-(void)fetchInterstitial:(NSString*)name
 {
-    showInterstitial = NO;
-    [[NativeXMonetizationSDK sharedInstance] cacheInterstitialAdWithName:name delegate:self];
+    [[NativeXMonetizationSDK sharedInstance] fetchInterstitialWithName:name delegate:self];
 }
-
-
--(void)showCachedInterstitial:(NSString*)name
-{
-    [[NativeXMonetizationSDK sharedInstance] showInterstitialAdWithName:name];
-}
-
 
 -(void)showInterstitial:(NSString *)name
 {
-    showInterstitial = YES;
-    [[NativeXMonetizationSDK sharedInstance] cacheInterstitialAdWithName:name delegate:self];
-}
-
--(void)showBanner
-{
-    self.bannerView = [[NativeXMonetizationSDK sharedInstance] bannerAdViewWithThemeID:nil delegate:self frame:CGRectMake(bannerPoint.x, bannerPoint.y, bannerWidth, bannerHeight)];
-    bannerView.hidden = YES;
-    [UnityGetGLViewController().view addSubview:bannerView];
-    
-    
-}
-
--(void)removeBanner
-{
-    [bannerView removeFromSuperview];
+    [[NativeXMonetizationSDK sharedInstance] fetchInterstitialWithName:name delegate:self];
+    [[NativeXMonetizationSDK sharedInstance] showInterstitialWithName:name];
 }
 
 -(void) connectWithAppId:(NSString *)appId
@@ -249,14 +224,10 @@ static NativeXCore *sharedInstance;
 }
 
 //_________________________________________________________________________________________________
-//Enhanced Interstitial Delegates
+//Interstitial Delegates
 //_________________________________________________________________________________________________
--(void) didLoadEnhancedAdView:(NativeXEnhancedAdView *)adView withName:(NSString *)name
+-(void) didLoadAdView:(NativeXAdView *)adView withName:(NSString *)name
 {
-    if(showInterstitial == YES)
-    {
-        [[NativeXMonetizationSDK sharedInstance] showInterstitialAdWithName:name];
-    }
     if(name){
         UnitySendMessage("NativeXHandler", "didInterstitialLoad", [name UTF8String]);
     }else{
@@ -264,13 +235,13 @@ static NativeXCore *sharedInstance;
     }
 }
 
--(void)noAdContentForEnhancedAdView:(NativeXEnhancedAdView *)adView
+-(void)noAdContentForAdView:(NativeXAdView *)adView
 {
     NSLog(@"We were unable to load any content for Enhanced Interstitial.");
     UnitySendMessage("NativeXHandler", "didInterstitialLoad", "NO_INTERSTITIAL_LOADED");
 }
 
--(void)enhancedAdView:(NativeXEnhancedAdView *)adView didFailWithError:(NSError *)error
+-(void)nativeXAdView:(NativeXAdView *)adView didFailWithError:(NSError *)error
 {
     NSLog(@"Enhanced Interstitial failed to inititialize with Error: %@", error);
     if(adView.name){
@@ -280,7 +251,7 @@ static NativeXCore *sharedInstance;
     }
 }
 
--(void) enhancedAdViewWillDisplay:(NativeXEnhancedAdView *)adView
+-(void) nativeXAdViewWillDisplay:(NativeXAdView *)adView
 {
     if(adView.name)
     {
@@ -290,7 +261,7 @@ static NativeXCore *sharedInstance;
     }
 }
 
--(void) enhancedAdViewDidDismiss:(NativeXEnhancedAdView *)adView
+-(void) nativeXAdViewDidDismiss:(NativeXAdView *)adView
 {
    if(adView.name){
         UnitySendMessage("NativeXHandler", "actionComplete", [adView.name UTF8String]);
@@ -298,39 +269,6 @@ static NativeXCore *sharedInstance;
         UnitySendMessage("NativeXHandler", "actionComplete", "6");
     }
     adView = nil;
-}
-
-//_________________________________________________________________________________________________
-//Banner Delegates
-//_________________________________________________________________________________________________
-
--(void)didLoadContentForBannerAdView:(NativeXBannerAdView *)adView
-{
-    bannerView = adView;
-    if(bannerView) {
-        [bannerView setHidden:NO];
-    }
-    UnitySendMessage("NativeXHandler", "didBannerLoad", "1");
-}
-
--(void)noAdContentForBannerAdView:(NativeXBannerAdView *)adView
-{
-    if(bannerView) {
-        [bannerView setHidden:YES];
-    }
-    UnitySendMessage("NativeXHandler", "didBannerLoad", "0");
-}
-
--(void)bannerAdView:(NativeXBannerAdView *)adView didFailWithError:(NSError *)error
-{
-    NSLog(@"Banner failed with Error: %@", error);
-    UnitySendMessage("NativeXHandler", "actionFailed", "7");
-}
-
--(BOOL)bannerAdView:(NativeXBannerAdView *)adView shouldLeaveApplicationOpeningURL:(NSURL *)url
-{
-    UnitySendMessage("NativeXHandler", "userLeavingApplication", "7");
-    return YES;
 }
 
 //_________________________________________________________________________________________________

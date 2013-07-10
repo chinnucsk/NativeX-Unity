@@ -10,9 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "NativeXBannerAdView.h"
-#import "NativeXInterstitialAdViewController.h"
-#import "NativeXEnhancedAdView.h"
+#import "NativeXAdView.h"
 #import "NativeXInAppPurchaseTrackRequest.h"
 
 @protocol NativeXMonetizationDelegate;
@@ -99,19 +97,19 @@
  */
 - (void)redeemCurrency;
 
-#pragma mark - Enhanced Interstitial Ad Methods (MRAID)
+#pragma mark - Enhanced Ad Methods
 
 /**
  Show an MRAID complient interstitial from key window
  */
-- (void)showInterstitialAd;
+- (void)showInterstitial;
 
 /**
  Show an MRAID complient interstitial with placement name from key window, used for targeting certain ads for cetain in app placements.
  
  @param name   NSString representation of placement name
  */
-- (void)showInterstitialAdWithName:(NSString *)name;
+- (void)showInterstitialWithName:(NSString *)name;
 
 /**
  Cache an MRAID complient interstitial
@@ -119,32 +117,8 @@
  @param name   NSString representation of placement name (optional)
  @param delegate        used to set delegate
  */
-- (void)cacheInterstitialAdWithName:(NSString *) name delegate:(id<NativeXEnhancedAdViewDelegate>)aDelegate;
+- (void)fetchInterstitialWithName:(NSString *) name delegate:(id<NativeXAdViewDelegate>)aDelegate;
 
-#pragma mark - Regular Ad methods
-/**
- Initialize an instance of Banner Ad
- 
- @param themeId optional ID for publisher theme
- @param delegate
- @param frame set size of banner ad
- 
- @return NativeXBannerAdView 
- */
-- (NativeXBannerAdView *)bannerAdViewWithThemeID:(NSNumber *)themeID
-                                        delegate:(id<NativeXBannerAdViewDelegate>)delegate
-                                           frame:(CGRect)frame;
-
-/**
- Initialize an instance of Interstitial Ad
- 
- @param themeId optional ID for publisher theme
- @param delegate
- 
- @return NativeXInterstitialAdView
- */
-- (NativeXInterstitialAdViewController *)interstitialAdViewControllerWithThemeID:(NSNumber *)themeID
-                                                                        delegate:(id<NativeXInterstitialAdViewControllerDelegate>)delegate;
 
 #pragma mark - In App Purchase Tracking (IAPT) methods
 /**
@@ -158,13 +132,11 @@
 - (NativeXInAppPurchaseTrackRequest *)trackInAppPurchaseWithTrackRecord:(NativeXInAppPurchaseTrackRecord *)trackRecord
                                                                delegate:(id<NativeXInAppPurchaseTrackDelegate>)delegate; //if the delegate is about to be deallocated clear return value's delegate property
 
-
 /**
  Use this method to get sessionId for current session
  @return the current sessionId
  */
 - (NSString *) getSessionId;
-
 
 #pragma mark - NativeX Advertiser API
 
@@ -224,6 +196,7 @@
 - (UIViewController *)parentViewControllerForModallyPresentingInterstitialInstructionView:(UIViewController *)interstitialInstructionVC;
 
 @optional
+
 /** Called when offerwall is about to display */
 - (void)offerWallWillDisplay;
 
@@ -253,8 +226,5 @@
 
 /** Called after featured offer alert did dismiss */
 - (void)featuredOfferDidDismiss;
-
-//TODO: add enhanceAd delegate AdWillShow method so devs can pause game play
-- (void)adWillShow;
 
 @end
