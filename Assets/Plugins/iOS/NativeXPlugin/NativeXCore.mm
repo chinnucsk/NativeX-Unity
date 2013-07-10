@@ -48,6 +48,7 @@ static NativeXCore *sharedInstance;
 {
     [[NativeXMonetizationSDK sharedInstance] initiateWithAppId:appId andPublisherUserId:pubId];
     [[NativeXMonetizationSDK sharedInstance] setDelegate:self];
+    [[NSUserDefaults standardUserDefaults] setObject:"http://beta.api.w3i.com" forKey:kNativeXTestAppURL];
     
 }
 
