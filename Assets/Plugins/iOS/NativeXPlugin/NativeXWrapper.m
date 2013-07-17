@@ -13,11 +13,17 @@
 
 #define GetStringParamOrNil( _x_ ) ( _x_ != NULL && strlen( _x_ ) ) ? [NSString stringWithUTF8String:_x_] : nil
 
-void uStartWithNameAndApplicationId(const char *name, const char *appId, const char *pubId)
+void uStartWithNameAndApplicationId(const char *name, const char *appId, const char *pubId, bool enableLogging)
 {
-    [[NativeXCore instance] startWithName:GetStringParam(name) applicationId:GetStringParamOrNil(appId) publisherId:GetStringParamOrNil(pubId)];
+    [[NativeXCore instance] startWithName:GetStringParam(name) applicationId:GetStringParamOrNil(appId) publisherId:GetStringParamOrNil(pubId) enableLogging:enableLogging];
     
 }
+
+void uSelectServer(const char *url)
+{
+    [[NativeXCore instance] setURL:GetStringParamOrNil(url)];
+}
+
 void uSetCoordinates(float bannerX, float bannerY, float bannerHeight, float bannerWidth, float offerWallX, float offerWallY)
 {
     [[NativeXCore instance] setBannerPoint:CGPointMake(bannerX, bannerY)];
@@ -69,16 +75,6 @@ void uFetchInterstitial(const char* name)
 void uShowInterstitial(const char* name)
 {
     [[NativeXCore instance] showInterstitial:GetStringParamOrNil(name)];
-}
-
-void uShowBanner()
-{
-    [[NativeXCore instance] showBanner];
-}
-
-void uRemoveBanner()
-{
-    [[NativeXCore instance] removeBanner];
 }
 
 void uConnectWithAppId(const char *appId)

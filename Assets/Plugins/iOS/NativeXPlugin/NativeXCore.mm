@@ -7,8 +7,9 @@
 //
 
 #import "NativeXCore.h"
-//#import "NSObject-SBJSON.h"
 #import "NativeXPublisherSBJsonWriter.h"
+
+#define kNativeXTestAppURL		@"NativeXTestAppURL"
 
 UIViewController *UnityGetGLViewController();
 
@@ -44,11 +45,19 @@ static NativeXCore *sharedInstance;
     
 }
 
--(void)startWithName:(NSString*)name applicationId:(NSString*)appId publisherId:(NSString*)pubId
+-(void)startWithName:(NSString*)name applicationId:(NSString*)appId publisherId:(NSString*)pubId enableLogging:(bool)enableLogging
 {
+    if([[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.W3i.W3iUnityTest"]){
+        [[NSUserDefaults standardUserDefaults] setObject:_URL forKey:kNativeXTestAppURL];
+    }
     [[NativeXMonetizationSDK sharedInstance] initiateWithAppId:appId andPublisherUserId:pubId];
     [[NativeXMonetizationSDK sharedInstance] setDelegate:self];
-    [[NSUserDefaults standardUserDefaults] setObject:"http://beta.api.w3i.com" forKey:kNativeXTestAppURL];
+    if(enableLogging){
+        [[NativeXMonetizationSDK sharedInstance] setShouldOutputDebugLog:YES];
+    }else{
+        [[NativeXMonetizationSDK sharedInstance] setShouldOutputDebugLog:NO];
+    }
+    
     
 }
 
@@ -181,24 +190,9 @@ static NativeXCore *sharedInstance;
     return UnityGetGLViewController();
 }
 
--(void)offerWallDidDisplay
-{
-    UnitySendMessage("NativeXHandler", "actionComplete", "1");
-}
-
--(void)offerWallWillDisplay
-{
-    UnitySendMessage("NativeXHandler", "actionComplete", "1");
-}
-
--(void)offerWallWillRedirectUserToAppStore
+-(void)SDKWillRedirectUser
 {
     UnitySendMessage("NativeXHandler", "userLeavingApplication", "1");
-}
-
--(void)offerWallWillDismiss
-{
-    UnitySendMessage("NativeXHandler", "actionComplete", "1");
 }
 
 -(void)offerWallDidDismiss

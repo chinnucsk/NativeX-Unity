@@ -11,8 +11,8 @@ using System.Runtime.InteropServices;
 public class NativeXCore : MonoBehaviour {
 	
 	public static bool isDebugLogEnabled = true;
-	protected static NativeXiOS iOSDevice;
-	protected static NativeXAndroid androidDevice;
+	public static NativeXiOS iOSDevice;
+	public static NativeXAndroid androidDevice;
 	
 #if UNITY_ANDROID
 	private static AndroidJavaObject instance;
@@ -37,7 +37,7 @@ public class NativeXCore : MonoBehaviour {
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
-	public static extern void uStartWithNameAndApplicationId(string name, string applicationId, string publisherId);
+	public static extern void uStartWithNameAndApplicationId(string name, string applicationId, string publisherId, bool enableLogging);
 	[DllImport ("__Internal")]
 	public static extern void uSetCoordinates(float bannerX, float bannerY, float bannerHeight, float bannerWidth, float offerWallX, float offerWallY);
 #endif
@@ -49,7 +49,7 @@ public class NativeXCore : MonoBehaviour {
 			if(Application.platform == RuntimePlatform.Android){
 				Debug.Log("W3i - Initialization called");
 				Debug.Log("Android Device: "+androidDevice.ToString());
-				instance.Call("init", currentAct, android.appId, android.displayName, android.packageName, android.publisherUserId);	
+				instance.Call("init", currentAct, android.appId, android.displayName, android.packageName, android.publisherUserId, android.enableLogging);	
 			}
 		//}else{
 		//	Debug.Log("No NativeXAndroid object exists");
@@ -58,16 +58,16 @@ public class NativeXCore : MonoBehaviour {
 		//if(iOS!=null){
 			iOSDevice = iOS;
 			if(Application.platform == RuntimePlatform.IPhonePlayer){
-				uStartWithNameAndApplicationId(iOS.appName, iOS.appId.ToString(), iOS.publisherUserId);
+				uStartWithNameAndApplicationId(iOS.appName, iOS.appId.ToString(), iOS.publisherUserId, iOS.enableLogging);
 				uSetCoordinates(iOS.bannerX, iOS.bannerY, iOS.bannerHeight, iOS.bannerWidth, iOS.offerWallX, iOS.offerWallY);
-				if(isDebugLogEnabled){
-					Debug.Log("initialization has been hit");
-				}
 			}
 		//}else{
 		//	Debug.Log("No NativeXiOS object exists.");
 		//}
 #endif
+		if(isDebugLogEnabled){
+			Debug.Log("initialization has been hit");
+		}
 		return;		
 	}
 
@@ -86,11 +86,12 @@ public class NativeXCore : MonoBehaviour {
 #if UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 				uShowOfferWall();
-				if(isDebugLogEnabled){
-					Debug.Log("showOfferWall has been hit");
-				}
+				
 		}
 #endif
+		if(isDebugLogEnabled){
+			Debug.Log("showOfferWall has been hit");
+		}
 		return;
 	}
 		
@@ -110,12 +111,12 @@ public class NativeXCore : MonoBehaviour {
 #if UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			uShowIncentOfferWall();	
-			if(isDebugLogEnabled){
-				Debug.Log("showWebOfferWall has been hit");
-			}
+			
 		}
 #endif
-
+		if(isDebugLogEnabled){
+			Debug.Log("showWebOfferWall has been hit");
+		}
 		return;
 	}
 
@@ -133,19 +134,23 @@ public class NativeXCore : MonoBehaviour {
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			uShowNonIncentOfferWall();	
-			if(isDebugLogEnabled){
-				Debug.Log("showNonIncentWebOfferWall has been hit");
-			}
+			
 		}
 #endif
+		if(isDebugLogEnabled){
+			Debug.Log("showNonIncentWebOfferWall has been hit");
+		}
 	}
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uGetAndCacheFeaturedOffer();
 #endif
-
-	public static void getAndCacheFeaturedOffer()
+	/**
+ 	* Fetch a Featured Offer
+ 	* 
+ 	*/
+	public static void fetchFeaturedOffer()
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
@@ -154,19 +159,23 @@ public class NativeXCore : MonoBehaviour {
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			uGetAndCacheFeaturedOffer();
-			if(isDebugLogEnabled){
-				Debug.Log("getAndCacheFeaturedOffer has been hit");
-			}
+			
 		}
 #endif
+		if(isDebugLogEnabled){
+			Debug.Log("getAndCacheFeaturedOffer has been hit");
+		}
 	}
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uShowCachedFeaturedOffer();
 #endif
-
-	public static void showCachedFeaturedOffer()
+	/**
+ 	* Shows the already fetched Featured Offer
+ 	* 
+ 	*/
+	public static void showFetchedFeaturedOffer()
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
@@ -175,18 +184,22 @@ public class NativeXCore : MonoBehaviour {
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			uShowCachedFeaturedOffer();	
-			if(isDebugLogEnabled){
-				Debug.Log("iOS - showCachedFeaturedOffer has been hit");
-			}
+			
 		}
 #endif
+		if(isDebugLogEnabled){
+			Debug.Log("iOS - showCachedFeaturedOffer has been hit");
+		}
 	}
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uShowFeaturedOffer();
 #endif
-
+	/**
+ 	* Show a Features Offer
+ 	* 
+ 	*/
 	public static void showFeaturedOffer()
 	{
 #if UNITY_ANDROID
@@ -199,7 +212,7 @@ public class NativeXCore : MonoBehaviour {
 		}
 #endif
 		if(isDebugLogEnabled){
-				Debug.Log("showFeaturedOffer has been hit");
+			Debug.Log("showFeaturedOffer has been hit");
 		}
 	}
 
@@ -207,7 +220,11 @@ public class NativeXCore : MonoBehaviour {
 	[DllImport ("__Internal")]
 	public static extern void uFetchInterstitial(string name);
 #endif
-
+	/**
+ 	* Fetch an enhanced interstitial
+ 	* 
+ 	* @param name      string representation of placement name (optional)
+ 	*/
 	public static void fetchInterstitial(string name)
 	{
 #if UNITY_ANDROID
@@ -223,7 +240,7 @@ public class NativeXCore : MonoBehaviour {
 		}
 #endif
 		if(isDebugLogEnabled){
-				Debug.Log("getandCacheInterstitial has been hit");
+			Debug.Log("getandCacheInterstitial has been hit");
 		}
 	}
 
@@ -256,7 +273,12 @@ public class NativeXCore : MonoBehaviour {
 	[DllImport ("__Internal")]
 	public static extern void uShowInterstitial(string name);
 #endif
-
+	/**
+ 	* Show an enhanced interstitial with placement name from key window, 
+ 	* used for targeting certain ads for cetain in app placements.
+ 	* 
+ 	* @param name   string representation of placement name(optional)
+ 	*/
 	public static void showInterstitial(string name)
 	{
 #if UNITY_ANDROID
@@ -272,48 +294,8 @@ public class NativeXCore : MonoBehaviour {
 		}
 #endif
 		if(isDebugLogEnabled){
-				Debug.Log("showInterstitial has been hit");
+			Debug.Log("showInterstitial has been hit");
 		}
-	}
-
-#if UNITY_IPHONE
-	[DllImport ("__Internal")]
-	public static extern void uShowBanner();
-#endif
-	public static void showBanner()
-	{
-#if UNITY_ANDROID
-		if(Application.platform == RuntimePlatform.Android){
-			instance.Call("showNonRewardBanner", currentAct);
-		}
-#elif UNITY_IPHONE
-		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uShowBanner();
-			if(isDebugLogEnabled){
-				Debug.Log("showBanner has been hit");
-			}
-		}
-#endif
-	}
-
-#if UNITY_IPHONE
-	[DllImport ("__Internal")]
-	public static extern void uRemoveBanner();
-#endif
-	public static void removeBanner()
-	{
-#if UNITY_ANDROID
-		if(Application.platform == RuntimePlatform.Android){
-			instance.Call("removeBanner", currentAct);
-		}
-#elif UNITY_IPHONE
-		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			uRemoveBanner();
-			if(isDebugLogEnabled){
-				Debug.Log("removeBanner has been hit");
-			}
-		}
-#endif
 	}
 
 #if UNITY_IPHONE
@@ -329,11 +311,12 @@ public class NativeXCore : MonoBehaviour {
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			uRedeemCurrency();	
-			if(isDebugLogEnabled){
-				Debug.Log("redeemCurrency has been hit");
-			}
+			
 		}
 #endif
+		if(isDebugLogEnabled){
+			Debug.Log("redeemCurrency has been hit");
+		}
 	}
 
 //These methods were added as a request from a specific client and should not be used in typical integrations!
@@ -375,12 +358,13 @@ public class NativeXCore : MonoBehaviour {
 			if(null!=iOSDevice.appId)
 			{
 				uConnectWithAppId(iOSDevice.appId.ToString());
-				if(isDebugLogEnabled){
-					Debug.Log("appWasRun has been hit");
-				}
+				
 			}
 		}
 #endif
+		if(isDebugLogEnabled){
+			Debug.Log("appWasRun has been hit");
+		}
 	}
 
 	//This Call this to perform an Action Taken call.
@@ -402,12 +386,13 @@ public class NativeXCore : MonoBehaviour {
 			if(iOSDevice.actionId!=null)
 			{
 				uActionTakenWithActionId(iOSDevice.actionId.ToString());
-				if(isDebugLogEnabled){
-					Debug.Log("actionTaken has been hit");
-				}
+				
 			}
 		}
 #endif
+		if(isDebugLogEnabled){
+			Debug.Log("actionTaken has been hit");
+		}
 	}
 
 	//This is an Android only function used to aler the consumer to turn on Auto-matic updates
@@ -450,7 +435,32 @@ public class NativeXCore : MonoBehaviour {
 		return;
 	}
 
-
+#if UNITY_IPHONE
+	[DllImport ("__Internal")]
+	public static extern void uSelectServer(string url);
+#endif
+	public static void selectServer(string server)
+	{
+#if UNITY_IPHONE
+		switch(server)
+		{
+		case "BETA":
+			uSelectServer("http://beta.api.w3i.com");
+			break;
+		case "DEV":
+			uSelectServer("http://api.w3i.teamfreeze.com");
+			break;
+		case "PROD":
+			uSelectServer("http://appclick.co");
+			break;
+		default:
+			uSelectServer("http://appclick.co");
+			break;
+		}
+#endif
+		return;
+		
+	}
 
 	
 }

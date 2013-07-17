@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JsonFx.Json;
 
-public class NativeXBalance : MonoBehaviour {
+public class NativeXBalance{
 
 	public int Amount;
 	public string DisplayName;

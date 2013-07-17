@@ -44,12 +44,12 @@ typedef enum
 @property (nonatomic, strong) UIViewController *presentingViewController;
 
 /**
- * Advanced: call to initialize an intence of an interstitial ad
+ * Advanced: call to initialize an instance of an interstitial ad
  *
- * @param name optional for setting per placement
- * @param aDelegate the delegate file to use for this interstitial instance
+ * @param name          optional for setting per placement
+ * @param aDelegate     the delegate file to use for this interstitial instance
  *
- * @return NativeXAdView -- Ad view with placementType = interstitial
+ * @return              NativeXAdView Ad view with placementType = interstitial
  */
 - (id)initInterstitialWithName:(NSString *)name
                         delegate:(id<NativeXAdViewDelegate>)aDelegate;
@@ -71,49 +71,73 @@ typedef enum
 /** Called when adView is loaded and ready to be displayed
  * use this method to override when adView is displayed
  * If this delegate does not exist when caching an ad it will be shown immediately
- * @param adView adView that has been loaded
- * @param name placement name for ad, use for showing cached ad
+ *
+ * @param adView        the NativeX adView that has been loaded
+ * @param name          placement name for ad, use for showing cached ad
  */
 - (void)didLoadAdView:(NativeXAdView *)adView withName:(NSString *)name;
 
 /** called if no ad is available at this time
  *
- * @param adView
+ * @param adView        the NativeX adView that has NOT been loaded
  */
 - (void)noAdContentForAdView:(NativeXAdView *)adView;
 
-- (void)dismissActionForAdView:(NativeXAdView *)adView completionBlock:(void (^)(void))completion;
 /** Called when error loading an ad (was the SDK initialized correctly?)
  *
- * @param adView
- * @param error
+ * @param adView        the NativeX adView that has NOT been loaded because of an error
+ * @param error         reason why ad failed to load
  */
 - (void)nativeXAdView:(NativeXAdView *)adView didFailWithError:(NSError *)error;
 
 /** Called when ad content has expired for specific adView
  *
- * @param adView
+ * @param adView        the NativeX adView that has expired
  */
 - (void)adContentExpiredForAdView:(NativeXAdView *)adView;
 
 
 /** Called when SDK needs to get presentingVC for displaying the adView
- * presentingViewController defaults to the keyWindow's rootviewcontroller, but this method can be used to set a specific parent view controller for the AdView
+ * presentingViewController defaults to the keyWindow's rootviewcontroller, 
+ * but this method can be used to set a specific parent view controller for the AdView
  *
- * @param adView
- * @return -- UIViewController the view controller that will be used as parent to adView
+ * @param adView        the NativeX adView that will be the child view
+ * @return              UIViewController the view controller that will be used as parent to adView
  */
 - (UIViewController *)presentingViewControllerForAdView:(NativeXAdView *) adView;
 
-//TODO: ended editing comments here
-// adview lifecycle events
+/** called right before an ad will be displayed
+ *
+ * @param adView        the NativeX adView that will be displayed
+ */
 - (void)nativeXAdViewWillDisplay:(NativeXAdView *)adView;
+
+/** called after an ad has been displayed on screen
+ *
+ * @param adView        the NativeX adView that was displayed
+ */
 - (void)nativeXAdViewDidDisplay:(NativeXAdView *)adView;
+
+/** called right before an ad will be dismissed
+ *
+ * @param adView        the NativeX adView that will be dismissed
+ */
 - (void)nativeXAdViewWillDismiss:(NativeXAdView *)adView;
+
+/** called after an ad has been dismissed
+ *
+ * @param adView        the NativeX adView that was dismissed
+ */
 - (void)nativeXAdViewDidDismiss:(NativeXAdView *)adView;
 
+/** Used for adding dismiss actions for an adView */
+- (void)dismissActionForAdView:(NativeXAdView *)adView completionBlock:(void (^)(void))completion;
 
-// for overriding or capturing MRAID events
+/** Used for capturing rich media events 
+ *
+ * @param adView        the NativeX adView for which the rich media request was fired.
+ * @param event         The Rick Media event that was fired
+ */
 - (void)nativeXAdView:(NativeXAdView *)adView didProcessRichmediaRequest:(NSURLRequest*)event;
 
 @end

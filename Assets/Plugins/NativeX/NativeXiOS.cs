@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class NativeXiOS : MonoBehaviour {
+public class NativeXiOS {
 
 	public int appId;
 	public string publisherUserId;
 	public string appName;
 	public int actionId;
+	public bool enableLogging = false;
 	public float bannerX=0f;
 	public float bannerY=0f;
 	public float bannerHeight = Screen.height/20f;

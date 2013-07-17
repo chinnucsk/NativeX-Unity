@@ -18,11 +18,12 @@
 @private
     BOOL showInterstitial;
     CGPoint myPoint;
+    
 }
 
 + (NativeXCore*) instance;
 
--(void)startWithName:(NSString*)name applicationId:(NSString*)appId publisherId:(NSString*)pubId;
+-(void)startWithName:(NSString*)name applicationId:(NSString*)appId publisherId:(NSString*)pubId enableLogging:(bool) enableLogging;
 -(void)showOfferWall;
 -(void)showIncentOfferWall;
 -(void)showNonIncentOfferWall;
@@ -32,8 +33,6 @@
 -(void)showFeaturedOffer;
 -(void)fetchInterstitial:(NSString*)name;
 -(void)showInterstitial:(NSString*)name;
--(void)showBanner;
--(void)removeBanner;
 -(void)actionTaken:(NSString*)actionId;
 -(void)connectWithAppId:(NSString*)appId;
 -(void)redeemCurrency;
@@ -47,6 +46,7 @@
 @property (nonatomic) float bannerHeight;
 @property (nonatomic) float bannerWidth;
 @property (nonatomic, retain) NSDictionary *interstitialDic;
+@property (nonatomic, retain) NSString *URL;
 
 
 @end

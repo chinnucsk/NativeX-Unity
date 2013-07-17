@@ -1,13 +1,14 @@
 using UnityEngine;
 using System.Collections;
 
-public class NativeXAndroid : MonoBehaviour {
+public class NativeXAndroid {
 
 	public int appId;
 	public string packageName;
 	public string displayName;
 	public string publisherUserId;
 	public int actionId;
+	public bool enableLogging = false;
 	
 	public NativeXAndroid(int applicationId, string packName, string disName, string pubName)
 	{

@@ -13,6 +13,7 @@ extern "C"
 	void				mono_aot_register_module(gpointer *aot_info);
 	extern gboolean		mono_aot_only;
 	extern gpointer*	mono_aot_module_Assembly_CSharp_firstpass_info; // Assembly-CSharp-firstpass.dll
+	extern gpointer*	mono_aot_module_Assembly_CSharp_info; // Assembly-CSharp.dll
 	extern gpointer*	mono_aot_module_JsonFx_Json_info; // JsonFx.Json.dll
 	extern gpointer*	mono_aot_module_Mono_Security_info; // Mono.Security.dll
 	extern gpointer*	mono_aot_module_System_Xml_info; // System.Xml.dll
@@ -30,12 +31,11 @@ extern "C"
 	void	uShowFeaturedOffer();
 	void	uFetchInterstitial();
 	void	uShowInterstitial();
-	void	uShowBanner();
-	void	uRemoveBanner();
 	void	uRedeemCurrency();
 	void	uConnectWithAppId();
 	void	uActionTakenWithActionId();
 	void	uTrackInAppPurchase();
+	void	uSelectServer();
 }
 void RegisterMonoModules()
 {
@@ -44,6 +44,7 @@ void RegisterMonoModules()
 	mono_aot_only = true;
 	mono_ficall_flag = false;
 	mono_aot_register_module(mono_aot_module_Assembly_CSharp_firstpass_info);
+	mono_aot_register_module(mono_aot_module_Assembly_CSharp_info);
 	mono_aot_register_module(mono_aot_module_JsonFx_Json_info);
 	mono_aot_register_module(mono_aot_module_Mono_Security_info);
 	mono_aot_register_module(mono_aot_module_System_Xml_info);
@@ -61,12 +62,11 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("uShowFeaturedOffer", (void*)&uShowFeaturedOffer);
 	mono_dl_register_symbol("uFetchInterstitial", (void*)&uFetchInterstitial);
 	mono_dl_register_symbol("uShowInterstitial", (void*)&uShowInterstitial);
-	mono_dl_register_symbol("uShowBanner", (void*)&uShowBanner);
-	mono_dl_register_symbol("uRemoveBanner", (void*)&uRemoveBanner);
 	mono_dl_register_symbol("uRedeemCurrency", (void*)&uRedeemCurrency);
 	mono_dl_register_symbol("uConnectWithAppId", (void*)&uConnectWithAppId);
 	mono_dl_register_symbol("uActionTakenWithActionId", (void*)&uActionTakenWithActionId);
 	mono_dl_register_symbol("uTrackInAppPurchase", (void*)&uTrackInAppPurchase);
+	mono_dl_register_symbol("uSelectServer", (void*)&uSelectServer);
 #endif // !(TARGET_IPHONE_SIMULATOR)
 }
 

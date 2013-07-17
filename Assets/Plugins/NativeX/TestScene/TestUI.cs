@@ -24,7 +24,6 @@ public class TestUI: MonoBehaviour
 		NativeXHandler.e_didSDKinitialize += didSDKInititialize;
 		NativeXHandler.e_didFeaturedOfferLoad += didFeaturedOfferLoad;
 		NativeXHandler.e_didInterstitialLoad += didInterstitialLoad;
-		NativeXHandler.e_didBannerLoad += didBannerLoad;
 		NativeXHandler.e_actionCompleted += actionComplete;
 		NativeXHandler.e_actionFailed += actionFailed;
 		NativeXHandler.e_userLeavingApplication += userLeavingApplication;
@@ -67,13 +66,13 @@ public class TestUI: MonoBehaviour
 
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Get And Cache Featured Offer" ) )
 		{
-			NativeXCore.getAndCacheFeaturedOffer();
+			NativeXCore.fetchFeaturedOffer();
 			Debug.Log("Get And Cache Featured Offer has been clicked");
 		}
 
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Cached Featured Offer" ) )
 		{
-			NativeXCore.showCachedFeaturedOffer();
+			NativeXCore.showFetchedFeaturedOffer();
 			Debug.Log("Show Cached Featured Offer has been clicked");
 		}
 
@@ -89,12 +88,6 @@ public class TestUI: MonoBehaviour
 			Debug.Log("Get And Cache Interstitial has been clicked");
 		}
 
-//		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Cached Interstitial" ) )
-//		{
-//			NativeXCore.showCachedInterstitial("Blah");
-//			Debug.Log("Show Cached Interstitial has been clicked");
-//		}
-
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Interstitial" ) )
 		{
 			NativeXCore.showInterstitial("Blah");
@@ -105,19 +98,7 @@ public class TestUI: MonoBehaviour
 		xPos = Screen.width - width - 5.0f;
 		yPos = 5.0f;
 
-		if( GUI.Button( new Rect( xPos, yPos, width, height ), "Show Banner" ) )
-		{
-			NativeXCore.showBanner();
-			Debug.Log("Show Banner has been clicked");
-		}
-		
-		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Remove Banner" ) )
-		{
-			NativeXCore.removeBanner();
-			Debug.Log("Remove Banner has been clicked");
-		}
-		
-		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Redeem Currency" ) )
+		if( GUI.Button( new Rect( xPos, yPos, width, height ), "Redeem Currency" ) )
 		{
 			NativeXCore.redeemCurrency();
 			Debug.Log("Redeem Currency has been clicked");
@@ -201,11 +182,6 @@ public class TestUI: MonoBehaviour
 	void didSDKInititialize (bool obj)
 	{
 		resultText = "didSDKInititialize:" +obj;
-	}
-	
-	void didBannerLoad (bool obj)
-	{
-		resultText = "didBannerLoad:" +obj;
 	}
 	
 	void didPerformAction(bool action)

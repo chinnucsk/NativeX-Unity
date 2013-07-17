@@ -6,7 +6,7 @@
 //  "SDK_SourceCode_LicenseAgreement", which is part of this source code package.
 //
 //  Created by Patrick Brennan on 10/6/11.
-//  Copyright 2011 NativeX. All rights reserved.
+//  Copyright 2013 NativeX. All rights reserved.
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -15,7 +15,7 @@
 
 @protocol NativeXMonetizationDelegate;
 
-/** Main class for NativeXPublisherSDK */
+/** Main class for NativeXMonetizationSDK */
 @interface NativeXMonetizationSDK : NSObject
 
 @property (nonatomic, copy) NSString *gameTitle;
@@ -29,133 +29,136 @@
 @property (nonatomic, readonly) BOOL isShowFeaturedOffer;
 @property (nonatomic, assign) int numberOfOffersInOfferWall;
 @property (nonatomic, assign) BOOL shouldUseInAppDownload;
+@property (nonatomic, assign) BOOL shouldOutputDebugLog;
 
 #pragma mark - Publisher API
 
 /** 
- This method provides access to the NativeXMonetizationSDK shared object.
- 
- @return a singleton NativeXMonetizationSDK instance.
+ * Provides access to the NativeXMonetizationSDK shared object.
+ *
+ * @return a singleton NativeXMonetizationSDK instance.
  */
 + (id)sharedInstance;
 
 /** 
- This method provides access to the NativeXMonetizationSDK version
- 
- @return NativeXMonetizationSDK Version
+ * Provides access to the NativeXMonetizationSDK version
+ *
+ * @return NativeXMonetizationSDK Version
  */
 - (NSString *)getSDKVersion;
 
 /**
- Create a session with NativeX offer network.
- Call this in AppDidFinishLaunchingWithOptions{}
- 
- @param appID is the unique Identifier you receive from NativeX
- @param publisherUserId Id used for publisher currency postback if used
+ * Create a session with NativeX offer network.
+ * Call this in AppDidFinishLaunchingWithOptions{}
+ *
+ * @param appID is the unique Identifier you receive from NativeX
+ * @param publisherUserId Id used for publisher currency postback if used
  */
 - (void)initiateWithAppId:(NSString *)appId
        andPublisherUserId:(NSString *)publisherUserId;
 
 /**
- Reward Discovery Wall presentation 
- 
- @param presentingViewController View Controller the SDK will use as parent to Discovery Wall
+ * Reward Discovery Wall presentation
+ *
+ * @param presentingViewController View Controller the SDK will use as parent to Discovery Wall
  */
 - (void)openOfferWallFromPresentingViewController:(UIViewController *)presentingViewController;
 
 /**
- Native iPad reward Discovery Wall presentation
- 
- @param popoverView UIView used to position the popOver and direction arrows
+ * Native iPad reward Discovery Wall presentation
+ *
+ * @param popoverView UIView used to position the popOver and direction arrows
  */
 - (void)openOfferWallFromPopoverView:(UIView *)popoverView;
 
 /**
- Non-reward web Discovery Wall presentation
- 
- @param presentingViewController View Controller the SDK will use as the parent of non-reward discovery wall
+ * Non-reward web Discovery Wall presentation
+ *
+ * @param presentingViewController View Controller the SDK will use as the parent of non-reward discovery wall
  */
 - (void)openNonRewardWebOfferWallFromPresentingViewController:(UIViewController *)presentingViewController;
 
 /**
- Gets and shows a featured offer alert
+ * Gets and shows a featured offer alert
  */
 - (void)showFeaturedOffer;
 
 /**
- Gets and caches a featured offer alert
+ * Gets and caches a featured offer alert
  */
 - (void)getAndCacheFeaturedOffer;
 
 /**
- Shows cached featured offer alert
+ * Shows cached featured offer alert
  */
 - (void)showCachedFeaturedOffer;
 
 /** 
- Call redeem currency
+ * Call redeem currency
  */
 - (void)redeemCurrency;
 
 #pragma mark - Enhanced Ad Methods
 
 /**
- Show an MRAID complient interstitial from key window
+ * Show an enhanced interstitial from key window
  */
 - (void)showInterstitial;
 
 /**
- Show an MRAID complient interstitial with placement name from key window, used for targeting certain ads for cetain in app placements.
- 
- @param name   NSString representation of placement name
+ * Show an enhanced interstitial with placement name from key window, 
+ * used for targeting certain ads for cetain in app placements.
+ * 
+ * @param name   NSString representation of placement name
  */
 - (void)showInterstitialWithName:(NSString *)name;
 
 /**
- Cache an MRAID complient interstitial
- 
- @param name   NSString representation of placement name (optional)
- @param delegate        used to set delegate
+ * Fetch/ache an enhanced interstitial
+ * 
+ * @param name      NSString representation of placement name (optional)
+ * @param delegate  used to set delegate
  */
 - (void)fetchInterstitialWithName:(NSString *) name delegate:(id<NativeXAdViewDelegate>)aDelegate;
 
 
 #pragma mark - In App Purchase Tracking (IAPT) methods
 /**
- Used for In App Purchase Tracking
- 
- @param trackRecord
- @param delegate
- 
- @return NativeXInAppPurchaseRequest
+ * Used for In App Purchase Tracking
+ * 
+ * @param trackRecord
+ * @param delegate
+ * 
+ * @return NativeXInAppPurchaseRequest
  */
 - (NativeXInAppPurchaseTrackRequest *)trackInAppPurchaseWithTrackRecord:(NativeXInAppPurchaseTrackRecord *)trackRecord
                                                                delegate:(id<NativeXInAppPurchaseTrackDelegate>)delegate; //if the delegate is about to be deallocated clear return value's delegate property
 
 /**
- Use this method to get sessionId for current session
- @return the current sessionId
+ * Use this method to get sessionId for current session
+ * @return the current sessionId
  */
 - (NSString *) getSessionId;
 
 #pragma mark - NativeX Advertiser API
 
 /**
- call this to connect to NativeX and inform that the app "appID" was run
- call this in AppDidFinishLaunchingWithOptions
- 
- @param appID -- is the unique Application Identifier you receive from NativeX
-*/
+ * call this to connect to NativeX and inform that the app "appID" was run
+ * call this in AppDidFinishLaunchingWithOptions
+ *
+ * @param appID -- is the unique Application Identifier you receive from NativeX
+ */
 - (void)connectWithAppID:(NSString*)appID;
 
 /**
- call this to connect to NativeX and inform that the app "actionID" was performed
- @param actionID is the unique Action Identifier for the action, that you receive from NativeX
+ * call this to connect to NativeX and inform that the app "actionID" was performed
+ * 
+ * @param actionID is the unique Action Identifier for the action, that you receive from NativeX
  */
 - (void)actionTakenWithActionID:(NSString*)actionID;
 
 /**
- call this when you no longer need the shared connector object, usually in AppWillTerminate
+ * call this when you no longer need the shared connector object, usually in AppWillTerminate
  */
 - (void)close;
 
@@ -168,30 +171,30 @@
 @required
 
 /** Called when the Offer Wall is successfully initialized. 
- @param isAvailable -- boolean flag to let developer know if discovery wall is available
+ * @param isAvailable   boolean flag to let developer know if discovery wall is available
  */
 - (void)nativeXMonetizationSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable;
 
 /** Called when there is an error trying to initialize the Offer Wall. 
- @param error
+ * @param error
  */
 - (void)nativeXMonetizationSdkDidFailToInitiate: (NSError *) error;
 
 /** Called when the currency redemption is successfull. 
- @param balances -- an array
- @param recieptId unique identifier for currency redeption
+ * @param balances      an array of balanced to be redeemed to user
+ * @param recieptId     unique identifier for currency redeption
  */
 - (void)didRedeemWithBalances:(NSArray *)balances
                  andReceiptId:(NSString *)receiptId;
 
 /** Called when the currency redemption is unsuccessfull. 
- @param error
+ * @param error
  */
 - (void)didRedeemWithError:(NSError *)error;
 
-/** Called when publisher is about to display modally fullscreen instruction view for a chosen featured offer 
- @param interstitialInstructionVC   This VCs view will be added at the child to the Vc that is returned in this method.
- @return UIViewController -- View Controller used to present modal interstitial screens
+/** Called when publisher is about to display modally fullscreen instruction view for a chosen featured offer
+ * @param interstitialInstructionVC This VCs view will be added as the child to the VC that is returned in this method.
+ * @return UIViewController View Controller used to present modal interstitial screens
  */
 - (UIViewController *)parentViewControllerForModallyPresentingInterstitialInstructionView:(UIViewController *)interstitialInstructionVC;
 
