@@ -61,6 +61,12 @@ public class NativeXHandler : MonoBehaviour {
 	 * 
 	 */
 	public static event Action<string> e_receiptId;
+	/** Called when the SDK has successfully intitialized
+	 * 
+	 * @param string - Will contain the current Session Id
+	 * 
+	 */
+	public static event Action<string> e_sessionId;
 	/** Called when a user clicks through to either rate your app or sign up for automatic updates(Android only)
 	 * 
 	 * @param bool - Will return true of they continue, false if the close or cancel
@@ -73,9 +79,9 @@ public class NativeXHandler : MonoBehaviour {
 	void OnGUI()
 	{
 			if (buttonEnabled) {
-						if (GUI.Button (new Rect( 0, 0, Screen.width, Screen.height ), "")) {
-								Debug.Log ("You pushed my button!");
-						}
+				if (GUI.Button (new Rect( 0, 0, Screen.width, Screen.height ), "")) {
+					Debug.Log ("You pushed my button!");
+				}
 			}
 	}
 
@@ -96,7 +102,6 @@ public class NativeXHandler : MonoBehaviour {
 		if(e_didInterstitialLoad!=null){
 			e_didInterstitialLoad(i_name);
 		}
-
 	}
 
 	public void didFeaturedOfferLoad(string load)
@@ -167,6 +172,15 @@ public class NativeXHandler : MonoBehaviour {
 			e_receiptId(myReceipt);
 			}
 		}
+	}
+	
+	public void sessionId(string sessionId)
+	{
+		if(e_sessionId!=null){
+			if(sessionId!=null){
+			e_sessionId(sessionId);
+			}
+		}	
 	}
 
 	public void didPerformAction(string action)

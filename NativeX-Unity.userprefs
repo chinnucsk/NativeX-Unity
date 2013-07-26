@@ -1,30 +1,34 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/NativeX/NativeXHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/NativeX/NativeXCore.cs">
     <Files>
       <File FileName="Assets/Plugins/NativeX/NativeXBalance.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/NativeX/TestScene/TestUI.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/NativeX/NativeXCore.cs" Line="299" Column="3" />
+      <File FileName="Assets/Plugins/NativeX/NativeXCore.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/NativeX/NativeXAndroid.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/NativeX/NativeXiOS.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/NativeX/NativeXHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets/Internal TestApp/Scripts/ResultsManager.cs" Line="85" Column="3" />
-      <File FileName="Assets/Internal TestApp/Scripts/Initialize.cs" Line="19" Column="45" />
-      <File FileName="Assets/Internal TestApp/Scripts/FetchInterstitial.cs" Line="8" Column="64" />
-      <File FileName="Assets/Internal TestApp/Scripts/MainMenuButton.cs" Line="8" Column="34" />
-      <File FileName="Assets/Internal TestApp/Scripts/OfferWall.cs" Line="8" Column="37" />
-      <File FileName="Assets/Internal TestApp/Scripts/ShowFeaturedOffer.cs" Line="6" Column="2" />
-      <File FileName="Assets/Internal TestApp/Scripts/ShowInterstitial.cs" Line="8" Column="63" />
-      <File FileName="Assets/Internal TestApp/Scripts/WebOfferWall.cs" Line="8" Column="40" />
-      <File FileName="Assets/Internal TestApp/Scripts/AppWasRun.cs" Line="8" Column="25" />
-      <File FileName="Assets/Internal TestApp/Scripts/ActionTaken.cs" Line="8" Column="29" />
-      <File FileName="Assets/Internal TestApp/Scripts/Manager.cs" Line="8" Column="1" />
-      <File FileName="Assets/Internal TestApp/Scripts/SetActionTakenId.cs" Line="12" Column="67" />
-      <File FileName="Assets/Internal TestApp/Scripts/FetchFeaturedOffer.cs" Line="6" Column="2" />
-      <File FileName="Assets/Internal TestApp/Scripts/SetAppId.cs" Line="13" Column="19" />
-      <File FileName="Assets/Internal TestApp/Scripts/SetInterstitialName.cs" Line="13" Column="73" />
-      <File FileName="Assets/Internal TestApp/Scripts/ServerSelection.cs" Line="10" Column="44" />
-      <File FileName="Assets/Internal TestApp/Scripts/VariableHolder.cs" Line="8" Column="44" />
+      <File FileName="Assets/Internal TestApp/Scripts/ResultsManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/Initialize.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/FetchInterstitial.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/MainMenuButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/OfferWall.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/ShowFeaturedOffer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/ShowInterstitial.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/WebOfferWall.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/AppWasRun.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/ActionTaken.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/SetActionTakenId.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/FetchFeaturedOffer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/SetAppId.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/SetInterstitialName.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/ServerSelection.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/VariableHolder.cs" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/RedeemCurrency.cs" Line="6" Column="2" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="Assets/Internal TestApp/Scripts/NonRewardWebOfferwall.cs" Line="8" Column="43" />
+      <File FileName="Assets/Internal TestApp/Scripts/OldTestApp.cs" Line="8" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

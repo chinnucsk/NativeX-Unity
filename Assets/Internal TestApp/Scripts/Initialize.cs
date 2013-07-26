@@ -19,7 +19,7 @@ public class Initialize : MonoBehaviour {
 		android.actionId = VariableHolder.actionId;
 		Debug.Log("NativeX - Unity  Is being Inititialized with androidDevice:" + android.ToString());
 #endif
-		NativeXCore.intitialization(android, iOS);
+		NativeXCore.initialization(android, iOS);
 		
 	}
 }

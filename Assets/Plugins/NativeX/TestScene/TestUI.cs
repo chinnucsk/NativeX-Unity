@@ -16,7 +16,7 @@ public class TestUI: MonoBehaviour
 		android.actionId = 16;
 		Debug.Log(iOS.ToString());
 		Debug.Log("NativeX - Unity has Started");
-		NativeXCore.intitialization(android, iOS);
+		NativeXCore.initialization(android, iOS);
 	}
 
 	void OnEnable()

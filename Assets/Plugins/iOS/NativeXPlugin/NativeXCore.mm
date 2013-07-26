@@ -151,6 +151,8 @@ static NativeXCore *sharedInstance;
 -(void)nativeXMonetizationSdkDidInitiateWithIsOfferwallAvailable:(BOOL)isAvailable
 {
     UnitySendMessage("NativeXHandler", "didSDKinitialize", "1");
+    UnitySendMessage("NativeXHandler", "sessionId", [[[NativeXMonetizationSDK sharedInstance] getSessionId] UTF8String]);
+
 }
 
 -(void)nativeXMonetizationSdkDidFailToInitiate:(NSError *)error
@@ -226,7 +228,7 @@ static NativeXCore *sharedInstance;
     if(name){
         UnitySendMessage("NativeXHandler", "didInterstitialLoad", [name UTF8String]);
     }else{
-        UnitySendMessage("NativeXHandler", "didInterstitialLoad", "INTERSTITIAL_LOADED");
+        UnitySendMessage("NativeXHandler", "didInterstitialLoad", "NAME_UNDEFINED");
     }
 }
 
@@ -242,7 +244,7 @@ static NativeXCore *sharedInstance;
     if(adView.name){
         UnitySendMessage("NativeXHandler", "actionFailed", [adView.name UTF8String]);
     }else{
-        UnitySendMessage("NativeXHandler", "actionFailed", "6");
+        UnitySendMessage("NativeXHandler", "actionFailed", "NAME_UNDEFINED");
     }
 }
 
@@ -252,7 +254,7 @@ static NativeXCore *sharedInstance;
     {
         UnitySendMessage("NativeXHandler", "didInterstitialLoad", [adView.name UTF8String]);
     }else{
-        UnitySendMessage("NativeXHandler", "didInterstitialLoad", "INTERSTITIAL_LOADED");
+        UnitySendMessage("NativeXHandler", "didInterstitialLoad", "NAME_UNDEFINED");
     }
 }
 
@@ -261,7 +263,7 @@ static NativeXCore *sharedInstance;
    if(adView.name){
         UnitySendMessage("NativeXHandler", "actionComplete", [adView.name UTF8String]);
     }else{
-        UnitySendMessage("NativeXHandler", "actionComplete", "6");
+        UnitySendMessage("NativeXHandler", "actionComplete", "NAME_UNDEFINED");
     }
     adView = nil;
 }

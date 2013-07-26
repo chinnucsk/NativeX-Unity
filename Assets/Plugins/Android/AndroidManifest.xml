@@ -62,20 +62,20 @@
             android:name="com.nativex.monetization.activities.HistoryActivity"
             android:configChanges="orientation" >
         </activity>
-		<activity
-            android:name="com.nativex.monetization.activities.WebOfferwallActivity"
-            android:configChanges="orientation" >
-        </activity>
+		<activity android:name="com.nativex.monetization.activities.WebOfferwallActivity"
+			android:configChanges="orientation" android:hardwareAccelerated="true" />
 		<activity
             android:name="com.nativex.monetization.activities.InterstitialActivity"
             android:screenOrientation="portrait" >
         </activity>
 
-        <receiver android:name="com.nativex.advertiser.ReferralReceiver" >
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
+        <receiver android:name="com.nativex.advertiser.ReferralReceiver">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER" />
+			</intent-filter>
+			<meta-data android:name="forward.kochava"
+				android:value="com.kochava.android.tracker.ReferralCapture" />
+		</receiver>
 
 
 		<!-- META-DATA -->

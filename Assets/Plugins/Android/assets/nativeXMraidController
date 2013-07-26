@@ -181,7 +181,7 @@
     }
 
     mraid.fireSizeChangeEvent = function (width, height) {
-        console.log("fireSizeChangeEvent, with =" + width + ", height = " + height);
+        mraid.log("fireSizeChangeEvent, with =" + width + ", height = " + height);
 
         var eventHandlers = listeners[EVENTS.SIZE_CHANGE];
         if (eventHandlers) {
@@ -218,7 +218,7 @@
             mraid.fireChangeEvent(EVENTS.STATE_CHANGE, newState);
         } else if (newState === STATES.RESIZED) {
             // MRAID specification: "An event listener will hear a new stateChange event,
-            // even though the state is still “resized” after the event fires"
+            // even though the state is still resized after the event fires"
             mraid.fireChangeEvent(EVENTS.STATE_CHANGE, newState);
         }
     }
@@ -514,7 +514,10 @@
         if (video) {
             var progress = video.currentTime / video.duration * 100;
             if (progress > 0) {
-                mraidSDK.trackVideo('url=' + video.currentSrc + '&progress=' + progress);
+                // Track video every 2%
+                if (progress >= 95 || Math.round(progress) % 2 == 0) {
+                    mraidSDK.trackVideo('url=' + video.currentSrc + '&progress=' + progress);
+                }
             }
         }
     }

@@ -3,10 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-//Version:3.0.2
-//AndroidSDK: 4.1.1
-//iOS SDK: 4.1.1
-
+//Version:4.2.0
 
 public class NativeXCore : MonoBehaviour {
 	
@@ -41,7 +38,7 @@ public class NativeXCore : MonoBehaviour {
 	[DllImport ("__Internal")]
 	public static extern void uSetCoordinates(float bannerX, float bannerY, float bannerHeight, float bannerWidth, float offerWallX, float offerWallY);
 #endif
-	public static void intitialization(NativeXAndroid android, NativeXiOS iOS)
+	public static void initialization(NativeXAndroid android, NativeXiOS iOS)
 	{
 #if UNITY_ANDROID
 		//if(android != null){
@@ -229,10 +226,10 @@ public class NativeXCore : MonoBehaviour {
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
-			if(name == null){
-				name = "";
-			}
-			instance.Call("fetchInterstitial", currentAct, name);
+//			if(name == null){
+//				name = "";
+//			}
+//			instance.Call("fetchInterstitial", currentAct, name);
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
@@ -283,10 +280,10 @@ public class NativeXCore : MonoBehaviour {
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
-			if(name == null){
-				name = "";
-			}
-			instance.Call("showInterstitial",currentAct, name);	
+//			if(name == null){
+//				name = "";
+//			}
+//			instance.Call("showInterstitial",currentAct, name);	
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
@@ -414,8 +411,7 @@ public class NativeXCore : MonoBehaviour {
 #endif
 		return;
 	}
-
-
+	
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]
 	public static extern void uTrackInAppPurchase(string storeProductId, string storeTransactionId,

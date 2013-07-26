@@ -16,7 +16,8 @@ public class ResultsManager : MonoBehaviour {
 		NativeXHandler.e_userLeavingApplication += userLeavingApplication;
 		NativeXHandler.e_balanceTransfered += balanceTransfered;
 		NativeXHandler.e_receiptId += receiptId;
-		NativeXHandler.e_didPerformAction += didPerformAction;	
+		NativeXHandler.e_didPerformAction += didPerformAction;
+		NativeXHandler.e_sessionId += sessionId;
 	}
 	
 
@@ -31,6 +32,7 @@ public class ResultsManager : MonoBehaviour {
 		NativeXHandler.e_balanceTransfered -= balanceTransfered;
 		NativeXHandler.e_receiptId -= receiptId;
 		NativeXHandler.e_didPerformAction -= didPerformAction;
+		NativeXHandler.e_sessionId -= sessionId;
 	}
 	
 	void Update()
@@ -87,6 +89,11 @@ public class ResultsManager : MonoBehaviour {
 	void didPerformAction(bool action)
 	{
 			resultText = "didPerformAction: " + action;
+	}
+	
+	void sessionId(string sessionId)
+	{
+		resultText = "sessionId: " + sessionId;	
 	}
 	
 }
