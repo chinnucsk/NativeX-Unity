@@ -10,7 +10,7 @@ public class TestUI: MonoBehaviour
 	
 	void Start()
 	{
-		iOS = new NativeXiOS(12198, "TestApp", null, 200, 300, Screen.height/20, Screen.width/2, 100, 200);
+		iOS = new NativeXiOS(14052, "TestApp", null, 200, 300, Screen.height/20, Screen.width/2, 100, 200);
 		android = new NativeXAndroid(5077, "android.PackName", "TestApp", "Test Pub");
 		iOS.actionId = 17;
 		android.actionId = 16;
@@ -84,13 +84,13 @@ public class TestUI: MonoBehaviour
 
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Fetch Interstitial" ) )
 		{
-			NativeXCore.fetchInterstitial("Blah");
+			NativeXCore.fetchInterstitial("testOne");
 			Debug.Log("Get And Cache Interstitial has been clicked");
 		}
 
 		if( GUI.Button( new Rect( xPos, yPos+=heightPlus, width, height ), "Show Interstitial" ) )
 		{
-			NativeXCore.showInterstitial("Blah");
+			NativeXCore.showInterstitial("testOne");
 			Debug.Log("Show Interstitial has been clicked.");
 		}
 
