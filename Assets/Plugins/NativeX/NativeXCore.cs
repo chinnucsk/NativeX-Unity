@@ -226,10 +226,10 @@ public class NativeXCore : MonoBehaviour {
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
-//			if(name == null){
-//				name = "";
-//			}
-//			instance.Call("fetchInterstitial", currentAct, name);
+			if(name == null){
+				name = "";
+			}
+			instance.Call("fetchInterstitial", currentAct, name);
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
@@ -280,10 +280,10 @@ public class NativeXCore : MonoBehaviour {
 	{
 #if UNITY_ANDROID
 		if(Application.platform == RuntimePlatform.Android){
-//			if(name == null){
-//				name = "";
-//			}
-//			instance.Call("showInterstitial",currentAct, name);	
+			if(name == null){
+				name = "";
+			}
+			instance.Call("showInterstitial",currentAct, name);	
 		}
 #elif UNITY_IPHONE
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
