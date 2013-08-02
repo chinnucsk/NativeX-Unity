@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-//Version:3.0.3
+//Version:3.0.4
 //AndroidSDK: 4.1.1
-//iOS SDK: 4.1.1
+//iOS SDK: 4.1.2
 
 
 public class NativeXCore : MonoBehaviour {
