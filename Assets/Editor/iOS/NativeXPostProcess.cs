@@ -28,7 +28,7 @@ namespace UnityEditor.XCodeEditor
 								}
 
 								// Finally save the xcode project
-								project.Save ();
+								project.Save();
 						
 						}
 				}
