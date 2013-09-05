@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-//Version:4.2.0
+//Version:4.2.2
 
 public class NativeXCore : MonoBehaviour {
 	
@@ -295,22 +295,22 @@ public class NativeXCore : MonoBehaviour {
 		}
 	}
 	
-	public static void showBanner(string name, Rect position)
-	{
-#if UNITY_ANDROID
-	if(Application.platform == RuntimePlatform.Android){
-			if(name == null){
-				name = "";
-			}
-			instance.Call("showBanner" , currentAct, name, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), Mathf.RoundToInt(position.height), Mathf.RoundToInt(position.width));
-		}
-#elif UNITY_IPHONE
-		
-#endif
-		if(isDebugLogEnabled){
-			Debug.Log("showBanner has been hit");
-		}
-	}
+//	public static void showBanner(string name, Rect position)
+//	{
+//#if UNITY_ANDROID
+//	if(Application.platform == RuntimePlatform.Android){
+//			if(name == null){
+//				name = "";
+//			}
+//			instance.Call("showBanner" , currentAct, name, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), Mathf.RoundToInt(position.height), Mathf.RoundToInt(position.width));
+//		}
+//#elif UNITY_IPHONE
+//		
+//#endif
+//		if(isDebugLogEnabled){
+//			Debug.Log("showBanner has been hit");
+//		}
+//	}
 
 #if UNITY_IPHONE
 	[DllImport ("__Internal")]

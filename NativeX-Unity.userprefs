@@ -13,7 +13,9 @@
       <File FileName="Assets/Internal TestApp/Scripts/SetInterstitialName.cs" Line="1" Column="1" />
       <File FileName="Assets/Internal TestApp/Scripts/ShowFeaturedOffer.cs" Line="1" Column="1" />
       <File FileName="Assets/Internal TestApp/Scripts/Initialize.cs" Line="1" Column="1" />
-      <File FileName="Assets/Editor/iOS/NativeXPostProcess.cs" Line="31" Column="23" />
+      <File FileName="Assets/Editor/iOS/NativeXPostProcess.cs" Line="1" Column="1" />
+      <File FileName="Assets/Editor/iOS/XCodePostProcess.cs" Line="24" Column="18" />
+      <File FileName="Assets/Editor/iOS/XCProject.cs" Line="511" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
