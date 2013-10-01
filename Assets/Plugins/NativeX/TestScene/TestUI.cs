@@ -11,7 +11,7 @@ public class TestUI: MonoBehaviour
 	void Start()
 	{
 		iOS = new NativeXiOS(12198, "TestApp", null, 200, 300, Screen.height/20, Screen.width/2, 100, 200);
-		android = new NativeXAndroid(13992, "android.PackName", "TestApp", "Test Pub");
+		android = new NativeXAndroid(5077, "android.PackName", "TestApp", "Test Pub");
 		iOS.actionId = 17;
 		android.actionId = 16;
 		Debug.Log(iOS.ToString());
